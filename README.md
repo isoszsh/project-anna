@@ -18,17 +18,16 @@ Takım X
 
 ## Ürün Özellikleri DÜZENLE
 
-- Oyun Hikayesi: Oyuncular, Anna'nın bilinçaltı ile harmanlanmış hayal dünyasında bilinmez bir yolculuğa atılırlar. Hikâye, şövalyenin çocukluk masallarında duyduğu sürgün kralın izine düşmesiyle başlar. Sürgün kralı esaretinden kurtarmak ve krallığı saran karanlıkları yenmek için macera dolu bir yolculuğa çıkarlar.
-- Oyun Dünyası: Oyun, birbirinden büyüleyici seviyeleri içeren bir oyun dünyasına sahiptir. Oyuncular, ormanın derinliklerinden başlayarak mezarlığın gizemlerine, zindanın zorlu yapısına kadar birçok farklı atmosferi keşfetmeye başlarlar.
-- Oynanışı: Anna, platform ve aksiyonun mükemmel bir birleşimi olan heyecan verici bir oynanış sunar. Oyuncular, düşmanlarla dolu savaşlarda yeteneklerini kullanarak ilerlerken, farklı dünyalar arasında geçiş yapar ve bosslarla savaşırlar.
-- Düşmanlar ve Boss Savaşları: Oyuncular, Dark Throne: Revenge of the Kingdom oyununda düşmanlar ve boss karakterleriyle savaşırken çeşitli saldırı kombinasyonları ve özel yetenekler kullanarak üstünlük sağlayacak. Güçlü silahlar ve ekipmanlarla karakteri geliştirerek zorlu boss savaşlarında başarılı olmaya ve krallığınızı karanlık güçlerden korumaya çalışırlar.
-- Yetenek Geliştirme: Dark Throne: Revenge of the Kingdom oyununda yetenek geliştirme özelliği sayesinde oyuncular, Sir Giovanni the Galahad adlı savaşçının yeteneklerini ilerleterek daha güçlü bir karakter haline getirebilirler. Oyuncular, kazandığı veya satın aldığı yeteneklerle saldırı gücünü artırabilir, özel yeteneklerini açabilir ve karakterlerini kişiselleştirebilirler.
-- Müzikler ve Tasarım: Müzikler, oyunun tempo ve atmosferini güçlendirirken görsel tasarımlar, ormanlar, mezarlıklar ve zindanlar gibi mekanlar nefes kesici bir şekilde hayata geçirir.
+- Oyun Hikayesi: Anna'nın hikayesi, her karanlığın içinde bir umut ışığı olduğunun ve bu ışığı bulmanın mümkün olduğunun güçlü bir sembolü olarak kalır. Oyuncular, Anna'nın bu derin ve duygusal yolculuğuna tanıklık ederken, kendi hayatlarında da umut ve cesaret bulacaklardır. Anna'nın gözlerini açışı, hayatın ve umudun her zaman devam ettiğini hatırlatır
+- Oyun Dünyası: Oyun, 5 duyu organı temelli birçok puzzle ve mini game içeren bir oyun dünyasına sahiptir. Oyuncular, ormanın derinliklerinden başlayarak .......... kadar birçok farklı atmosferi keşfetmeye başlarlar.
+- Oynanışı: Anna, sanat ve trajedinin mükemmel bir birleşimi olan büyüleyici bir deneyim sunar.
+- Düşmanlar ve Boss Savaşları: Oyuncular, Anna'da kendi korkularından varolan düşmanlardan kaçarken çeşitli ... kombinasyonları ve kelebeğini kullanarak üstünlük sağlayacak. Kelebeğiniz korkularınızda yanınızda olur ve sizi zorlu yollardaki karanlık güçlerden korumaya çalışırlar.
+- Müzikler ve Tasarım: Müzikler, oyunun gerçekliğini ve hissiyatını güçlendirirken görsel tasarımları ve oyun içi mekanları özel bir deneyim sunar.
 
 ## Hedef Kitle
 
 - Hikaye oyunlarını sevenler
-- Trajik oyunlara ilgi duyanlar
+- Puzzle içeren oyunlara ilgi duyanlar
 - 15 - 65 yaş arası kullanıcılar
 
 ## Product Backlog URL
@@ -39,13 +38,13 @@ Takım X
 
 # Sprint 1
 
-- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilmektedir.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
 - **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken toplam 350 puanlık backlog bulunmaktadır. 3 sprinte bölündüğünde ilk sprintin 100 ile başlaması gerektiği kararlaştırıldı.
 
-- **Backlog düzeni ve Story seçimleri**: Backlog'umuz bir sonraki sprintlerin temelini atacak şekilde düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde görevler dağıtılmıştır. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir. DÜZENLENECEK
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz bir sonraki sprintlerin temelini atacak şekilde düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde görevler dağıtılmıştır. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılması kararlaştırılmıştır. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 1 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
 
