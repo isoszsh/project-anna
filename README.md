@@ -18,10 +18,10 @@ Takım X
 
 ## Ürün Özellikleri DÜZENLE
 
-- Oyun Hikayesi: Anna'nın hikayesi, her karanlığın içinde bir umut ışığı olduğunun ve bu ışığı bulmanın mümkün olduğunun güçlü bir sembolü olarak kalır. Oyuncular, Anna'nın bu derin ve duygusal yolculuğuna tanıklık ederken, kendi hayatlarında da umut ve cesaret bulacaklardır. Anna'nın gözlerini açışı, hayatın ve umudun her zaman devam ettiğini hatırlatır
-- Oyun Dünyası: Oyun, 5 duyu organı temelli birçok puzzle ve mini game içeren bir oyun dünyasına sahiptir. Oyuncular, ormanın derinliklerinden başlayarak .......... kadar birçok farklı atmosferi keşfetmeye başlarlar.
+- Oyun Hikayesi: Anna'nın hikayesi, her karanlığın içinde bir umut ışığı olduğunun ve bu ışığı bulmanın mümkün olduğunun güçlü bir sembolü olarak kalır. Oyuncular, Anna'nın bu derin ve duygusal yolculuğuna tanıklık ederken, kendi hayatlarında da umut ve cesaret bulacaklardır. Anna'nın gözlerini açışı, hayatın ve umudun her zaman devam ettiğini hatırlatır.
+- Oyun Dünyası: Oyun, 5 duyu organı temelli birçok puzzle ve mini game içeren bir oyun dünyasına sahiptir. Oyuncular, Anna'nın zihninin derinliklerindeki ormandan başlayarak çiçekli bahçelere kadar birçok farklı atmosferi keşfetmeye başlarlar.
 - Oynanışı: Anna, sanat ve trajedinin mükemmel bir birleşimi olan büyüleyici bir deneyim sunar.
-- Düşmanlar ve Boss Savaşları: Oyuncular, Anna'da kendi korkularından varolan düşmanlardan kaçarken çeşitli ... kombinasyonları ve kelebeğini kullanarak üstünlük sağlayacak. Kelebeğiniz korkularınızda yanınızda olur ve sizi zorlu yollardaki karanlık güçlerden korumaya çalışırlar.
+- Düşmanlar ve Boss Savaşları: Oyuncular, Anna'da kendi korkularından varolan düşmanlardan kaçarken çeşitli savunma kombinasyonlarını ve kelebeğini kullanarak üstünlük sağlayacak. Kelebeğiniz korkularınızda yanınızda olur ve sizi zorlu yollardaki karanlık güçlerden korumaya çalışırlar.
 - Müzikler ve Tasarım: Müzikler, oyunun gerçekliğini ve hissiyatını güçlendirirken görsel tasarımları ve oyun içi mekanları özel bir deneyim sunar.
 
 ## Hedef Kitle
