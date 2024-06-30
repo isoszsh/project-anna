@@ -1,22 +1,22 @@
 # **Takım İsmi**
 
-Takım X
+U31 Unity Takımı
 
-# Ürün İle İlgili Bilgiler
+# Oyun İle İlgili Bilgiler
 
 ## Takım Elemanları
 
 [İsmail Dönmez: Product Owner](https://www.linkedin.com/in/ismail-dz/) <br/> [İncila Kırbaç: Scrum Master](https://www.linkedin.com/in/incila-kirbac/) <br/> [İbrahim Serhat Aktaş: Developer](https://www.linkedin.com/in/ibrahim-serhat-aktas/) <br/> [İpek Nezihe Can: Developer](https://www.linkedin.com/in/ipek-nezihe-can/) <br/> [İrfan Şenatlı: Developer](https://www.linkedin.com/in/irfan-%C5%9Fenatl%C4%B1-7a3963249/)
 
-## Ürün İsmi
+## Oyun İsmi
 
 **Anna**
 
-## Ürün Açıklaması
+## Oyun Açıklaması
 
 - 
 
-## Ürün Özellikleri DÜZENLE
+## Oyun Özellikleri DÜZENLE
 
 - Oyun Hikayesi: Anna'nın hikayesi, her karanlığın içinde bir umut ışığı olduğunun ve bu ışığı bulmanın mümkün olduğunun güçlü bir sembolü olarak kalır. Oyuncular, Anna'nın bu derin ve duygusal yolculuğuna tanıklık ederken, kendi hayatlarında da umut ve cesaret bulacaklardır. Anna'nın gözlerini açışı, hayatın ve umudun her zaman devam ettiğini hatırlatır.
 - Oyun Dünyası: Oyun, 5 duyu organı temelli birçok puzzle ve mini game içeren bir oyun dünyasına sahiptir. Oyuncular, Anna'nın zihninin derinliklerindeki ormandan başlayarak çiçekli bahçelere kadar birçok farklı atmosferi keşfetmeye başlarlar.
