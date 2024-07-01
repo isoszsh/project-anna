@@ -5,15 +5,25 @@ using UnityEngine;
 public class StoneController : MonoBehaviour
 {
 
-    private bool isImpact = false;
+    private int impactCount = 0;
     public AudioSource aus;
     public AudioClip clip;
+    public GameObject ripple;
     private void OnCollisionEnter(Collision collision)
     {
-        if(!isImpact)
+        if(impactCount < 1)
         {
             aus.PlayOneShot(clip);
-            isImpact = true;
+            impactCount ++;
+            GameObject RO = Instantiate(ripple,transform.position, Quaternion.identity);
+            Destroy(RO, 3);
         }
+        else if (impactCount < 3)
+        {
+            GameObject RO = Instantiate(ripple, transform.position, Quaternion.identity);
+            Destroy(RO, 3);
+            impactCount++;
+        }
+       
     }
 }

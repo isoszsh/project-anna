@@ -2432,6 +2432,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
         type: 3}
+      propertyPath: ripplePrefab
+      value: 
+      objectReference: {fileID: 2904157395899244814, guid: b0e81c243cb186f48a5f5f1eec9a03fc,
+        type: 3}
+    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
+        type: 3}
       propertyPath: handTransform
       value: 
       objectReference: {fileID: 868662722}

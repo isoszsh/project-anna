@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     public Transform interactableObject;
     public GameObject stonePrefab;
     public Transform handTransform;
+    public GameObject ripplePrefab;
 
 
     private int _speedFloat = Animator.StringToHash("Speed");
@@ -175,6 +176,9 @@ public class PlayerController : MonoBehaviour
 
         GameObject stone = Instantiate(stonePrefab, handTransform.position, Quaternion.identity);
         Rigidbody stoneRigidbody = stone.GetComponent<Rigidbody>();
+        StoneController sc  = stoneRigidbody.GetComponent<StoneController>();
+
+        sc.ripple = ripplePrefab;
 
         stone.transform.position = new Vector3(stone.transform.position.x, -1, stone.transform.position.x);
 
