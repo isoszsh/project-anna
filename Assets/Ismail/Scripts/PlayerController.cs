@@ -2,13 +2,17 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections.Generic;
+using System.Collections;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
     public float playerSpeed;
+    public float cursorSpeed;
     public float jumpForce = 5f;
     private Vector2 movementData;
     private Rigidbody playerRigidBody;
+    private Rigidbody cursorRigidBody;
     public Animator playerAnimator;
     private AudioSource audioSource;
     public bool sneaking;
@@ -18,6 +22,10 @@ public class PlayerController : MonoBehaviour
     public Material faceMaterial;
     public Texture[] faceTextures;
     public AudioClip yawnSFX;
+
+    //Aim Variables
+    public CinemachineVirtualCamera virtualCamera;
+    public GameObject cursor3D;
 
     [Serializable]
     public struct MaterialFootstepPair
@@ -30,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask raycastLayerMask;
     public GameObject groundCheck;
     public Transform interactableObject;
+    public GameObject stonePrefab;
+    public Transform handTransform;
 
 
     private int _speedFloat = Animator.StringToHash("Speed");
@@ -43,6 +53,14 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private float timer;
     private bool isBlinking;
+    private bool isAiming;
+    private bool isSneaking;
+    private bool isThrowing = false;
+
+    public bool lockControls;
+
+    public Transform pickPoint;
+    public GameObject pickedItem;
 
     private void Start()
     {
@@ -72,7 +90,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Jump");
         playerRigidBody.velocity = Vector3.zero;
         playerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        playerAnimator.SetTrigger("Jump");
+        if(isGrounded)
+        {
+            playerAnimator.SetBool("isJumping", true);
+        }
+        
     }
 
     private void Update()
@@ -80,6 +102,40 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             HandleInteraction();
+        }
+
+
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            isSneaking = !isSneaking;
+            playerAnimator.SetBool("Sneak", isSneaking);
+        }
+
+      
+
+        if(Input.GetKeyDown(KeyCode.F) && !isThrowing)
+        {
+            
+            if(!isAiming)
+            {
+                lockControls = true;
+                StartAim();
+                isAiming = true;
+            }
+            else
+            {
+                StartCoroutine(StartThrow());
+            }
+            
+
+        }
+
+        if(pickedItem != null && Input.GetKeyDown(KeyCode.Y))
+        {
+            if (pickedItem.GetComponent<PickUpItem>().type == "Plant")
+            {
+                StartCoroutine(Plant());
+            }
         }
 
         timer += Time.deltaTime;
@@ -95,6 +151,123 @@ public class PlayerController : MonoBehaviour
         
     }
 
+
+    void StartAim()
+    {
+       GameObject cursor =  Instantiate(cursor3D,transform.position, Quaternion.identity);
+       virtualCamera.Follow = cursor.transform;
+       virtualCamera.LookAt = cursor.transform;
+       cursorRigidBody = cursor.transform.GetComponent<Rigidbody>();
+
+    }
+
+    IEnumerator StartThrow()
+    {
+        isAiming = false;
+        isThrowing = true;
+        Vector3 cursorPosition = cursorRigidBody.transform.position;
+        Vector3 directionToCursor = (cursorPosition - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(directionToCursor);
+        playerRigidBody.rotation = lookRotation;
+        
+
+       
+
+        GameObject stone = Instantiate(stonePrefab, handTransform.position, Quaternion.identity);
+        Rigidbody stoneRigidbody = stone.GetComponent<Rigidbody>();
+
+        stone.transform.position = new Vector3(stone.transform.position.x, -1, stone.transform.position.x);
+
+        Vector3 throwVelocity = CalculateThrowVelocity(handTransform.position, cursorPosition, stoneRigidbody);
+        virtualCamera.Follow = transform;
+        virtualCamera.LookAt = transform;
+        playerAnimator.SetTrigger("Throw");
+        Destroy(cursorRigidBody.gameObject);
+
+        if (isSneaking)
+        {
+            yield return new WaitForSeconds(0.66f);
+            stone.transform.position = handTransform.position;
+            stone.transform.GetChild(0).transform.rotation = Quaternion.Euler(0, UnityEngine.Random.Range(0f, 360f), 0);
+            stoneRigidbody.velocity = throwVelocity * 0.65f;
+            virtualCamera.Follow = stone.transform;
+            virtualCamera.LookAt = stone.transform;
+            yield return new WaitForSeconds(3f);
+            
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.35f);
+            stone.transform.position = handTransform.position;
+            stone.transform.GetChild(0).transform.rotation = Quaternion.Euler(0, UnityEngine.Random.Range(0f, 360f),0);
+            stoneRigidbody.velocity = throwVelocity * 1.05f;
+            virtualCamera.Follow = stone.transform;
+            virtualCamera.LookAt = stone.transform;
+            yield return new WaitForSeconds(3f);
+        }
+
+        virtualCamera.Follow = transform;
+        virtualCamera.LookAt = transform;
+        isThrowing = false;
+        lockControls = false;
+    }
+
+
+    Vector3 CalculateThrowVelocity(Vector3 startPosition, Vector3 targetPosition, Rigidbody stoneRigidbody)
+    {
+        // Hedefe olan yatay mesafeyi hesapla
+        Vector3 horizontalTarget = new Vector3(targetPosition.x, startPosition.y, targetPosition.z);
+        float horizontalDistance = Vector3.Distance(startPosition, horizontalTarget);
+
+        // Dikey yükseklik farkýný hesapla
+        float heightDifference = targetPosition.y - startPosition.y;
+
+        // Ýdeal hýz için süreyi hesapla
+        float gravity = Physics.gravity.magnitude;
+        float timeToReach = Mathf.Sqrt(2 * Mathf.Abs(heightDifference) / gravity);
+
+        // Taþýn yatay ve dikey hýz bileþenlerini hesapla
+        float horizontalSpeed = horizontalDistance / timeToReach;
+        float verticalSpeed = gravity * timeToReach / 2;
+
+        // Hedef yukarýda mý yoksa aþaðýda mý?
+        verticalSpeed = heightDifference > 0 ? verticalSpeed : -verticalSpeed;
+
+        Vector3 direction = (horizontalTarget - startPosition).normalized;
+        Vector3 throwVelocity = direction * horizontalSpeed;
+        throwVelocity.y = verticalSpeed;
+
+        return throwVelocity;
+    }
+
+    void HandleAim()
+    {
+        if(Vector3.Distance(transform.position, cursorRigidBody.transform.position) < 3f)
+        {
+            Vector3 movement = new Vector3(movementData.x, 0f, movementData.y).normalized * cursorSpeed;
+            cursorRigidBody.velocity = cursorRigidBody.velocity = new Vector3(movement.x, cursorRigidBody.velocity.y, movement.z);
+        }
+        else
+        {
+            cursorRigidBody.velocity = new Vector3(0f, 0f, 0f);
+        }
+
+
+    }
+    IEnumerator Plant()
+    {
+        lockControls = true;
+        playerAnimator.SetTrigger("Plant");
+        yield return new WaitForSeconds(2);
+        pickedItem.transform.parent = null;
+        pickedItem.transform.rotation = Quaternion.Euler(0, 0, 0);
+        pickedItem.transform.position = new Vector3(pickedItem.transform.position.x,0,pickedItem.transform.position.z);
+        pickedItem.GetComponent<BoxCollider>().enabled = true;
+        pickedItem = null;
+        yield return new WaitForSeconds(5.5f);
+        lockControls = false;
+    }
+
     private System.Collections.IEnumerator Blink()
     {
         int dice = UnityEngine.Random.Range(0, 100);
@@ -106,20 +279,28 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(yawnSFX);
             yield return new WaitForSeconds(.5f);
             faceMaterial.SetTexture("_BaseMap", faceTextures[2]);
+            faceMaterial.SetTexture("_EmissionMap", faceTextures[2]);
             yield return new WaitForSeconds(.1f);
             faceMaterial.SetTexture("_BaseMap", faceTextures[3]);
+            faceMaterial.SetTexture("_EmissionMap", faceTextures[3]);
             yield return new WaitForSeconds(.2f);
             faceMaterial.SetTexture("_BaseMap", faceTextures[4]);
+            faceMaterial.SetTexture("_EmissionMap", faceTextures[4]);
             yield return new WaitForSeconds(.3f);
             faceMaterial.SetTexture("_BaseMap", faceTextures[5]);
+            faceMaterial.SetTexture("_EmissionMap", faceTextures[5]);
             yield return new WaitForSeconds(.5f);
             faceMaterial.SetTexture("_BaseMap", faceTextures[6]);
+            faceMaterial.SetTexture("_EmissionMap", faceTextures[6]);
             yield return new WaitForSeconds(.2f);
             faceMaterial.SetTexture("_BaseMap", faceTextures[7]);
+            faceMaterial.SetTexture("_EmissionMap", faceTextures[7]);
             yield return new WaitForSeconds(.1f);
             faceMaterial.SetTexture("_BaseMap", faceTextures[8]);
+            faceMaterial.SetTexture("_EmissionMap", faceTextures[8]);
             yield return new WaitForSeconds(1f);
             faceMaterial.SetTexture("_BaseMap", faceTextures[0]);
+            faceMaterial.SetTexture("_EmissionMap", faceTextures[0]);
             audioSource.volume = .3f;
             isBlinking = false;
         }
@@ -133,11 +314,13 @@ public class PlayerController : MonoBehaviour
             if (faceMaterial != null && faceTextures[1] != null)
             {
                 faceMaterial.SetTexture("_BaseMap", faceTextures[1]);
+                faceMaterial.SetTexture("_EmissionMap", faceTextures[1]);
             }
             yield return new WaitForSeconds(0.2f);
             if (faceMaterial != null && faceTextures[0] != null)
             {
                 faceMaterial.SetTexture("_BaseMap", faceTextures[0]);
+                faceMaterial.SetTexture("_EmissionMap", faceTextures[0]);
             }
             isBlinking = false;
         }
@@ -196,15 +379,25 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
 
-        MovePlayer();
-        HandleSneak();
+        if(!lockControls)
+        {
+            MovePlayer();
+            HandleSneak();
+        }
+
+        if(isAiming)
+        {
+            HandleAim();
+        }
+        
         CheckGroundedStatus();
+        CheckFallingStatus();
     }
 
     void HandleSneak()
     {
         bool isMoving = playerRigidBody.velocity.sqrMagnitude > 0;
-        bool isSneaking = Input.GetKey(KeyCode.LeftShift) && isMoving;
+        
 
         if (sneaking != isSneaking)
         {
@@ -398,5 +591,24 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics.Raycast(groundCheck.transform.position, Vector3.down, 0.1f, raycastLayerMask);
         playerAnimator.SetBool("IsGrounded", isGrounded);
+        if(isGrounded && playerAnimator.GetBool("isFalling"))
+        {
+            playerAnimator.SetBool("isJumping", false);
+        }
+    }
+
+    private void CheckFallingStatus()
+    {
+ 
+        
+        if(playerRigidBody.velocity.y < 0 && !isGrounded)
+        {
+            playerAnimator.SetBool("isFalling", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("isFalling", false);
+        }
+
     }
 }

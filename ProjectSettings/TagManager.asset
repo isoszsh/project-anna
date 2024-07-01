@@ -10,13 +10,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - 3DCursor
   - Water
   - UI
   - Player
-  - 
-  - 
-  - 
+  - Stone
+  - PressurePlate
+  - MoveObject
   - 
   - 
   - 
