@@ -1,8 +1,6 @@
-# **Takım İsmi**
+## **Takım İsmi**
 
 U31 Unity Takımı
-
-# Oyun İle İlgili Bilgiler
 
 ## Takım Elemanları
 
@@ -16,7 +14,7 @@ U31 Unity Takımı
 
 - Anna, 5 duyu organı temelli birçok puzzle ve mini game içeren bir oynanışa sahiptir. Oyuncular, Anna'nın zihninin derinliklerindeki ormandan başlayarak çiçekli bahçelere kadar birçok farklı atmosferi keşfetmeye başlarlar. Anna'da kendi korkularından varolan düşmanlardan kaçarken çeşitli savunma kombinasyonlarını kullanarak üstünlük sağlanır.
 
-## Oyun Özellikleri DÜZENLE
+## Oyun Özellikleri
 
 - 3D
 - Singleplayer
