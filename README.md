@@ -14,21 +14,20 @@ U31 Unity Takımı
 
 ## Oyun Açıklaması
 
-- 
+- Anna, 5 duyu organı temelli birçok puzzle ve mini game içeren bir oynanışa sahiptir. Oyuncular, Anna'nın zihninin derinliklerindeki ormandan başlayarak çiçekli bahçelere kadar birçok farklı atmosferi keşfetmeye başlarlar. Anna'da kendi korkularından varolan düşmanlardan kaçarken çeşitli savunma kombinasyonlarını kullanarak üstünlük sağlanır.
 
 ## Oyun Özellikleri DÜZENLE
 
-- Oyun Hikayesi: Anna'nın hikayesi, her karanlığın içinde bir umut ışığı olduğunun ve bu ışığı bulmanın mümkün olduğunun güçlü bir sembolü olarak kalır. Oyuncular, Anna'nın bu derin ve duygusal yolculuğuna tanıklık ederken, kendi hayatlarında da umut ve cesaret bulacaklardır. Anna'nın gözlerini açışı, hayatın ve umudun her zaman devam ettiğini hatırlatır.
-- Oyun Dünyası: Oyun, 5 duyu organı temelli birçok puzzle ve mini game içeren bir oyun dünyasına sahiptir. Oyuncular, Anna'nın zihninin derinliklerindeki ormandan başlayarak çiçekli bahçelere kadar birçok farklı atmosferi keşfetmeye başlarlar.
-- Oynanışı: Anna, sanat ve trajedinin mükemmel bir birleşimi olan büyüleyici bir deneyim sunar.
-- Düşmanlar ve Boss Savaşları: Oyuncular, Anna'da kendi korkularından varolan düşmanlardan kaçarken çeşitli savunma kombinasyonlarını ve kelebeğini kullanarak üstünlük sağlayacak. Kelebeğiniz korkularınızda yanınızda olur ve sizi zorlu yollardaki karanlık güçlerden korumaya çalışırlar.
-- Müzikler ve Tasarım: Müzikler, oyunun gerçekliğini ve hissiyatını güçlendirirken görsel tasarımları ve oyun içi mekanları özel bir deneyim sunar.
+- 3D
+- Singleplayer
+- Deep Lore
+- 
 
 ## Hedef Kitle
 
-- Hikaye oyunlarını sevenler
-- Puzzle içeren oyunlara ilgi duyanlar
-- 15 - 65 yaş arası kullanıcılar
+- Bağımsız (Indie) Oyun Severler
+- Strateji ve Planlama Meraklıları
+- 15 - 65 Yaş Arası Oyuncular
 
 ## Product Backlog URL
 
@@ -44,7 +43,7 @@ U31 Unity Takımı
 
 - **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken toplam 350 puanlık backlog bulunmaktadır. 3 sprinte bölündüğünde ilk sprintin 100 ile başlaması gerektiği kararlaştırıldı.
 
-- **Backlog düzeni ve Story seçimleri**: Backlog'umuz bir sonraki sprintlerin temelini atacak şekilde düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde görevler dağıtılmıştır. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz bir sonraki sprintlerin temelini atacak şekilde düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde görevler dağıtılmıştır. Miro Board'da gözüken pembe item'lar yazılım, mor item'lar ses, açık yeşil item'lar görsel efekt, koyu yeşil item'lar türü olmayan görevleri gösterirken, mavi item'lar tasarım görevlerini temsil etmektedir.
 
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılması kararlaştırılmıştır. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 1 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
 
@@ -58,7 +57,7 @@ U31 Unity Takımı
   ![Screenshot 2](-)
 
 - **Sprint Review**: 
-Alınan kararlar:
+Alınan kararlar: 
 Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
 
 - **Sprint Retrospective:**
