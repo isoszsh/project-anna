@@ -59,7 +59,7 @@ Alınan kararlar:
 Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
 
 - **Sprint Retrospective:**
-  - 
+  - Karakterin tüm mekanikleri tamamlanmıştır.
   - 
   - 
 
