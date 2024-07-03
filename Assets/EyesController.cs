@@ -27,7 +27,7 @@ public class EyesController : MonoBehaviour
     IEnumerator Blink()
     {
         isBlinking = true;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(UnityEngine.Random.Range(0.5f, 2f));
         faceMaterial.SetTexture("_BaseMap", faceTextures[0]);
         faceMaterial.SetTexture("_EmissionMap", faceTextures[0]);
         yield return new WaitForSeconds(.1f);
