@@ -1098,12 +1098,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea10774542693594183ed8bc58125543, type: 3}
---- !u!4 &868662722 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8094079702686483343, guid: 43579104e86056c4d95a973fbd0ce4b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 5187988241793849998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &951770024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1161,37 +1155,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cebbe72b3420fb47b0861343e1b0a46, type: 3}
---- !u!1 &1031131518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1031131519}
-  m_Layer: 0
-  m_Name: pickPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1031131519
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031131518}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.77823734, y: 0.013459289, z: -0.016953386, w: 0.62759715}
-  m_LocalPosition: {x: 0.00007, y: 0.00055, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 868662722}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1048602673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2410,47 +2373,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
         type: 3}
-      propertyPath: cursor3D
-      value: 
-      objectReference: {fileID: 8890578809496640450, guid: ffc0fd23258cebe4bba9e5b69cb16300,
-        type: 3}
-    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
-        type: 3}
-      propertyPath: pickPoint
-      value: 
-      objectReference: {fileID: 1031131519}
-    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
-        type: 3}
-      propertyPath: cursorSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
-        type: 3}
-      propertyPath: stonePrefab
-      value: 
-      objectReference: {fileID: 6555895903495393007, guid: 3a187d3eea0decc46a96de76142e51be,
-        type: 3}
-    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
-        type: 3}
-      propertyPath: ripplePrefab
-      value: 
-      objectReference: {fileID: 2904157395899244814, guid: b0e81c243cb186f48a5f5f1eec9a03fc,
-        type: 3}
-    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
-        type: 3}
-      propertyPath: handTransform
-      value: 
-      objectReference: {fileID: 868662722}
-    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
-        type: 3}
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 1366955438}
-    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
-        type: 3}
-      propertyPath: raycastLayerMask.m_Bits
-      value: 823
-      objectReference: {fileID: 0}
     - target: {fileID: 4611760375647128817, guid: 43579104e86056c4d95a973fbd0ce4b7,
         type: 3}
       propertyPath: m_Name
@@ -2458,11 +2383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8094079702686483343, guid: 43579104e86056c4d95a973fbd0ce4b7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1031131519}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43579104e86056c4d95a973fbd0ce4b7, type: 3}
 --- !u!1001 &6070033303911068077

@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public Texture[] faceTextures;
     public AudioClip yawnSFX;
 
+    private CapsuleCollider playerCollider;
+
     //Aim Variables
     public CinemachineVirtualCamera virtualCamera;
     public GameObject cursor3D;
@@ -69,6 +71,8 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         InitializeFootstepDictionary();
 
+        playerCollider = GetComponent<CapsuleCollider>();
+
         timer = 0f;
         isBlinking = false;
     }
@@ -110,6 +114,16 @@ public class PlayerController : MonoBehaviour
         {
             isSneaking = !isSneaking;
             playerAnimator.SetBool("Sneak", isSneaking);
+            if(isSneaking)
+            {
+                playerCollider.height = .6f;
+                playerCollider.center = new Vector3(0,0.3f,0);
+            }
+            else
+            {
+                playerCollider.height = 1.2f;
+                playerCollider.center = new Vector3(0, 0.6f, 0);
+            }
         }
 
       
