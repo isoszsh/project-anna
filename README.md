@@ -46,21 +46,22 @@ U31 Unity Takımı
 
 - **Sprint board update**: Sprint board screenshotları: 
 ![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/6a346cc1-3981-42c6-aede-b4ca6bc73f28) 
-![Backlog 2](https://github.com/isoszsh/project-anna/assets/154831174/a429bfbc-e860-496e-b6e9-afe5e157849a) 
-![Backlog 3]()
 
 - **Ürün Durumu**: Ekran görüntüleri:
   ![Screenshot 1](-)
   ![Screenshot 2](-)
 
 - **Sprint Review**: süreç nasıl gitti iyi miydi falan
-Alınan kararlar: Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Herkes görevlerinin çıktıları hakkında bilgilendirmeler yaptı . Biten kısımlar hakkında konuşuldu.
-Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
+  - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
+  - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
 
 - **Sprint Retrospective:**  toplantıda nelerin yapıldığı
-  - Ekibin sprint boyunca yaptığı bireysel görevleri birleştirildi.
-  - 
-  - 
+  - 2+2+1 biçiminde süreci hızlandıracak bir gruplandırma yapıldı.
+    - Grup 1: İsmail, İncila
+    - Grup 2: İbrahim Serhat, İpek
+    - Destek/Üretim: İrfan
+  - Toplantı sayısının arttırılması düşünüldü.
+
 
 -**Diğer Notlar**:
 - N/A
