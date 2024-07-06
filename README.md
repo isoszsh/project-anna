@@ -49,7 +49,9 @@ U31 Unity Takımı
 
 - **Ürün Durumu**: Ekran görüntüleri:
   ![Screenshot 1](-)
-  ![Screenshot 2](https://github.com/isoszsh/project-anna/assets/154831174/b77b64bc-c941-486d-974a-bd20d116a544)
+  ![Screenshot 2](https://github.com/isoszsh/project-anna/assets/154831174/b77b64bc-c941-486d-974a-bd20d116a544) 
+  ![Screenshot 3](https://github.com/isoszsh/project-anna/assets/154831174/1fbff295-eac4-41cb-bbec-3c77c458b289)
+  ![Screenshot 4](-)
 
 - **Sprint Review**: süreç nasıl gitti iyi miydi falan
   - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
