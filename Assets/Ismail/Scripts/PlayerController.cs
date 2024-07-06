@@ -77,9 +77,27 @@ public class PlayerController : MonoBehaviour
 
         timer = 0f;
         isBlinking = false;
-        playerAnimator.SetTrigger("WakeUp");
+        WakeUp();
     }
 
+
+    public void WakeUp(bool checkpoint = false)
+    {
+        StartCoroutine(WakeNow(checkpoint));
+    }
+
+
+    IEnumerator WakeNow(bool checkpoint)
+    {
+        lockControls = true;
+        if(checkpoint)
+        {
+            transform.position = lastCheckPoint.transform.position;
+        }
+        playerAnimator.SetTrigger("WakeUp");
+        yield return new WaitForSeconds(4f);
+        lockControls = false;
+    }
     public void OnMove(InputAction.CallbackContext context)
     {
         movementData = context.ReadValue<Vector2>();

@@ -12,8 +12,7 @@ public class FallTrigger : MonoBehaviour
         {
             PlayerController pc = other.GetComponent<PlayerController>();
 
-            pc.transform.position = pc.lastCheckPoint.transform.position;
-            pc.playerAnimator.SetTrigger("WakeUp");
+            pc.WakeUp(true);
             
         }
     }
