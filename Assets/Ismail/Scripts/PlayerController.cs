@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
     public GameObject cursor3D;
 
+    public Transform lastCheckPoint;
+
     [Serializable]
     public struct MaterialFootstepPair
     {
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
         timer = 0f;
         isBlinking = false;
+        playerAnimator.SetTrigger("WakeUp");
     }
 
     public void OnMove(InputAction.CallbackContext context)
