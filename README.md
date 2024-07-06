@@ -19,7 +19,6 @@ U31 Unity Takımı
 - 3D
 - Singleplayer
 - Deep Lore
-- 
 
 ## Hedef Kitle
 
@@ -46,20 +45,20 @@ U31 Unity Takımı
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılması kararlaştırılmıştır. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 1 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/43a46359-0096-47d4-aa6e-965d0e3c7f29) 
-![Backlog 2]() 
+![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/6a346cc1-3981-42c6-aede-b4ca6bc73f28) 
+![Backlog 2](https://github.com/isoszsh/project-anna/assets/154831174/a429bfbc-e860-496e-b6e9-afe5e157849a) 
 ![Backlog 3]()
 
 - **Ürün Durumu**: Ekran görüntüleri:
   ![Screenshot 1](-)
   ![Screenshot 2](-)
 
-- **Sprint Review**: 
-Alınan kararlar: 
+- **Sprint Review**: süreç nasıl gitti iyi miydi falan
+Alınan kararlar: Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Herkes görevlerinin çıktıları hakkında bilgilendirmeler yaptı . Biten kısımlar hakkında konuşuldu.
 Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
 
-- **Sprint Retrospective:**
-  - Karakterin tüm mekanikleri tamamlanmıştır.
+- **Sprint Retrospective:**  toplantıda nelerin yapıldığı
+  - Ekibin sprint boyunca yaptığı bireysel görevleri birleştirildi.
   - 
   - 
 
