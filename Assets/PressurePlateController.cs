@@ -12,7 +12,16 @@ public class PressurePlateController : MonoBehaviour
     private AudioSource aus;
     private MeshRenderer mR;
 
+    public bool oneWay;
+    public bool timeActivated;
+    public float time;
+
+    public ActivatedObject activatedObject;
+
     private bool isActive = false;
+    private float timer;
+
+    
 
 
     private void Start()
@@ -22,16 +31,37 @@ public class PressurePlateController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Rigidbody>() != null && !isActive)
+        if(other.GetComponent<Rigidbody>() != null && !isActive && !timeActivated)
         {
             Activate();
         }
     }
 
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponent<Rigidbody>() != null && !isActive && timeActivated)
+        {
+            if(timer < time) {
+                timer += Time.deltaTime;
+            }
+            else
+            {
+                Activate();
+            }
+        }
+    }
+
+
     private void OnTriggerExit(Collider other)
     {
-        Deactivate();
+        if(!oneWay && isActive)
+        {
+            Deactivate();
+        }
+
+        timer = 0;
+       
     }
 
 
@@ -41,6 +71,10 @@ public class PressurePlateController : MonoBehaviour
         mR.material.color = Color.green;
         aus.PlayOneShot(onSFX);
         isActive = true;
+        if (activatedObject)
+        {
+            activatedObject.Activate();
+        }
     }
 
     private void Deactivate()
