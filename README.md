@@ -44,8 +44,8 @@ U31 Unity Takımı
 
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılması kararlaştırılmıştır. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 1 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
 
-- **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/6a346cc1-3981-42c6-aede-b4ca6bc73f28) 
+- **Sprint board update**: Sprint board screenshot: 
+![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/74a8a491-8bf8-4b72-9e05-506f48044979) 
 
 - **Ürün Durumu**: Ekran görüntüleri:
   ![Screenshot 1]()
