@@ -48,17 +48,18 @@ U31 Unity Takımı
 ![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/74a8a491-8bf8-4b72-9e05-506f48044979) 
 
 - **Ürün Durumu**: Ekran görüntüleri:
+  
   ![Screenshot 1](https://github.com/isoszsh/project-anna/assets/154831174/3caf844a-f29f-4779-ab74-b39f047c283a)
   ![Screenshot 2](https://github.com/isoszsh/project-anna/assets/154831174/1fbff295-eac4-41cb-bbec-3c77c458b289) 
   ![Screenshot 3](https://github.com/isoszsh/project-anna/assets/154831174/31ff440e-af36-4b93-bc22-f98fe08c5659)
   ![Screenshot 4](https://github.com/isoszsh/project-anna/assets/154831174/2db880d4-0aa8-4753-a9fc-51b31217a2a9)
   ![Screenshot 5](https://github.com/isoszsh/project-anna/assets/154831174/f8552310-d0b8-45ea-b776-9f4786dca256)
 
-- **Sprint Review**: süreç nasıl gitti iyi miydi falan
+- **Sprint Review**: 
   - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
   - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
 
-- **Sprint Retrospective:**  toplantıda nelerin yapıldığı
+- **Sprint Retrospective:** 
   - 2+2+1 biçiminde süreci hızlandıracak bir gruplandırma yapıldı.
     - Grup 1: İsmail, İncila
     - Grup 2: İbrahim Serhat, İpek
