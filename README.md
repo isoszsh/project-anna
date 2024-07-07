@@ -60,11 +60,11 @@ U31 Unity Takımı
   - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
 
 - **Sprint Retrospective:** 
-  - 2+2+1 biçiminde süreci hızlandıracak bir gruplandırma yapıldı.
+  - Ekip iki gruba bölündü, bir grup oyunun kalan 4 bölümü üzerinde çalışarak ilerlemeye devam edecek; diğer ekip ise oluşturulan bölümlerin eksiklikleri üzerinde çalışacak ve oyunu final aşamasına hazır hale getirecek.
     - Grup 1: İsmail, İncila
-    - Grup 2: İbrahim Serhat, İpek
-    - Destek/Üretim: İrfan
-  - Toplantı sayısının arttırılması düşünüldü.
+    - Grup 2: İbrahim, İpek, İrfan
+  - Toplantıların belirli bir zaman aralığıyla gerçekleştirilmesi kararlaştırıldı.
+  - Üretim aşamasında görev alan ekip üyelerine gelecek bölümlerde ihtiyaç duyulabilecek assetlerin üretimi için listeler hazırlandı.
 
 
 -**Diğer Notlar**:
