@@ -8,11 +8,11 @@ U31 Unity Takımı
 
 ## Oyun İsmi
 
-**Anna**
+**The Ghost of Anna**
 
 ## Oyun Açıklaması
 
-- Anna, 5 duyu organı temelli birçok puzzle ve mini game içeren bir oynanışa sahiptir. Oyuncular, Anna'nın zihninin derinliklerindeki ormandan başlayarak çiçekli bahçelere kadar birçok farklı atmosferi keşfetmeye başlarlar. Anna'da kendi korkularından varolan düşmanlardan kaçarken çeşitli savunma kombinasyonlarını kullanarak üstünlük sağlanır.
+- The Ghost of Anna, derin duygusal içeriğiyle öne çıkan, hikaye odaklı ve keşfetmeye dayalı bir Adventure/Puzzle oyunudur. Oyuncular, genç kız Anna'nın iç dünyasını derinlemesine keşfederken, onun zihnindeki mücadeleleri deneyimler. Bulmacaları çözer, gizemleri ortaya çıkarır ve Anna'nın büyüme ve içsel dönüşüm sürecinde ona rehberlik ederler. Oyunun dokusu ve atmosferi, oyuncuları duygusal olarak etkileyerek, benzersiz ve unutulmaz bir oyun deneyimi sunar.
 
 ## Oyun Özellikleri
 
@@ -51,7 +51,7 @@ U31 Unity Takımı
   ![Screenshot 1]()
   ![Screenshot 2](https://github.com/isoszsh/project-anna/assets/154831174/1fbff295-eac4-41cb-bbec-3c77c458b289) 
   ![Screenshot 3]()
-  ![Screenshot 4](https://github.com/isoszsh/project-anna/assets/154831174/43785512-a0f2-47a0-b3e5-c61f58e3ec20)
+  ![Screenshot 4]()
 
 - **Sprint Review**: süreç nasıl gitti iyi miydi falan
   - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
