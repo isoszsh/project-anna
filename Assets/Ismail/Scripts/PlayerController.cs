@@ -640,7 +640,7 @@ public class PlayerController : MonoBehaviour
     {
  
         
-        if(playerRigidBody.velocity.y < 0 && !isGrounded)
+        if(playerRigidBody.velocity.y < -0.1f && !isGrounded)
         {
             playerAnimator.SetBool("isFalling", true);
         }

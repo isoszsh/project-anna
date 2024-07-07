@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -47,8 +48,20 @@ public class ActivatedObject : MonoBehaviour
         {
             audioSource.Play();
         }
+
+        StartCoroutine(ShakeCamera(5f));
     }
 
+
+    IEnumerator ShakeCamera(float time)
+    {
+        CinemachineBasicMultiChannelPerlin noiseProfile = GameManager.Instance.virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        noiseProfile.m_FrequencyGain = 2f;
+        noiseProfile.m_AmplitudeGain = 2f;
+        yield return new WaitForSeconds(11);
+        noiseProfile.m_FrequencyGain = .25f;
+        noiseProfile.m_AmplitudeGain = .25f;
+    }
     void ActivateWithRigidbodyActivation()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
