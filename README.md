@@ -44,14 +44,14 @@ U31 Unity Takımı
 
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılması kararlaştırılmıştır. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 1 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
 
-- **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/6a346cc1-3981-42c6-aede-b4ca6bc73f28) 
+- **Sprint board update**: Sprint board screenshot: 
+![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/74a8a491-8bf8-4b72-9e05-506f48044979) 
 
 - **Ürün Durumu**: Ekran görüntüleri:
   ![Screenshot 1]()
   ![Screenshot 2](https://github.com/isoszsh/project-anna/assets/154831174/1fbff295-eac4-41cb-bbec-3c77c458b289) 
   ![Screenshot 3]()
-  ![Screenshot 4]()
+  ![Screenshot 4](https://github.com/isoszsh/project-anna/assets/154831174/43785512-a0f2-47a0-b3e5-c61f58e3ec20)
 
 - **Sprint Review**: süreç nasıl gitti iyi miydi falan
   - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
