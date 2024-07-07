@@ -18,6 +18,7 @@ U31 Unity Takımı
 
 - 3D
 - Singleplayer
+- Adventure/Puzzle
 - Deep Lore
 
 ## Hedef Kitle
