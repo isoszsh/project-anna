@@ -48,10 +48,11 @@ U31 Unity Takımı
 ![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/74a8a491-8bf8-4b72-9e05-506f48044979) 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1]()
+  ![Screenshot 1](https://github.com/isoszsh/project-anna/assets/154831174/3caf844a-f29f-4779-ab74-b39f047c283a)
   ![Screenshot 2](https://github.com/isoszsh/project-anna/assets/154831174/1fbff295-eac4-41cb-bbec-3c77c458b289) 
-  ![Screenshot 3]()
-  ![Screenshot 4]()
+  ![Screenshot 3](https://github.com/isoszsh/project-anna/assets/154831174/31ff440e-af36-4b93-bc22-f98fe08c5659)
+  ![Screenshot 4](https://github.com/isoszsh/project-anna/assets/154831174/2db880d4-0aa8-4753-a9fc-51b31217a2a9)
+  ![Screenshot 5](https://github.com/isoszsh/project-anna/assets/154831174/f8552310-d0b8-45ea-b776-9f4786dca256)
 
 - **Sprint Review**: süreç nasıl gitti iyi miydi falan
   - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
