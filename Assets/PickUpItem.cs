@@ -14,7 +14,7 @@ public class PickUpItem : MonoBehaviour
            if( other.CompareTag("Player") )
            {
                 PlayerController pc = other.GetComponent<PlayerController>();
-                if( !pc.pickedItem && Input.GetKeyDown(KeyCode.Y))
+                if( !pc.pickedItem && Input.GetKeyDown(KeyCode.F))
                 {
                     StartCoroutine(PickMe(pc));
                 }

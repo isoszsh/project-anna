@@ -17,6 +17,7 @@ public class LizardTrigger : MonoBehaviour
         {
             lizardAnimator.transform.position = lizardNewPosition.position;
             lizardAnimator.transform.rotation = lizardNewPosition.rotation;
+            lizardAnimator.GetComponent<DialogueStarter>().readyToTalk = true;
             dialogueCanvas.SetActive(true);
             lizardAudioSource.Play();
             lizardAnimator.SetTrigger("Ready");

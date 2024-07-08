@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour
     public Transform pickPoint;
     public GameObject pickedItem;
 
+    public DialogueData dialogueData;
+
     private void Start()
     {
         playerRigidBody = GetComponent<Rigidbody>();
@@ -113,7 +115,6 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        Debug.Log("Jump");
         playerRigidBody.velocity = Vector3.zero;
         playerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         if(isGrounded)
@@ -130,6 +131,11 @@ public class PlayerController : MonoBehaviour
             HandleInteraction();
         }
 
+
+
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+        }
 
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -148,25 +154,31 @@ public class PlayerController : MonoBehaviour
         }
 
       
-
-        if(Input.GetKeyDown(KeyCode.F) && !isThrowing)
+        if(pickedItem != null)
         {
-            
-            if(!isAiming)
+            if(pickedItem.CompareTag("Stone"))
             {
-                lockControls = true;
-                StartAim();
-                isAiming = true;
-            }
-            else
-            {
-                StartCoroutine(StartThrow());
-            }
-            
+                if (Input.GetKeyDown(KeyCode.F) && !isThrowing)
+                {
 
+                    if (!isAiming)
+                    {
+                        lockControls = true;
+                        StartAim();
+                        isAiming = true;
+                    }
+                    else
+                    {
+                        StartCoroutine(StartThrow());
+                    }
+
+
+                }
+            }
         }
+     
 
-        if(pickedItem != null && Input.GetKeyDown(KeyCode.Y))
+        if(pickedItem != null && pickedItem.CompareTag("Plant") && Input.GetKeyDown(KeyCode.F))
         {
             if (pickedItem.GetComponent<PickUpItem>().type == "Plant")
             {

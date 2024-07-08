@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private Animator levelNameAnimator;
 
     public CinemachineVirtualCamera virtualCamera;
+    public PlayerController playerController;
 
     // Singleton instance property
     public static GameManager Instance

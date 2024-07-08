@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9bc2737785d494fb62a76eda54c770, type: 3}
+  m_Name: LizardDialogue
+  m_EditorClassIdentifier: 
+  dialogue:
+    npcName: Lizard
+    sentences:
+    - text: Hey are you trying to rob my house?
+      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    options:
+    - question: Who are you?
+      answers:
+      - text: I am a lizard. I have lived in these lands for centuries. As you can
+          see, I farm, but I haven't been able to enter my home for a long time;
+          I have to sleep outside. They've dubbed me the homeless lizard.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    - question: Why can't you enter your house?
+      answers:
+      - text: Come closer! I'll tell you a secret. There are tiny but very dangerous
+          creatures living here, we call them Arachnis. They call themselves Oopsies.
+          A few weeks ago, the Oopsies stole the key to my house.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      - text: There must be a hideout around here somewhere. I've heard they stash
+          everything they steal in a high place, but no one has ever seen or been
+          there before. If you can talk to them and help me get my house key back,
+          I'm sure there will be something useful for you in my house.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    - question: What do you know about butterflies?
+      answers:
+      - text: Butterflies are beautiful creatures. Contrary to popular belief, they
+          can live for quite a long time here, but I suppose you're not asking about
+          that.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      - text: According to an old legend, butterflies, due to their heightened senses,
+          may be trying to help you find something you deeply desire, but of course,
+          I don't know if those butterflies still exist.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
