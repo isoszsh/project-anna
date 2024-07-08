@@ -23,7 +23,7 @@ MonoBehaviour:
       - text: I am a lizard. I have lived in these lands for centuries. As you can
           see, I farm, but I haven't been able to enter my home for a long time;
           I have to sleep outside. They've dubbed me the homeless lizard.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
     - question: Why can't you enter your house?
       answers:
       - text: Come closer! I'll tell you a secret. There are tiny but very dangerous
@@ -43,5 +43,6 @@ MonoBehaviour:
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
       - text: According to an old legend, butterflies, due to their heightened senses,
           may be trying to help you find something you deeply desire, but of course,
-          I don't know if those butterflies still exist.
+          I don't know if those butterflies still exist or if they are searching
+          for something in my house.
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}

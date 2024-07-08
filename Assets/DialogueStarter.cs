@@ -10,6 +10,8 @@ public class DialogueStarter : MonoBehaviour
 
     public Sprite storedSprite;
 
+
+    public Sprite afterDialogueSprite;
     public Image characterHeadImage;
 
     public GameObject dialogueCanvas;
@@ -19,7 +21,7 @@ public class DialogueStarter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && readyToTalk)
         {
             storedSprite = characterHeadImage.sprite;
             characterHeadImage.sprite = DialogueManager.Instance.dialogueSprite;
@@ -31,7 +33,7 @@ public class DialogueStarter : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && readyToTalk)
         {
             if (Input.GetKeyDown(KeyCode.F) && !DialogueManager.Instance.isDialogueActive)
             {
@@ -43,9 +45,17 @@ public class DialogueStarter : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && readyToTalk)
         {
-            characterHeadImage.sprite = storedSprite;
+            
+            if(afterDialogueSprite != null)
+            {
+                characterHeadImage.sprite = afterDialogueSprite;
+            }
+            else
+            {
+                characterHeadImage.sprite = storedSprite;
+            }
             storedSprite = null;
             DialogueManager.Instance.audioSource = null;
             dialogueCanvas.SetActive(true);
