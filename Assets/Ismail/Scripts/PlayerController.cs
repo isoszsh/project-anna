@@ -79,7 +79,6 @@ public class PlayerController : MonoBehaviour
 
         timer = 0f;
         isBlinking = false;
-        WakeUp();
     }
 
 

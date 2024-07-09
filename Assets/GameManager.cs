@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public CinemachineVirtualCamera virtualCamera;
     public PlayerController playerController;
+    public GameObject butterfly;
+    public AudioSource StoryAudioSource;
 
     // Singleton instance property
     public static GameManager Instance
@@ -35,9 +37,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+
+    public void Play()
+    {
+        Animation anim = butterfly.GetComponent<Animation>();
+        anim["Butterfly_Fly"].speed = 1f;
+        anim.Play("Butterfly_Fly");
+        GameObject butterflyParent = butterfly.transform.parent.gameObject;
+
+        butterflyParent.GetComponent<Animator>().SetTrigger("Play");
+        StartCoroutine(Story());
+
+        
+    }
+
+
+    IEnumerator Story()
+    {
+        yield return new WaitForSeconds(1);
+        StoryAudioSource.Play();
+        yield return new WaitForSeconds(40);
+        levelNameAnimator = levelNameText.GetComponent<Animator>();
+        levelNameAnimator.SetTrigger("LevelName");
+        playerController.enabled = true;
+        playerController.playerAnimator.SetTrigger("Play");
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
+
+        playerController.enabled = false;
         // Singleton instance'ý bu GameManager nesnesine ata
         if (instance == null)
         {
@@ -53,8 +84,7 @@ public class GameManager : MonoBehaviour
         }
 
         // levelNameText üzerindeki Animator bileþenini al
-        levelNameAnimator = levelNameText.GetComponent<Animator>();
-        levelNameAnimator.SetTrigger("LevelName");
+        
     }
 
     // Update is called once per frame
