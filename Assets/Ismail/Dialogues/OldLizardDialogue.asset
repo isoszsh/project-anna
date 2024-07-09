@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9bc2737785d494fb62a76eda54c770, type: 3}
+  m_Name: OldLizardDialogue
+  m_EditorClassIdentifier: 
+  dialogue:
+    npcName: Lizard (But 100 Times Older)
+    sentences:
+    - text: Looks like you finally made it..
+      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    options:
+    - question: What Happened?
+      answers:
+      - text: You've been home for 200 years. I waited for you to find yourself and
+          come out. Finally, you did.
+        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
+    - question: What happened to the surroundings?
+      answers:
+      - text: A lot has changed in 200 years. Harsh winds blew, drought came, and
+          everything was shattered. The world is no longer the same, and almost nothing
+          lives here anymore.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    - question: What will happen now?
+      answers:
+      - text: Life progresses on a different path for everyone, Anna. My journey
+          is almost complete, and when I look back, I see many beautiful things.
+          You must find yourself and complete your own journey as well.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      - text: Now go and fulfill your destiny!
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}

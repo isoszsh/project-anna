@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -68,7 +69,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        playerController.enabled = false;
+        if(SceneManager.GetActiveScene().name == "Level1")
+        {
+            playerController.enabled = false;
+        }
+       
         // Singleton instance'ý bu GameManager nesnesine ata
         if (instance == null)
         {
