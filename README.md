@@ -65,7 +65,7 @@ U31 Unity Takımı
     - Grup 1: İsmail, İncila
     - Grup 2: İbrahim, İpek, İrfan
   - Toplantıların belirli bir zaman aralığıyla gerçekleştirilmesi kararlaştırıldı.
-  - Üretim aşamasında görev alan ekip üyelerine gelecek bölümlerde ihtiyaç duyulabilecek assetlerin üretimi için listeler hazırlandı.
+  - Üretim aşamasında görev alan ekip üyelerine gelecek bölümlerde ihtiyaç duyulabilecek assetlerin üretimi için listeler hazırlandı
 
 
 -**Diğer Notlar**:
