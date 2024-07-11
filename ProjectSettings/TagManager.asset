@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MoveObject
   - ButtonObject
+  - Note
   layers:
   - Default
   - TransparentFX
