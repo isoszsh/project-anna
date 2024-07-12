@@ -26,6 +26,7 @@ public class NoteLoader : MonoBehaviour
     public GameObject notePrefab; // Nota için prefab
     public Transform[] spawnPoints; // Her sütun için spawn noktalarý
     public AudioSource audioSource; // Ana müzik için AudioSource
+    public AudioSource audioSource2;
 
     public float beforeTime = 0;
 
@@ -75,10 +76,11 @@ public class NoteLoader : MonoBehaviour
     IEnumerator StartSong()
     {
 
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(1.5f);
         startTime = (float)AudioSettings.dspTime; // Müziðin baþlama zamanýný kaydet
         audioSource.PlayScheduled(startTime); // Müziði baþlat (planlanmýþ zamanla)
-        
+        audioSource2.PlayScheduled(startTime);
+
     }
     IEnumerator SpawnNotes()
     {

@@ -6,10 +6,6 @@ public class NoteMovement : MonoBehaviour
     public MeshRenderer noteRenderer;
     public Material[] materials; // Bu materyaller Unity Editör'de atanmalý
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         transform.Translate(Vector3.back * speed * Time.deltaTime); // Negatif z ekseninde hareket
@@ -17,8 +13,6 @@ public class NoteMovement : MonoBehaviour
 
     public void SetColor(string colorName)
     {
- 
-
         // Renk adýna göre Material nesnesi oluþturma
         switch (colorName.ToLower())
         {

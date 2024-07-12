@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1468465178861892657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.021, y: 0.04, z: -111.791}
+  m_LocalPosition: {x: -27.021, y: 0.04, z: -111.843}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d8892d3983fd147b08ec1ce3d42547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.5
+  speed: 5
   noteRenderer: {fileID: 7838690125940927132}
   materials:
   - {fileID: 2100000, guid: ddd0b875109f66e498d15e1d53e83746, type: 2}
@@ -150,6 +150,6 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 124
-  m_CollisionDetection: 1
+  m_Interpolate: 1
+  m_Constraints: 118
+  m_CollisionDetection: 2
