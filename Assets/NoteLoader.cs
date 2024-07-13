@@ -34,7 +34,7 @@ public class NoteLoader : MonoBehaviour
 
     void Start()
     {
-        LoadNotes(); // Notalarý yükle
+         // Notalarý yükle
 
        
          // Notalarý spawn etmek için coroutine baþlat
@@ -42,6 +42,7 @@ public class NoteLoader : MonoBehaviour
 
     public void StartFight()
     {
+        LoadNotes();
         StartCoroutine(SpawnNotes());
         StartCoroutine(StartSong());
     }

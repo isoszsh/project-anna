@@ -67,6 +67,7 @@ public class SpiderController : MonoBehaviour
         gameCam.gameObject.SetActive(true);
         spiderCam.gameObject.SetActive(false);
         AnnaCam.gameObject.SetActive(false);
+        aus.Stop();
         notesLoader.StartFight(); 
     }
 }
