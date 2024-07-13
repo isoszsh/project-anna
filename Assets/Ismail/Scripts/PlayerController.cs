@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     public Material faceMaterial;
     public Texture[] faceTextures;
+    public Texture angerTexture;
     public AudioClip yawnSFX;
 
     private CapsuleCollider playerCollider;
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
     private bool isAiming;
     private bool isSneaking;
     private bool isThrowing = false;
+    private bool isAngry = false;
 
     public bool lockControls;
 
@@ -68,6 +70,7 @@ public class PlayerController : MonoBehaviour
     public GameObject pickedItem;
 
     public DialogueData dialogueData;
+
 
     private void Start()
     {
@@ -112,6 +115,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Anger()
+    {
+        StartCoroutine(AngerCoroutine());
+    }
+
+
+    IEnumerator AngerCoroutine()
+    {
+        isAngry = true;
+        faceMaterial.SetTexture("_BaseMap", angerTexture);
+        faceMaterial.SetTexture("_EmissionMap", angerTexture);
+        yield return new WaitForSeconds(3f);
+        faceMaterial.SetTexture("_BaseMap", faceTextures[0]);
+        faceMaterial.SetTexture("_EmissionMap", faceTextures[0]);
+        isAngry = false;
+    }
     private void Jump()
     {
         playerRigidBody.velocity = Vector3.zero;
@@ -187,14 +206,18 @@ public class PlayerController : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if (timer >= 1f)
+        if(!isAngry)
         {
-            if (!isBlinking)
+            if (timer >= 1f)
             {
-                StartCoroutine(Blink());
+                if (!isBlinking)
+                {
+                    StartCoroutine(Blink());
+                }
+                timer = 0f;
             }
-            timer = 0f;
         }
+       
         
     }
 

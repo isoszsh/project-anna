@@ -36,11 +36,15 @@ public class NoteLoader : MonoBehaviour
     {
         LoadNotes(); // Notalarý yükle
 
-        StartCoroutine(SpawnNotes());
-        StartCoroutine(StartSong());
+       
          // Notalarý spawn etmek için coroutine baþlat
     }
 
+    public void StartFight()
+    {
+        StartCoroutine(SpawnNotes());
+        StartCoroutine(StartSong());
+    }
     void LoadNotes()
     {
         string jsonText = File.ReadAllText(jsonFilePath);
