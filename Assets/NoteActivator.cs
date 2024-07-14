@@ -10,7 +10,6 @@ public class NoteActivator : MonoBehaviour
     {
         if (other.CompareTag("Note"))
         {
-            Debug.Log("Note Entered: " + other.gameObject.name);
             currentObject = other.gameObject;
         }
     }
@@ -21,7 +20,6 @@ public class NoteActivator : MonoBehaviour
         {
             Destroy(currentObject);
             currentObject = null;
-            Debug.Log("Key Pressed: " + keyToPress);
         }
     }
 
@@ -29,11 +27,8 @@ public class NoteActivator : MonoBehaviour
     {
         if (other.CompareTag("Note"))
         {
-            Debug.Log("Note Exited: " + other.gameObject.name);
-            if (currentObject == other.gameObject)
-            {
                 currentObject = null;
-            }
+                Destroy(other.gameObject);
         }
     }
 }

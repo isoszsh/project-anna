@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueStarter : MonoBehaviour
+public class DialogueStarter : Event
 {
     public DialogueData dialogueData;
 
@@ -26,20 +26,18 @@ public class DialogueStarter : MonoBehaviour
             storedSprite = characterHeadImage.sprite;
             characterHeadImage.sprite = DialogueManager.Instance.dialogueSprite;
             DialogueManager.Instance.audioSource = GetComponent<AudioSource>();
+            GameManager.Instance.playerController.currentEvent = this;
         }
         
     }
 
 
-    private void OnTriggerStay(Collider other)
+    public override void TriggerEvent()
     {
-        if (other.CompareTag("Player") && readyToTalk)
+        if (!DialogueManager.Instance.isDialogueActive)
         {
-            if (Input.GetKeyDown(KeyCode.F) && !DialogueManager.Instance.isDialogueActive)
-            {
-                DialogueManager.Instance.StartDialogue(dialogueData.dialogue);
-                dialogueCanvas.SetActive(false);
-            }
+            DialogueManager.Instance.StartDialogue(dialogueData.dialogue);
+            dialogueCanvas.SetActive(false);
         }
     }
 
@@ -47,19 +45,20 @@ public class DialogueStarter : MonoBehaviour
     {
         if (other.CompareTag("Player") && readyToTalk)
         {
-            
-            if(afterDialogueSprite != null)
+            if (GameManager.Instance.playerController.currentEvent != null && GameManager.Instance.playerController.currentEvent == this)
             {
-                characterHeadImage.sprite = afterDialogueSprite;
+                if (afterDialogueSprite != null)
+                {
+                    characterHeadImage.sprite = afterDialogueSprite;
+                }
+                else
+                {
+                    characterHeadImage.sprite = storedSprite;
+                }
+                storedSprite = null;
+                DialogueManager.Instance.audioSource = null;
+                dialogueCanvas.SetActive(true);
             }
-            else
-            {
-                characterHeadImage.sprite = storedSprite;
-            }
-            storedSprite = null;
-            DialogueManager.Instance.audioSource = null;
-            dialogueCanvas.SetActive(true);
-        }
-        
+        }   
     }
 }

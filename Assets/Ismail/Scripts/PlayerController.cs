@@ -68,8 +68,13 @@ public class PlayerController : MonoBehaviour
 
     public Transform pickPoint;
     public GameObject pickedItem;
+    public GameObject willPick;
+
+    public Event currentEvent;
 
     public DialogueData dialogueData;
+
+    public GameObject scannerPrefab;
 
 
     private void Start()
@@ -144,16 +149,53 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            HandleInteraction();
+            if(currentEvent)
+            {
+                currentEvent.TriggerEvent();
+            }
+            else if(pickedItem != null)
+            {
+                string ItemType = pickedItem.GetComponent<PickUpItem>().type;
+                if (ItemType == "Stone" && !isThrowing)
+                {
+                    if (!isAiming)
+                    {
+                        lockControls = true;
+                        StartAim();
+                        isAiming = true;
+                    }
+                    else
+                    {
+                        StartCoroutine(StartThrow());
+                    }
+                }
+                else if (ItemType == "Flute")
+                {
+                    StartCoroutine(PlayFlute());
+                }
+                else if (ItemType == "Plant")
+                {
+                    StartCoroutine(Plant());
+                }
+            }
+            else
+            {
+                if(willPick !=  null)
+                {
+                    StartCoroutine(PickUp());
+                }
+                else
+                {
+                    HandleInteraction();
+                }
+            }
+
+            
         }
 
 
-
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-        }
 
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -171,38 +213,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-      
-        if(pickedItem != null)
-        {
-            if(pickedItem.CompareTag("Stone"))
-            {
-                if (Input.GetKeyDown(KeyCode.F) && !isThrowing)
-                {
-
-                    if (!isAiming)
-                    {
-                        lockControls = true;
-                        StartAim();
-                        isAiming = true;
-                    }
-                    else
-                    {
-                        StartCoroutine(StartThrow());
-                    }
-
-
-                }
-            }
-        }
+     
      
 
-        if(pickedItem != null && pickedItem.CompareTag("Plant") && Input.GetKeyDown(KeyCode.F))
-        {
-            if (pickedItem.GetComponent<PickUpItem>().type == "Plant")
-            {
-                StartCoroutine(Plant());
-            }
-        }
+       
 
         timer += Time.deltaTime;
 
@@ -219,6 +233,33 @@ public class PlayerController : MonoBehaviour
         }
        
         
+    }
+
+    IEnumerator PickUp()
+    {
+        playerAnimator.SetTrigger("Pick");
+        lockControls = true;
+        yield return new WaitForSeconds(.7f);
+        willPick.transform.position = pickPoint.position;
+        willPick.transform.rotation = pickPoint.rotation;
+        willPick.transform.parent = pickPoint.parent;
+        willPick.GetComponent<BoxCollider>().enabled = false;
+        yield return new WaitForSeconds(2f);
+        pickedItem = willPick;
+        willPick = null;
+        lockControls = false;
+    }
+    IEnumerator PlayFlute()
+    {
+
+        Vector3 instantiatePos = new Vector3(transform.position.x,0,transform.position.z);
+        Instantiate(scannerPrefab, instantiatePos, Quaternion.identity);
+        yield return new WaitForSeconds(.3f);
+        Instantiate(scannerPrefab, instantiatePos, Quaternion.identity);
+        yield return new WaitForSeconds(.3f);
+        Instantiate(scannerPrefab, instantiatePos, Quaternion.identity);
+        yield return new WaitForSeconds(.3f);
+
     }
 
 
