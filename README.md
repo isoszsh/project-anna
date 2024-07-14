@@ -1,6 +1,6 @@
 ## **Takım İsmi**
 
-U31 Unity Takımı
+**Imagine 5**
 
 ## Takım Elemanları
 
@@ -67,18 +67,40 @@ U31 Unity Takımı
   - Toplantıların belirli bir zaman aralığıyla gerçekleştirilmesi kararlaştırıldı.
   - Üretim aşamasında görev alan ekip üyelerine gelecek bölümlerde ihtiyaç duyulabilecek assetlerin üretimi için listeler hazırlandı
 
+# Sprint 2
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
+
+- **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılmasına devam edilmiştir. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 2 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
+
+- **Sprint board update**: Sprint board screenshot: 
+![Backlog 2](https://github.com/isoszsh/project-anna/assets/154831174/74a8a491-8bf8-4b72-9e05-506f48044979)
+
+- **Ürün Durumu**: Ekran görüntüleri:
+  
+  ![Screenshot 1]()
+  ![Screenshot 2]() 
+  ![Screenshot 3]()
+  ![Screenshot 4]()
+  ![Screenshot 5]()
+
+- **Sprint Review**: 
+  - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
+  - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
+
+- **Sprint Retrospective:** 
+  - Ekip iki gruba bölündü, bir grup oyunun kalan 4 bölümü üzerinde çalışarak ilerlemeye devam edecek; diğer ekip ise oluşturulan bölümlerin eksiklikleri üzerinde çalışacak ve oyunu final aşamasına hazır hale getirecek.
+    - Grup 1: İsmail, İncila
+    - Grup 2: İbrahim, İpek, İrfan
+  - Toplantıların belirli bir zaman aralığıyla gerçekleştirilmesi kararlaştırıldı.
+  - Üretim aşamasında görev alan ekip üyelerine gelecek bölümlerde ihtiyaç duyulabilecek assetlerin üretimi için listeler hazırlandı
+
+
+# Sprint 3
+
+---
 
 -**Diğer Notlar**:
 - N/A
 
 ---
-
-# Sprint 2
-
-
----
-
-# Sprint 3
-
----
-  
