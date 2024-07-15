@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using Cinemachine;
+using System.Globalization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -39,6 +40,8 @@ public class PlayerController : MonoBehaviour
         public AudioClip[] footstepSounds;
     }
 
+    public AudioClip diggingSfx;
+
     public MaterialFootstepPair[] materialFootstepPairs;
     public LayerMask raycastLayerMask;
     public GameObject groundCheck;
@@ -71,10 +74,12 @@ public class PlayerController : MonoBehaviour
     public GameObject willPick;
 
     public Event currentEvent;
+    public SoundReflector currentReflector;
 
     public DialogueData dialogueData;
 
     public GameObject scannerPrefab;
+    public AudioClip scannerClip;
 
 
     private void Start()
@@ -114,7 +119,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        if (context.performed && isGrounded && !lockControls)
         {
             Jump();
         }
@@ -149,7 +154,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.X) && !lockControls)
+        {
+            StartCoroutine(Drop());
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.F) && !lockControls)
         {
             if(currentEvent)
             {
@@ -178,6 +189,10 @@ public class PlayerController : MonoBehaviour
                 else if (ItemType == "Plant")
                 {
                     StartCoroutine(Plant());
+                }
+                else if (ItemType == "Shovel")
+                {
+                    StartCoroutine(Dig());
                 }
             }
             else
@@ -235,6 +250,30 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    IEnumerator Drop()
+    {
+        lockControls = true;
+        pickedItem.transform.parent = null;
+        pickedItem.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        string itemType = pickedItem.GetComponent<PickUpItem>().type;
+        float itemHeight = 0;
+        if (itemType == "Shovel")
+        {
+            itemHeight = 0.278f;
+        }
+        else if (itemType == "Plant")
+        {
+            itemHeight = 0;
+        }
+        
+        pickedItem.transform.position = new Vector3(pickedItem.transform.position.x, itemHeight, pickedItem.transform.position.z);
+        pickedItem.GetComponent<BoxCollider>().enabled = true;
+        pickedItem = null;
+        lockControls = false;
+        willPick = null;
+        yield return null;
+    }
     IEnumerator PickUp()
     {
         playerAnimator.SetTrigger("Pick");
@@ -249,9 +288,39 @@ public class PlayerController : MonoBehaviour
         willPick = null;
         lockControls = false;
     }
+
+    IEnumerator Dig()
+    {
+        lockControls = true;
+        playerAnimator.SetTrigger("Dig");
+        audioSource.PlayOneShot(diggingSfx);
+        Vector3 storedPos = pickedItem.transform.localPosition;
+        Quaternion storedRotation = pickedItem.transform.localRotation;
+        Vector3 shovelPos = new Vector3(0.00282f, 0.00255f, 0.00112f);
+        Quaternion ShovelRotation = Quaternion.Euler(200.269f, -3.300995f, 51.412f);
+        pickedItem.transform.localPosition = shovelPos;
+        pickedItem.transform.localRotation = ShovelRotation;
+        if (currentReflector != null)
+        {
+            StartCoroutine(currentReflector.DigReflector());
+            yield return new WaitForSeconds(5f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+            Instantiate(GameManager.Instance.holePrefab, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+            yield return new WaitForSeconds(4f);
+        }
+        
+        
+        
+        pickedItem.transform.localPosition = storedPos;
+        pickedItem.transform.localRotation = storedRotation;
+        lockControls = false;
+    }
     IEnumerator PlayFlute()
     {
-
+        audioSource.PlayOneShot(scannerClip);
         Vector3 instantiatePos = new Vector3(transform.position.x,0,transform.position.z);
         Instantiate(scannerPrefab, instantiatePos, Quaternion.identity);
         yield return new WaitForSeconds(.3f);

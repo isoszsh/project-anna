@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject butterfly;
     public AudioSource StoryAudioSource;
 
+    public GameObject holePrefab;
+
     // Singleton instance property
     public static GameManager Instance
     {

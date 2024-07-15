@@ -36,7 +36,16 @@ public class DialogueStarter : Event
     {
         if (!DialogueManager.Instance.isDialogueActive)
         {
-            DialogueManager.Instance.StartDialogue(dialogueData.dialogue);
+            if(GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>())
+            {
+                ExtraData ed = GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>();
+                DialogueManager.Instance.StartDialogue(ed.DialogueData.dialogue);
+            }
+            else
+            {
+                DialogueManager.Instance.StartDialogue(dialogueData.dialogue);
+            }
+           
             dialogueCanvas.SetActive(false);
         }
     }
@@ -58,6 +67,8 @@ public class DialogueStarter : Event
                 storedSprite = null;
                 DialogueManager.Instance.audioSource = null;
                 dialogueCanvas.SetActive(true);
+
+                GameManager.Instance.playerController.currentEvent = null;
             }
         }   
     }

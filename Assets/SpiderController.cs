@@ -68,6 +68,7 @@ public class SpiderController : MonoBehaviour
         spiderCam.gameObject.SetActive(false);
         AnnaCam.gameObject.SetActive(false);
         aus.Stop();
-        notesLoader.StartFight(); 
+        notesLoader.StartFight();
+        GameManager.Instance.playerController.playerAnimator.SetBool("PlayingPiano", true);
     }
 }

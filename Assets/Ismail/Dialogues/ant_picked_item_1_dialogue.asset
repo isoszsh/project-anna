@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9bc2737785d494fb62a76eda54c770, type: 3}
+  m_Name: ant_picked_item_1_dialogue
+  m_EditorClassIdentifier: 
+  dialogue:
+    npcName: Ant
+    sentences:
+    - text: Aww looks like you found something
+      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    options:
+    - question: is this your batteries?
+      answers:
+      - text: Let me look
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      - text: No, unfortunately. This is a lost chapter from a book written by the
+          king 1000 years ago. It's probably worth thousands of kilograms of gold,
+          but the batteries are not here. I'm sorry.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}

@@ -1933,12 +1933,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5187988241793849998}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1803304022 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1061757854145883983, guid: 43579104e86056c4d95a973fbd0ce4b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 5187988241793849998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1852917642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1996,12 +1990,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7986b2d54ec33f4b8d0dd855c370967, type: 3}
---- !u!4 &2024779914 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 565367252443215780, guid: 43579104e86056c4d95a973fbd0ce4b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 5187988241793849998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2045940860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2242,12 +2230,12 @@ PrefabInstance:
         type: 3}
       propertyPath: restPoint
       value: 
-      objectReference: {fileID: 2024779914}
+      objectReference: {fileID: 0}
     - target: {fileID: 675375408909728526, guid: feacc865c01910847ba16d6443bb64c1,
         type: 3}
       propertyPath: sneakRestPoint
       value: 
-      objectReference: {fileID: 1803304022}
+      objectReference: {fileID: 0}
     - target: {fileID: 675375408909728526, guid: feacc865c01910847ba16d6443bb64c1,
         type: 3}
       propertyPath: playerController
@@ -2370,6 +2358,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
+        type: 3}
+      propertyPath: pickPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
+        type: 3}
+      propertyPath: handTransform
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2687690020015727741, guid: 43579104e86056c4d95a973fbd0ce4b7,
         type: 3}
