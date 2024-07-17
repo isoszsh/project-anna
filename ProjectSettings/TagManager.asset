@@ -20,10 +20,10 @@ TagManager:
   - MoveObject
   - Butterfly
   - Door
-  - 
-  - 
-  - 
-  - 
+  - StencilLayer1
+  - StencilLayer2
+  - StencilLayer3
+  - StencilLayer4
   - 
   - 
   - 
