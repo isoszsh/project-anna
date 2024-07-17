@@ -194,6 +194,10 @@ public class PlayerController : MonoBehaviour
                 {
                     StartCoroutine(Dig());
                 }
+                else if(ItemType == "Brush")
+                {
+                    StartCoroutine(Paint());
+                }
             }
             else
             {
@@ -248,6 +252,13 @@ public class PlayerController : MonoBehaviour
         }
        
         
+    }
+
+
+    IEnumerator Paint()
+    {
+        playerAnimator.SetTrigger("Paint");
+        yield return null;
     }
 
     IEnumerator Drop()

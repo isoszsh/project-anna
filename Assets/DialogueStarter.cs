@@ -36,15 +36,23 @@ public class DialogueStarter : Event
     {
         if (!DialogueManager.Instance.isDialogueActive)
         {
-            if(GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>())
+            if(GameManager.Instance.playerController.pickedItem != null)
             {
-                ExtraData ed = GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>();
-                DialogueManager.Instance.StartDialogue(ed.DialogueData.dialogue);
+                if (GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>())
+                {
+                    ExtraData ed = GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>();
+                    DialogueManager.Instance.StartDialogue(ed.DialogueData.dialogue);
+                }
+                else
+                {
+                    DialogueManager.Instance.StartDialogue(dialogueData.dialogue);
+                }
             }
             else
             {
                 DialogueManager.Instance.StartDialogue(dialogueData.dialogue);
             }
+            
            
             dialogueCanvas.SetActive(false);
         }
