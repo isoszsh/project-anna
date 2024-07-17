@@ -15,33 +15,30 @@ MonoBehaviour:
   dialogue:
     npcName: Golem
     sentences:
-    - text: I entered a competition with the cicadas, but I am about to lose.
+    - text: Well, I can't distinguish colors; I'm a golem.
       audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
     options:
-    - question: Why are you competing with the cicadas?
+    - question: Why are you complaining about colors?
       answers:
-      - text: According to an ancient book, there is a rivalry between cicadas and
-          ants. Every year, under the name of the Competition Festival, we ants hold
-          a contest and, in the end, have a feast where we eat the food we have collected
-          during the process.
+      - text: Every golem has to prove themselves after reaching a certain age. I
+          need to prove myself by solving this ancient puzzle, but it involves colors,
+          and I'm colorblind.
         audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
-    - question: Why aren't you working?
+    - question: Which ancient puzzle?
       answers:
-      - text: I really want to work, but I lost the batteries for my antennas in
-          a storm that just passed through, so I can't work right now.
+      - text: There is an ancient puzzle just a little further from here. It represents
+          the world and space, but I think it requires doing something with colors.
+          Since I can't distinguish colors, I didn't understand anything.
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: For an ant to navigate and function properly, its antennas are crucial.
-          I'm afraid to even move because my antennas' batteries are dead, and I
-          don't want to get lost. I can't even send signals to my friends. I'm stuck
-          here.
+      - text: If I solve the puzzle, I will be able to start a family and live happily
+          with the one I love. He spends every day napping on the bridge while waiting
+          for me.
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-    - question: Can I help you?
+    - question: Can I take a look at the puzzle too?
       answers:
-      - text: I would be very happy! The batteries for my antennas are round and
-          very thin. I think they might have been buried in the sand during the sandstorm,
-          but I'm afraid to even search for them.
+      - text: Of course, you can take a look. Don't forget to grab the brush on the
+          table before you go.
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: If you want to help me, you can bring two batteries. I'll get my antennas
-          working again and can go back to work with my friends. If you like, I can
-          also give you one of my own tools. Maybe you need something sharp.
+      - text: If you manage to solve it, could you tell everyone that I solved it
+          instead of you? That way, I can pass the test and move on with my life.
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
