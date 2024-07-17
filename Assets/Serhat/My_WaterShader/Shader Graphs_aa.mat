@@ -39,19 +39,21 @@ Material:
     m_Ints: []
     m_Floats:
     - _FoamAmount: 1
-    - _FoamCutOff: 1.03
-    - _FoamScale: 1035.5
-    - _FoamSpeed: 0.05
+    - _FoamCutOff: 1.15
+    - _FoamScale: 1000
+    - _FoamSpeed: 0.2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReflectionScale: 2
     - _ReflectionSpeed: 0.02
     - _ReflectionStrenght: 5
-    - _WaterDepth: 5.1
+    - _WaterDeepFloat: 10
+    - _WaterDepth: 5.4
     m_Colors:
     - _DeepWater: {r: 0, g: 0.19655418, b: 1, a: 0.5529412}
+    - _DeepstColor: {r: 0, g: 0.04957464, b: 0.2528302, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShallowWater: {r: 0, g: 1, b: 0.9546881, a: 0.09803922}
+    - _ShallowWater: {r: 0, g: 1, b: 0.9529412, a: 0.09803922}
   m_BuildTextureStacks: []
 --- !u!114 &5127430128734852085
 MonoBehaviour:
