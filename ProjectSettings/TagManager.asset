@@ -24,8 +24,8 @@ TagManager:
   - StencilLayer2
   - StencilLayer3
   - StencilLayer4
-  - 
-  - 
+  - NoTunicEffectLightLayer
+  - TunicEffectLightLayer
   - 
   - 
   - 

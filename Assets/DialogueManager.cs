@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI npcNameText;
     public TextMeshProUGUI dialogueText;
     public Button[] optionButtons;
-    public AudioSource audioSource; // AudioSource bileþeni ekleyin
+    public AudioSource audioSource; // AudioSource bileï¿½eni ekleyin
     private Queue<DialogueSentence> sentences;
     private Dialogue currentDialogue;
 
@@ -95,6 +95,13 @@ public class DialogueManager : MonoBehaviour
         currentSentence = sentence.text;
 
         StopAllCoroutines();
+
+        if(dialogueText.GetComponent<EnhancedText>() != null) //EÄŸer EnhancedText bileÅŸeni varsa ÅŸu anki textin wobble indekslerini ayarla
+        {
+            dialogueText.GetComponent<EnhancedText>().isWobbly = false;
+            dialogueText.GetComponent<EnhancedText>().SetAllIndices(currentSentence);
+        }
+
         StartCoroutine(TypeSentence(currentSentence));
 
         if (sentence.audioClip != null)
@@ -114,17 +121,34 @@ public class DialogueManager : MonoBehaviour
     {
         HideOptions();
         isTyping = true;
+
+        
+        if(dialogueText.GetComponent<EnhancedText>() != null) //EÄŸer EnhancedText bileÅŸeni varsa ÅŸu anki textin wobble indekslerini ayarla
+        {
+            dialogueText.GetComponent<EnhancedText>().isWobbly = false;
+            dialogueText.GetComponent<EnhancedText>().SetAllIndices(currentSentence);
+        }
+
         dialogueText.text = "";
 
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            if(dialogueText.GetComponent<EnhancedText>() != null) // EÄŸer EnhancedText bileÅŸeni varsa wobble efektini uygula
+            {
+                dialogueText.GetComponent<EnhancedText>().WooblyUpdate();
+            }
             yield return new WaitForSeconds(typeSpeed);
         }
 
         isTyping = false;
 
-        // Eðer þu anki cümle `answers` dizisinin son cümlesi ise butonlarý göster
+        if(dialogueText.GetComponent<EnhancedText>() != null) // Eï¿½er EnhancedText bileï¿½eni varsa wobble efektini aÃ§
+        {
+            dialogueText.GetComponent<EnhancedText>().isWobbly = true;
+        }
+
+        // Eï¿½er ï¿½u anki cï¿½mle `answers` dizisinin son cï¿½mlesi ise butonlarï¿½ gï¿½ster
         if (sentences.Count == 0 && currentDialogue.options.Length > 0)
         {
             DisplayOptions();
@@ -142,10 +166,10 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayOptions()
     {
-        // Önce tüm düðmeleri gizle
+        // ï¿½nce tï¿½m dï¿½ï¿½meleri gizle
         HideOptions();
 
-        // Diyalog seçeneklerini göster
+        // Diyalog seï¿½eneklerini gï¿½ster
         for (int i = 0; i < optionButtons.Length; i++)
         {
             if (i < currentDialogue.options.Length)
@@ -153,7 +177,7 @@ public class DialogueManager : MonoBehaviour
                 optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentDialogue.options[i].question;
                 optionButtons[i].gameObject.SetActive(true);
                 int optionIndex = i;
-                optionButtons[i].onClick.RemoveAllListeners(); // Önceki dinleyicileri temizle
+                optionButtons[i].onClick.RemoveAllListeners(); // ï¿½nceki dinleyicileri temizle
                 optionButtons[i].onClick.AddListener(() => OnOptionSelected(optionIndex));
             }
             else
@@ -162,13 +186,13 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        // "Goodbye" butonunu göster ve týklama dinleyicisi ekle
+        // "Goodbye" butonunu gï¿½ster ve tï¿½klama dinleyicisi ekle
         if (currentDialogue != null)
         {
             Button goodbyeButton = optionButtons[optionButtons.Length - 1]; // Son buton "Goodbye" olarak kabul edelim
             goodbyeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Goodbye";
             goodbyeButton.gameObject.SetActive(true);
-            goodbyeButton.onClick.RemoveAllListeners(); // Önceki dinleyicileri temizle
+            goodbyeButton.onClick.RemoveAllListeners(); // ï¿½nceki dinleyicileri temizle
             goodbyeButton.onClick.AddListener(() => EndDialogue());
         }
     }
@@ -186,16 +210,16 @@ public class DialogueManager : MonoBehaviour
     private void OnOptionSelected(int index)
     {
         DialogueOption selectedOption = currentDialogue.options[index];
-        sentences.Clear(); // Önceki cümleleri temizle
+        sentences.Clear(); // ï¿½nceki cï¿½mleleri temizle
 
-        // Her cevabý kuyruða ekleyelim
+        // Her cevabï¿½ kuyruï¿½a ekleyelim
         foreach (DialogueSentence answer in selectedOption.answers)
         {
             sentences.Enqueue(answer);
             
         }
 
-        DisplayNextSentence(); // Ýlk cevabý göster
+        DisplayNextSentence(); // ï¿½lk cevabï¿½ gï¿½ster
     }
 
     public void EndDialogue()
@@ -205,7 +229,7 @@ public class DialogueManager : MonoBehaviour
         npcNameText.text = "";
         dialogueText.text = "";
         sentences.Clear();
-        HideOptions(); // Seçenekleri gizle
+        HideOptions(); // Seï¿½enekleri gizle
 
         // Opsiyon dinleyicilerini temizle
         foreach (Button button in optionButtons)

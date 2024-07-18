@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FoamAmount: 1
-    - _FoamCutOff: 1.15
+    - _FoamCutOff: 2
     - _FoamScale: 1000
     - _FoamSpeed: 0.2
     - _QueueControl: 0
@@ -51,7 +51,7 @@ Material:
     - _WaterDepth: 5.4
     m_Colors:
     - _DeepWater: {r: 0, g: 0.19655418, b: 1, a: 0.5529412}
-    - _DeepstColor: {r: 0, g: 0.04957464, b: 0.2528302, a: 1}
+    - _DeepstColor: {r: 0, g: 0.10501179, b: 0.5169811, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShallowWater: {r: 0, g: 1, b: 0.9529412, a: 0.09803922}
   m_BuildTextureStacks: []

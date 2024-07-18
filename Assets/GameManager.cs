@@ -20,20 +20,22 @@ public class GameManager : MonoBehaviour
 
     public GameObject holePrefab;
 
+    public GameObject startButton;
+
     // Singleton instance property
     public static GameManager Instance
     {
         get
         {
-            // Eðer instance henüz atanmamýþsa, bul ve ata
+            // Eï¿½er instance henï¿½z atanmamï¿½ï¿½sa, bul ve ata
             if (instance == null)
             {
                 instance = FindObjectOfType<GameManager>();
 
-                // Eðer sahnede GameManager yoksa, hata ver ve konsolda uyarý göster
+                // Eï¿½er sahnede GameManager yoksa, hata ver ve konsolda uyarï¿½ gï¿½ster
                 if (instance == null)
                 {
-                    Debug.LogError("GameManager script'i sahnede bulunamadý!");
+                    Debug.LogError("GameManager script'i sahnede bulunamadï¿½!");
                 }
             }
             return instance;
@@ -51,6 +53,10 @@ public class GameManager : MonoBehaviour
 
         butterflyParent.GetComponent<Animator>().SetTrigger("Play");
         StartCoroutine(Story());
+
+        //startbutton'un gÃ¶rÃ¼nÃ¼rlÃ¼ÄŸÃ¼nÃ¼ kapat
+        startButton.SetActive(false);
+        
 
         
     }
@@ -76,21 +82,21 @@ public class GameManager : MonoBehaviour
             playerController.enabled = false;
         }
        
-        // Singleton instance'ý bu GameManager nesnesine ata
+        // Singleton instance'ï¿½ bu GameManager nesnesine ata
         if (instance == null)
         {
             instance = this;
         }
         else
         {
-            // Eðer singleton instance zaten atanmýþsa ve bu nesne farklý bir GameManager ise, bu nesneyi yok et
+            // Eï¿½er singleton instance zaten atanmï¿½ï¿½sa ve bu nesne farklï¿½ bir GameManager ise, bu nesneyi yok et
             if (instance != this)
             {
                 Destroy(gameObject);
             }
         }
 
-        // levelNameText üzerindeki Animator bileþenini al
+        // levelNameText ï¿½zerindeki Animator bileï¿½enini al
         
     }
 

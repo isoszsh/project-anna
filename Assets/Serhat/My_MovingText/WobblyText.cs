@@ -6,6 +6,8 @@ using System.Text.RegularExpressions;
 
 public class EnhancedText : MonoBehaviour
 {
+    public bool isWobbly = false;
+
     public TMP_Text textComponent;
     public float colorChangeSpeed = 1.0f;
 
@@ -58,16 +60,26 @@ public class EnhancedText : MonoBehaviour
         }
     }
 
-    public void Start()
+    public void SetAllIndices(string text)
     {
-        textComponent.ForceMeshUpdate();
-        string text = textComponent.text;
+        colorChangeIndices.Clear();
+        wobbleIndices.Clear();
+        jitterIndices.Clear();
+
         FindColorChangeIndeces(text, colorChangeIndices);
         FindWobbleIndeces(text, wobbleIndices);
         FindJitterIndeces(text, jitterIndices);
     }
 
-    void Update()
+    public void Update()
+    {
+        if(isWobbly)
+        {
+            WooblyUpdate();
+        }
+    }
+
+    public void WooblyUpdate()
     {
         textComponent.ForceMeshUpdate();
         var textInfo = textComponent.textInfo;
