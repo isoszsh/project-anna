@@ -16,7 +16,15 @@ public class EnhancedText : MonoBehaviour
     public List<int> colorChangeIndices = new List<int>();
 
     public List<int> jitterIndices = new List<int>();
-     
+    
+    public void ClearAll()
+    {
+        colorChangeIndices.Clear();
+        wobbleIndices.Clear();
+        jitterIndices.Clear();
+        textComponent.text = " ";
+        isWobbly = false;
+    }
 
     public void FindColorChangeIndeces(string text, List<int> colorChangeIndices)
     {

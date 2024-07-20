@@ -38,13 +38,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FoamAmount: 1
-    - _FoamCutOff: 2
+    - _FoamAmount: 1.26
+    - _FoamCutOff: 1.43
     - _FoamScale: 1000
     - _FoamSpeed: 0.2
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReflectionScale: 2
+    - _ReflectionScale: 5
     - _ReflectionSpeed: 0.02
     - _ReflectionStrenght: 5
     - _WaterDeepFloat: 10
