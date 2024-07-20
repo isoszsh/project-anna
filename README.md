@@ -78,7 +78,7 @@
 
 - **Ürün Durumu**: Ekran görüntüleri:
   
-  ![Screenshot 1]()
+  ![Screenshot 1](https://github.com/user-attachments/assets/b225057b-e3ab-4076-81e8-a62b029f1e4d)
   ![Screenshot 2]() 
   ![Screenshot 3]()
   ![Screenshot 4]()
