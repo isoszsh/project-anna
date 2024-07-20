@@ -82,7 +82,7 @@
   ![Screenshot 2](https://github.com/user-attachments/assets/a716a14c-23b3-4be6-9625-5e6b50e91d90) 
   ![Screenshot 3](https://github.com/user-attachments/assets/e2bcbb7e-accf-417e-8013-0cde77fd082c)
   ![Screenshot 4](https://github.com/user-attachments/assets/ea04e39e-42ab-4689-96a6-b1836415e05d)
-  ![Screenshot 5]()
+  ![Screenshot 5](https://github.com/user-attachments/assets/ffe3c265-d758-491f-a9b4-db3bc7c00465)
 
 - **Sprint Review**: 
   - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
