@@ -198,6 +198,13 @@ public class PlayerController : MonoBehaviour
                 {
                     StartCoroutine(Paint());
                 }
+                else if(ItemType == "Mantar")
+                {
+                    StartCoroutine(Mantar());
+                }
+                else if(ItemType == "Key"){
+                    StartCoroutine(OpenDoor());
+                }
             }
             else
             {
@@ -413,18 +420,18 @@ public class PlayerController : MonoBehaviour
         Vector3 horizontalTarget = new Vector3(targetPosition.x, startPosition.y, targetPosition.z);
         float horizontalDistance = Vector3.Distance(startPosition, horizontalTarget);
 
-        // Dikey yükseklik farkýný hesapla
+        // Dikey yï¿½kseklik farkï¿½nï¿½ hesapla
         float heightDifference = targetPosition.y - startPosition.y;
 
-        // Ýdeal hýz için süreyi hesapla
+        // ï¿½deal hï¿½z iï¿½in sï¿½reyi hesapla
         float gravity = Physics.gravity.magnitude;
         float timeToReach = Mathf.Sqrt(2 * Mathf.Abs(heightDifference) / gravity);
 
-        // Taþýn yatay ve dikey hýz bileþenlerini hesapla
+        // Taï¿½ï¿½n yatay ve dikey hï¿½z bileï¿½enlerini hesapla
         float horizontalSpeed = horizontalDistance / timeToReach;
         float verticalSpeed = gravity * timeToReach / 2;
 
-        // Hedef yukarýda mý yoksa aþaðýda mý?
+        // Hedef yukarï¿½da mï¿½ yoksa aï¿½aï¿½ï¿½da mï¿½?
         verticalSpeed = heightDifference > 0 ? verticalSpeed : -verticalSpeed;
 
         Vector3 direction = (horizontalTarget - startPosition).normalized;
@@ -450,6 +457,32 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator Plant()
     {
+        lockControls = true;
+        playerAnimator.SetTrigger("Plant");
+        yield return new WaitForSeconds(2);
+        pickedItem.transform.parent = null;
+        pickedItem.transform.rotation = Quaternion.Euler(0, 0, 0);
+        pickedItem.transform.position = new Vector3(pickedItem.transform.position.x,0,pickedItem.transform.position.z);
+        pickedItem.GetComponent<BoxCollider>().enabled = true;
+        pickedItem = null;
+        yield return new WaitForSeconds(5.5f);
+        lockControls = false;
+    }
+
+    IEnumerator Mantar(){
+        lockControls = true;
+        playerAnimator.SetTrigger("Plant");
+        yield return new WaitForSeconds(2);
+        pickedItem.transform.parent = null;
+        pickedItem.transform.rotation = Quaternion.Euler(0, 0, 0);
+        pickedItem.transform.position = new Vector3(pickedItem.transform.position.x,0,pickedItem.transform.position.z);
+        pickedItem.GetComponent<BoxCollider>().enabled = true;
+        pickedItem = null;
+        yield return new WaitForSeconds(5.5f);
+        lockControls = false;
+    }
+
+    IEnumerator OpenDoor(){
         lockControls = true;
         playerAnimator.SetTrigger("Plant");
         yield return new WaitForSeconds(2);

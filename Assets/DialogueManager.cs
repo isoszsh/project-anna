@@ -44,6 +44,13 @@ public class DialogueManager : MonoBehaviour
     private string currentSentence = "";
     public bool isDialogueActive = false;
 
+    public GameObject npc = null ; // Serhat Ekledi NPC'yi tutmak için
+
+    public void SetNpc(GameObject npc)
+    {
+        this.npc = npc;
+    }
+
     // Awake is called when the script instance is being loaded
     private void Awake()
     {
@@ -79,6 +86,16 @@ public class DialogueManager : MonoBehaviour
 
         isDialogueActive = true; // Set the flag to indicate active dialogue
 
+        if(npc != null)
+        {
+            CameraActiveForDialog cameraDialog = npc.GetComponent<CameraActiveForDialog>();
+            if(cameraDialog != null){
+                cameraDialog.isSpeakerCamActive(true);
+            }
+            else { Debug.Log("CameraActiveForDialog component is missing on npc."); }
+        }
+        else { Debug.Log("npc is null, cannot change camera angle."); }
+
         DisplayNextSentence();
     }
 
@@ -96,7 +113,8 @@ public class DialogueManager : MonoBehaviour
 
         StopAllCoroutines();
 
-        if(dialogueText.GetComponent<EnhancedText>() != null) //Eğer EnhancedText bileşeni varsa şu anki textin wobble indekslerini ayarla
+        var dialogueEnhancedText = dialogueText.GetComponent<EnhancedText>();
+        if(dialogueEnhancedText != null) //Eğer EnhancedText bileşeni varsa şu anki textin wobble indekslerini ayarla
         {
             dialogueText.GetComponent<EnhancedText>().isWobbly = false;
             dialogueText.GetComponent<EnhancedText>().SetAllIndices(currentSentence);
@@ -122,8 +140,8 @@ public class DialogueManager : MonoBehaviour
         HideOptions();
         isTyping = true;
 
-        
-        if(dialogueText.GetComponent<EnhancedText>() != null) //Eğer EnhancedText bileşeni varsa şu anki textin wobble indekslerini ayarla
+        var dialogueEnhancedText = dialogueText.GetComponent<EnhancedText>();
+        if(dialogueEnhancedText != null) //Eğer EnhancedText bileşeni varsa şu anki textin wobble indekslerini ayarla
         {
             dialogueText.GetComponent<EnhancedText>().isWobbly = false;
             dialogueText.GetComponent<EnhancedText>().SetAllIndices(currentSentence);
@@ -134,15 +152,19 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            if(dialogueText.GetComponent<EnhancedText>() != null) // Eğer EnhancedText bileşeni varsa wobble efektini uygula
+
+            dialogueEnhancedText = dialogueText.GetComponent<EnhancedText>();
+            if(dialogueEnhancedText != null) // Eğer EnhancedText bileşeni varsa wobble efektini uygula
             {
                 dialogueText.GetComponent<EnhancedText>().WooblyUpdate();
             }
+
             yield return new WaitForSeconds(typeSpeed);
         }
 
         isTyping = false;
 
+        dialogueEnhancedText = dialogueText.GetComponent<EnhancedText>();
         if(dialogueText.GetComponent<EnhancedText>() != null) // E�er EnhancedText bile�eni varsa wobble efektini aç
         {
             dialogueText.GetComponent<EnhancedText>().isWobbly = true;
@@ -224,11 +246,37 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+
+        // //Konuştuğumuz esnada kamera açısı değişen npc için 
+        if(npc != null)
+        {
+            CameraActiveForDialog cameraDialog = npc.GetComponent<CameraActiveForDialog>();
+            if(cameraDialog != null){
+                cameraDialog.isSpeakerCamActive(false);
+                //npc = null;
+            }
+            else { Debug.Log("CameraActiveForDialog component is missing on npc."); }
+        }
+        else { Debug.Log("npc is null, cannot change camera angle."); }
+
+        var dialogueEnhancedText = dialogueText.GetComponent<EnhancedText>();
+        if(dialogueEnhancedText != null) //Eğer EnhancedText bileşeni varsa şu anki textin wobble indekslerini ayarla
+        {
+            Debug.Log("EnhancedText component is found.");
+            dialogueText.GetComponent<EnhancedText>().ClearAll();
+            Debug.Log("EnhancedText component is cleared.");
+        }
+
+
+
+
+
         GameManager.Instance.playerController.lockControls = false;
         currentDialogue = null;
         npcNameText.text = "";
         dialogueText.text = "";
         sentences.Clear();
+
         HideOptions(); // Se�enekleri gizle
 
         // Opsiyon dinleyicilerini temizle
@@ -238,7 +286,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         isDialogueActive = false; // Unset the flag to indicate no active dialogue
-
     }
 
 }

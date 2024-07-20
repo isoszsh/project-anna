@@ -36,6 +36,8 @@ public class DialogueStarter : Event
     {
         if (!DialogueManager.Instance.isDialogueActive)
         {
+            GameManager.Instance.GetComponent<DialogueManager>().SetNpc(this.gameObject); // Bu satır kamera açısı veya npc nin hareketlerini npc üstünden yönlendirmek için yazdığım bir satır.
+
             if(GameManager.Instance.playerController.pickedItem != null)
             {
                 if (GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>())
