@@ -113,7 +113,6 @@ public class CouncilManager : MonoBehaviour
         }
         else if (npc == "Anna")
         {
-            Debug.Log("anna kamerası");
             councilCamera.transform.position = new Vector3(-47.753f, 0.87f, -67.681f);
             councilCamera.transform.rotation = Quaternion.Euler(0, 500.265f, 0);
         }
