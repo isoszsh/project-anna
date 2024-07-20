@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Ismail/Scenes/PlayerTest.unity
     guid: 815415ace080c6f458a1b9cbc0dc02d6
+  - enabled: 1
+    path: Assets/GameScenes/Level1.unity
+    guid: 650224de68cf90544bac2011e5e33fb8
+  - enabled: 1
+    path: Assets/GameScenes/Level2.unity
+    guid: 7b5d6a9641a85cb47b89fa036d8c534e
+  - enabled: 1
+    path: Assets/GameScenes/Level3.unity
+    guid: dc5342f8e69b3f3469f7fa7179f63b58
+  - enabled: 1
+    path: Assets/GameScenes/Level3_Council.unity
+    guid: 2a1abfcf88dd8dc4686231acfb6c33e3
   m_configObjects: {}

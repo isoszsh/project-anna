@@ -18,6 +18,8 @@ public class DialogueStarter : Event
 
     public bool readyToTalk;
 
+    public Event relatedEvent;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -31,6 +33,14 @@ public class DialogueStarter : Event
         
     }
 
+
+    public override void TriggerEndEvent()
+    {
+        if(relatedEvent != null)
+        {
+            relatedEvent.TriggerStartEvent();
+        }
+    }
 
     public override void TriggerEvent()
     {

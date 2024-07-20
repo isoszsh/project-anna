@@ -10,4 +10,14 @@ public class Event : MonoBehaviour
     {
         
     }
+
+    public virtual void TriggerEndEvent()
+    {
+
+    }
+
+    public virtual void TriggerStartEvent()
+    {
+
+    }
 }

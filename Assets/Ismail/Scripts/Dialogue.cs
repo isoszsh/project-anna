@@ -10,6 +10,7 @@ public class DialogueOption
 [System.Serializable]
 public class DialogueSentence
 {
+    public string npcName;
     public string text;
     public AudioClip audioClip;
 }

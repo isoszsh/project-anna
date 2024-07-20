@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        isDialogueActive = true; // Set the flag to indicate active dialogue
+        isDialogueActive = true; 
 
         DisplayNextSentence();
     }
@@ -96,7 +96,7 @@ public class DialogueManager : MonoBehaviour
 
         StopAllCoroutines();
 
-        if(dialogueText.GetComponent<EnhancedText>() != null) //Eğer EnhancedText bileşeni varsa şu anki textin wobble indekslerini ayarla
+        if(dialogueText.GetComponent<EnhancedText>() != null) 
         {
             dialogueText.GetComponent<EnhancedText>().isWobbly = false;
             dialogueText.GetComponent<EnhancedText>().SetAllIndices(currentSentence);
@@ -123,7 +123,7 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
 
         
-        if(dialogueText.GetComponent<EnhancedText>() != null) //Eğer EnhancedText bileşeni varsa şu anki textin wobble indekslerini ayarla
+        if(dialogueText.GetComponent<EnhancedText>() != null)
         {
             dialogueText.GetComponent<EnhancedText>().isWobbly = false;
             dialogueText.GetComponent<EnhancedText>().SetAllIndices(currentSentence);
@@ -134,7 +134,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            if(dialogueText.GetComponent<EnhancedText>() != null) // Eğer EnhancedText bileşeni varsa wobble efektini uygula
+            if(dialogueText.GetComponent<EnhancedText>() != null) 
             {
                 dialogueText.GetComponent<EnhancedText>().WooblyUpdate();
             }
@@ -143,12 +143,12 @@ public class DialogueManager : MonoBehaviour
 
         isTyping = false;
 
-        if(dialogueText.GetComponent<EnhancedText>() != null) // E�er EnhancedText bile�eni varsa wobble efektini aç
+        if(dialogueText.GetComponent<EnhancedText>() != null) 
         {
             dialogueText.GetComponent<EnhancedText>().isWobbly = true;
         }
 
-        // E�er �u anki c�mle `answers` dizisinin son c�mlesi ise butonlar� g�ster
+       
         if (sentences.Count == 0 && currentDialogue.options.Length > 0)
         {
             DisplayOptions();
@@ -166,10 +166,10 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayOptions()
     {
-        // �nce t�m d��meleri gizle
+        
         HideOptions();
 
-        // Diyalog se�eneklerini g�ster
+        
         for (int i = 0; i < optionButtons.Length; i++)
         {
             if (i < currentDialogue.options.Length)
@@ -177,7 +177,7 @@ public class DialogueManager : MonoBehaviour
                 optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentDialogue.options[i].question;
                 optionButtons[i].gameObject.SetActive(true);
                 int optionIndex = i;
-                optionButtons[i].onClick.RemoveAllListeners(); // �nceki dinleyicileri temizle
+                optionButtons[i].onClick.RemoveAllListeners(); 
                 optionButtons[i].onClick.AddListener(() => OnOptionSelected(optionIndex));
             }
             else
@@ -186,13 +186,13 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        // "Goodbye" butonunu g�ster ve t�klama dinleyicisi ekle
+        
         if (currentDialogue != null)
         {
-            Button goodbyeButton = optionButtons[optionButtons.Length - 1]; // Son buton "Goodbye" olarak kabul edelim
+            Button goodbyeButton = optionButtons[optionButtons.Length - 1]; 
             goodbyeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Goodbye";
             goodbyeButton.gameObject.SetActive(true);
-            goodbyeButton.onClick.RemoveAllListeners(); // �nceki dinleyicileri temizle
+            goodbyeButton.onClick.RemoveAllListeners();
             goodbyeButton.onClick.AddListener(() => EndDialogue());
         }
     }
@@ -210,16 +210,16 @@ public class DialogueManager : MonoBehaviour
     private void OnOptionSelected(int index)
     {
         DialogueOption selectedOption = currentDialogue.options[index];
-        sentences.Clear(); // �nceki c�mleleri temizle
+        sentences.Clear(); 
 
-        // Her cevab� kuyru�a ekleyelim
+        
         foreach (DialogueSentence answer in selectedOption.answers)
         {
             sentences.Enqueue(answer);
             
         }
 
-        DisplayNextSentence(); // �lk cevab� g�ster
+        DisplayNextSentence(); 
     }
 
     public void EndDialogue()
@@ -237,8 +237,8 @@ public class DialogueManager : MonoBehaviour
             button.onClick.RemoveAllListeners();
         }
 
-        isDialogueActive = false; // Unset the flag to indicate no active dialogue
-
+        GameManager.Instance.playerController.currentEvent.TriggerEndEvent();
+        isDialogueActive = false;
     }
 
 }
