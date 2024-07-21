@@ -85,15 +85,15 @@
   ![Screenshot 5](https://github.com/user-attachments/assets/ffe3c265-d758-491f-a9b4-db3bc7c00465)
 
 - **Sprint Review**: 
-  - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
+  - Ekip, görevlerinin sağladığı gelişmeleri açıkladı. Güncel performansın arttırılması gerektiğinde anlaşıldı. Sprint içerisinde tasarlanmış olan leveller tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı, geliştirilebilecek noktalar tartışıldı.
   - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
 
 - **Sprint Retrospective:** 
-  - Ekip iki gruba bölündü, bir grup oyunun kalan 4 bölümü üzerinde çalışarak ilerlemeye devam edecek; diğer ekip ise oluşturulan bölümlerin eksiklikleri üzerinde çalışacak ve oyunu final aşamasına hazır hale getirecek.
+  - Ekip, bölünmüş olduğu gruplara devam edecek. İlk grup bölümleri hazırlayacak, ikinci grup ise bölümleri final product hale getirecek şekilde geliştirecek.
     - Grup 1: İsmail, İncila
     - Grup 2: İbrahim, İpek, İrfan
-  - Toplantıların belirli bir zaman aralığıyla gerçekleştirilmesi kararlaştırıldı.
-  - Üretim aşamasında görev alan ekip üyelerine gelecek bölümlerde ihtiyaç duyulabilecek assetlerin üretimi için listeler hazırlandı
+  - Grup 2'nin grup içi toplantıları arttırmasına karar verildi.
+  - Level 4 ve 5'te kullanılacak puzzleların geliştirilmesi kararlaştırıldı.
 
 
 # Sprint 3
