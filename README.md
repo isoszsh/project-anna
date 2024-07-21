@@ -71,7 +71,7 @@
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
-- **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılmasına devam edilmiştir. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 2 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
+- **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılmasına devam edilmiştir. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 2 - Daily Scrum Chats](https://imgur.com/a/jF4E9xp)
 
 - **Sprint board update**: Sprint board screenshot: 
 ![Backlog 2](https://github.com/user-attachments/assets/693edf2a-fa8b-4126-8e44-a3ddaa37de6c)
