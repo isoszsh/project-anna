@@ -8,20 +8,25 @@ public class example1 : MonoBehaviour
     public GameObject sprite;
     public ParticleSystem particals;
 
-    private void Start()
-    {
-        StartCoroutine(waitForIt());
-    }
+    public GameObject CameraPov;
+    public GameObject CameraAnim;
 
-    IEnumerator waitForIt()
-    {
-        yield return new WaitForSeconds(2);
-        Play();
-    }
+    public int waitTime;
 
     public void Play()
     {
+        CameraPov.SetActive(true);
+        CameraAnim.SetActive(false);
+
+        StartCoroutine(Wait(waitTime));
+    }
+
+    IEnumerator Wait(int i)
+    {
+        yield return new WaitForSeconds(i);
+
         sprite.gameObject.SetActive(false);
         particals.Emit(9999);
     }
+
 }

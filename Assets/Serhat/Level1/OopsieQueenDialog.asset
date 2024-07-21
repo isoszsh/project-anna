@@ -15,22 +15,29 @@ MonoBehaviour:
   dialogue:
     npcName: OopsieQueen
     sentences:
-    - text: '"Zort" ve ''ooyyy'' hata &amq&'
+    - text: Human child, what brings you to our hidden realm?
       audioClip: {fileID: 8300000, guid: d90d9cbe6fd86094ab743760200a618a, type: 3}
-    - text: '"Zort" ve ''ooyyy'' hata &amq&'
+    - text: "Greetings, mighty Oopsie King! I come seeking an audience with you.
+        I\u2019ve heard that you possess the key to the homeless lizard\u2019s house.
+        He\u2019s desperate to regain access."
       audioClip: {fileID: 8300000, guid: d90d9cbe6fd86094ab743760200a618a, type: 3}
     options:
-    - question: laps1
+    - question: Name your request, mighty Oopsie King. I am willing to listen.
       answers:
-      - text: '"Zort" ve ''ooyyy'' hata &amq&'
+      - text: If you are brave enough, seek the key to our treasure vault! Deep within
+          the Forbidden Caverns lies a crystal coveted even by the bravest souls.
         audioClip: {fileID: 8300000, guid: d90d9cbe6fd86094ab743760200a618a, type: 3}
-    - question: laps2
+    - question: "Why do you steal? Isn\u2019t that a bad thing?"
       answers:
-      - text: Hoppidi
+      - text: "If we didn\u2019t take, chaos would reign! Who do you think cleans
+          up your scattered toys? For centuries, you leave them behind, and we preserve
+          them."
         audioClip: {fileID: 8300000, guid: d90d9cbe6fd86094ab743760200a618a, type: 3}
-    - question: laps3
+    - question: Tell me about the Forbidden Caverns.
       answers:
-      - text: Cuppala
+      - text: "The Forbidden Caverns are a manifestation of children\u2019s nightmares.
+          Tell me, little one, what haunts your dreams? It seems your visions differ
+          from others."
         audioClip: {fileID: 8300000, guid: d90d9cbe6fd86094ab743760200a618a, type: 3}
     - question: 
       answers: []
