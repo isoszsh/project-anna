@@ -14,6 +14,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - npcName: Bear
-      text: Thanks Anna!
+    - npcName: Anna
+      text: I've thought about it, and I want to help. I'll go to the ship and try
+        to operate it. We need to protect your home.
       audioClip: {fileID: 0}
+    - npcName: Pinguin
+      text: Thank you, Anna. This means a lot to us.
+      audioClip: {fileID: 8300000, guid: f23c9d168bdd2a443a4020eedbe409e1, type: 3}
+    - npcName: Deer
+      text: We will all be here, ready to help you in any way we can.
+      audioClip: {fileID: 8300000, guid: c7bd6a960b2594b42a7dd4ff08042635, type: 3}
+    - npcName: Bear
+      text: Alright, let's plan this carefully. Anna,you will need to be careful.
+        We'll gather everything you need.
+      audioClip: {fileID: 8300000, guid: bd1761423d2b45745869aa9bf1b7a745, type: 3}
+    - npcName: Orca
+      text: So, how do we get you to the ship? The cold waters are dangerous.
+      audioClip: {fileID: 8300000, guid: 5ba5919da54b5c34ea2d178c3c377750, type: 3}
+    - npcName: Fox
+      text: What if we build a raft? It could get Anna close enough to the ship.
+      audioClip: {fileID: 8300000, guid: daba46400b1fa86448211d0720761035, type: 3}
+    - npcName: Pinguin
+      text: Yes, a raft! But where will we find the wood to build it?
+      audioClip: {fileID: 8300000, guid: b35529f5c426ea24aa073f566e54fd04, type: 3}
+    - npcName: Deer
+      text: Good point. The trees here aren't suitable for raft building.
+      audioClip: {fileID: 8300000, guid: 445f8e3c7a1db5b47832e2031eba15b5, type: 3}
+    - npcName: Orca
+      text: Wait, what if we use ice? I can break off a large ice floe and push it.
+        It could carry Anna to the ship. I can push the ice to where the water isn't
+        too cold yet, and the momentum will carry Anna the rest of the way to the
+        ship.
+      audioClip: {fileID: 8300000, guid: 21c661b5f42e1324ea6f8e45e2952688, type: 3}
+    - npcName: Bear
+      text: That's a brilliant idea! Ice will float, and Orca can guide it swiftly
+        through the water.
+      audioClip: {fileID: 8300000, guid: 841d5637e3191a0448637b36cd621b51, type: 3}
+    - npcName: Fox
+      text: Yes, and ice is sturdy enough for a short journey. We just need to make
+        sure Anna is secure.
+      audioClip: {fileID: 8300000, guid: 74da33117ce7e6f46af77d520fcc2fbd, type: 3}
+    - npcName: Orca
+      text: I can help find a suitable ice floe. Let's make sure it's thick enough
+        to support Anna.
+      audioClip: {fileID: 8300000, guid: 891476424412e5a4a981788a5756dcf2, type: 3}
+    - npcName: Bear
+      text: Alright, let's move quickly. Every moment counts.
+      audioClip: {fileID: 8300000, guid: 59bae9b9135e77242ad199738d016e78, type: 3}

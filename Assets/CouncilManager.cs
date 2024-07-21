@@ -30,6 +30,12 @@ public class CouncilManager : MonoBehaviour
     public GameObject dialoguePanel;
     public GameObject timePanel;
 
+
+    public Image fadeImage; // UI Image bileşenini burada atayın
+    public GameObject achievementText;
+    public AudioClip achievementClip;
+    public float fadeDuration = 1f;
+
     private int sentenceIndex;
 
     public int decision = 0;
@@ -106,7 +112,7 @@ public class CouncilManager : MonoBehaviour
         {
             audioSource.clip = sentence.audioClip;
             audioSource.Play();
-            StartCoroutine(DisplaySentenceWithDelay(currentSentence.Length * typeSpeed + 2f));
+            StartCoroutine(DisplaySentenceWithDelay(sentence.audioClip.length));
         }
         else
         {
@@ -186,14 +192,53 @@ public class CouncilManager : MonoBehaviour
         }
         else if (decision == 1)
         {
-            SceneManager.LoadScene("Level3_Accepted");
+            StartCoroutine(GoToLevel3_2());
         }
         else if (decision == 2)
         {
+            StartCoroutine(GoToLevel4());
             SceneManager.LoadScene("Level4");
         }
         
        
+    }
+
+    IEnumerator GoToLevel3_2()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Level3_Accepted");
+    }
+
+    IEnumerator GoToLevel4()
+    {
+        yield return StartCoroutine(FadeToBlack(fadeDuration));
+        yield return new WaitForSeconds(10);
+        SceneManager.LoadScene("Level4");
+
+    }
+
+    IEnumerator FadeToBlack(float duration)
+    {
+        fadeImage.gameObject.SetActive(true) ;
+        float elapsedTime = 0f;
+        Color startColor = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 0f); // Alpha değeri 0
+        Color endColor = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(startColor.a, endColor.a, elapsedTime / duration);
+            fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+            yield return null;
+        }
+
+        fadeImage.color = endColor; // Son rengi garantile
+
+        yield return new WaitForSeconds(2);
+        audioSource.PlayOneShot(achievementClip);
+        achievementText.SetActive(true);
+        
+
     }
 
     public void AcceptShip()

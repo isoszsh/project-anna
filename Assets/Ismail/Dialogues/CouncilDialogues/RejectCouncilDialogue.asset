@@ -16,22 +16,22 @@ MonoBehaviour:
     sentences:
     - npcName: Anna
       text: I've thought about it, and I can't do it. The risk is too high, and I
-        don't want to leave you all. We need to find another way.
+        don't want to go. You need to find another way.
       audioClip: {fileID: 0}
     - npcName: Pinguin
       text: (Looking down) That's... that's okay, Anna. We understand.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 3ed9e1dacdae64041a058152282d93c9, type: 3}
     - npcName: Deer
       text: (Sighing) It's just... we hoped you could help us. But your safety is
         important too.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: e6015cdd080dfbe4bb6bf460a3d3f346, type: 3}
     - npcName: Anna
       text: I'm sorry, everyone. I truly am. I wish there was more I could do. I'll
         leave you to your planning.
       audioClip: {fileID: 0}
     - npcName: Bear
       text: ' Take care, Anna. Thank you for considering it, at least.'
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 5083166d7b42b9b40883e2783c2cbb3c, type: 3}
     - npcName: Anna
-      text: Goodbye, everyone. I hope you find a way to save our home.
+      text: Goodbye, everyone. I hope you find a way to save your home.
       audioClip: {fileID: 0}

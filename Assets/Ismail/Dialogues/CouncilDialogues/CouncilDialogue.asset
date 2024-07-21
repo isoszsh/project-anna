@@ -17,87 +17,87 @@ MonoBehaviour:
     - npcName: Bear
       text: ' Friends, today we have a new member joining us. This is Anna. She knows
         a lot about humans and can help us. Let''s all welcome her.'
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 01f4050ed6bbc664a887a317da59cb95, type: 3}
     - npcName: Anna
       text: (Waves)
       audioClip: {fileID: 0}
     - npcName: Fox
       text: Welcome, Anna. It's great to meet you. What you know about humans could
         be very important for us.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: b8254cb777cd6034abb7d36f40826d26, type: 3}
     - npcName: Orca
       text: Welcome, Anna. With you, we might find a solution.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 9db9b6a37de76ed4c815b7c39956a9a8, type: 3}
     - npcName: Pinguin
       text: Welcome, Anna. I hope you can help us.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: ac40a0cdb8c4cc541ae47a085838c436, type: 3}
     - npcName: Deer
       text: Welcome, Anna. It takes a lot of courage to join us.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: e91cb45d5e094234b95b9171985a50f9, type: 3}
     - npcName: Bear
       text: Friends, the ship is taking a few of our animals every day and no one
         comes back. We need to do something about this. What are your thoughts?
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 747cb6ee04fa0204d9cda2b8f1725613, type: 3}
     - npcName: Orca
       text: This situation is becoming unbearable. We lose someone every day and
         we feel helpless.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: c97bd110b92c5e34cb2da6913848bf9a, type: 3}
     - npcName: Fox
       text: Yes, this can't go on. But how can we stop the ship? Humans are very
         powerful and well-equipped.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: fc6e2e93582270b4ebcbd309a4ca2a25, type: 3}
     - npcName: Pinguin
       text: They're destroying our habitat. They come closer every day and we're
         running out of space.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 1fad3c540c6dec840a29a8fa3d0d054a, type: 3}
     - npcName: Deer
       text: Humans are very dangerous. But if we do nothing, we could be next. We're
         all scared.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: ed00248d69941a04581e526ad780f479, type: 3}
     - npcName: Bear
       text: I understand. This is a difficult situation for all of us. But if we
         act together, we can find a solution. We need to show the humans that this
         is our home.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 275b27280a1709542889cb74418b456e, type: 3}
     - npcName: Orca
       text: Humans scare us with their power, but if we stand together, we might
         be able to stop them. We need a plan.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: ec098026014e8ad44a560b3c12af4602, type: 3}
     - npcName: Fox
       text: ' I think the first step should be to observe the ship secretly. We can
         find their weak points and develop a strategy.'
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 794f2cd2489951642bab16d192388cd4, type: 3}
     - npcName: Pinguin
       text: Yes, we need to understand them better. We should know their strengths
         and weaknesses to act accordingly.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 5bdaaa85ed5587d4fb2c6b16170f0d47, type: 3}
     - npcName: Deer
       text: Planning is crucial. Everyone should have a role. Together, we can be
         stronger.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: fae948955958d1c44a54e8364797aaed, type: 3}
     - npcName: Bear
       text: The idea of taking control of the ship makes sense, but it's located
         in a very cold area. Going there is a huge risk for everyone. How do we handle
         this?
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 01703d079a05fe5418f10e5112f9cfd8, type: 3}
     - npcName: Orca
       text: Yes, we can't survive long in the cold. There has to be a way, but how?
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: e39bf210f6b61a34f8c91d3d1ba28e4b, type: 3}
     - npcName: Fox
       text: Maybe we can find a way to stay warm. But even reaching the ship will
         be tough.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 1777f9c130440c64c8a617af66731944, type: 3}
     - npcName: Pinguin
       text: The cold is very dangerous. Even if we get there, we might not be able
         to function.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 0b7aeba0c7540564dbd3d94675e1ee1b, type: 3}
     - npcName: Deer
       text: We need something to protect us from the cold. Otherwise, no one can
         go there.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 589ee4379ded1564882bff7298e50a58, type: 3}
     - npcName: Bear
       text: Anna, what do you think? Do you have any ideas?
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: f17e7b8e44bade34e9bc82368594a04f, type: 3}
     - npcName: Anna
       text: Actually, I don't feel the cold. Because I don't have feelings, I have
         an advantage in this situation. I can go to the ship and operate it. But
@@ -105,15 +105,15 @@ MonoBehaviour:
       audioClip: {fileID: 0}
     - npcName: Fox
       text: That's great news! We can make a plan with you.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 198d4be7007d9354b94f488dddb7654d, type: 3}
     - npcName: Orca
       text: We should make a plan using Anna's strength. This is a big opportunity
         for us.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 4a83f6809f46b1849b7c57d35d57d5a6, type: 3}
     - npcName: Deer
       text: Anna, if you can go to the ship, we can support you from here.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: a56ccad005179be4b93026709bba398c, type: 3}
     - npcName: Bear
       text: Friends, even though Anna has special abilities, we can't force her to
         go there! Anna doesn't have to help us. Please, let's not manipulate her.
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: c69618f6370b4404ba80e0c905670c03, type: 3}

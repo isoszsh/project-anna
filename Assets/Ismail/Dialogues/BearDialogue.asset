@@ -15,32 +15,38 @@ MonoBehaviour:
   dialogue:
     npcName: Polar Bear
     sentences:
-    - text: This way, there won't be a single living being left here.
-      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    - npcName: 
+      text: This way, there won't be a single living being left here.
+      audioClip: {fileID: 8300000, guid: 9421f6933ee82dc479e528a72e3ad068, type: 3}
     options:
     - question: Where is everyone?
       answers:
-      - text: We have a big problem. Everyone has to run and hide because if we don't,
+      - npcName: 
+        text: We have a big problem. Everyone has to run and hide because if we don't,
           they catch us and take us to a metal place, and no one who goes there ever
           comes back.
-        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
+        audioClip: {fileID: 8300000, guid: 687096a75cfa37a449675ad950fae3bb, type: 3}
     - question: What is the problem?
       answers:
-      - text: Actually, there are two problems. The first is a metal thing approaching
+      - npcName: 
+        text: Actually, there are two problems. The first is a metal thing approaching
           here that captured all of us, and very few of us are left. Our future is
           in danger, and everyone is aware of this issue.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: The second one, which I think is a bigger problem, is that no one is
+        audioClip: {fileID: 8300000, guid: 21a9e8a409e1b0a4ab0a9b6de633fa37, type: 3}
+      - npcName: 
+        text: The second one, which I think is a bigger problem, is that no one is
           trying to do anything. Everyone is scared and prefers to hide. Every week,
           I hold a council and try to convince them, but I haven't been able to convince
           anyone. If this continues, we will all be gone.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: 296f86f22a5433040bb45e46bb25c8d3, type: 3}
     - question: Can I join the council?
       answers:
-      - text: Of course. Maybe if you join and share your ideas, we can convince
+      - npcName: 
+        text: Of course. Maybe if you join and share your ideas, we can convince
           them to do something about it.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: The council will start soon in front of the penguins' house. If we
+        audioClip: {fileID: 8300000, guid: 9df1579613a59ef4780c6e7e10da670d, type: 3}
+      - npcName: 
+        text: The council will start soon in front of the penguins' house. If we
           hurry, we might make it in time. Remember, the penguins' house is the one
           with black walls and a white door.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: ef4731a01f7260046b3c2433b9c2a209, type: 3}

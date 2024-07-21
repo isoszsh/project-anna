@@ -57,7 +57,6 @@ public class DialogueManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: Makes the instance persist across scenes
         }
         else if (instance != this)
         {
@@ -126,7 +125,7 @@ public class DialogueManager : MonoBehaviour
         {
             audioSource.clip = sentence.audioClip;
             audioSource.Play();
-            StartCoroutine(DisplaySentenceWithDelay(currentSentence.Length * typeSpeed + 2f));
+            StartCoroutine(DisplaySentenceWithDelay(sentence.audioClip.length));
         }
         else
         {

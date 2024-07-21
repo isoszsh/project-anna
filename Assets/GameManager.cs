@@ -95,14 +95,7 @@ public class GameManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        // levelNameText �zerindeki Animator bile�enini al
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        
     }
 }
