@@ -24,10 +24,13 @@ public class CouncilManager : MonoBehaviour
     public GameObject dialogueText;
     public Button[] optionButtons;
     public TextMeshProUGUI npcNameText;
-    private float typeSpeed = 0.05f;
+    private float typeSpeed = 0.04f;
     private bool isTyping = false;
     public GameObject DecisionPanel;
     public GameObject dialoguePanel;
+    public GameObject timePanel;
+
+    private int sentenceIndex;
 
     public int decision = 0;
 
@@ -47,6 +50,7 @@ public class CouncilManager : MonoBehaviour
     IEnumerator CouncilStartCutscene()
     {
         yield return new WaitForSeconds(1);
+        timePanel.SetActive(false);
         cutsceneCamera.GetComponent<Animator>().SetTrigger("CS");
         yield return new WaitForSeconds(2.3f);
         cutsceneCamera.gameObject.SetActive(false);
@@ -64,6 +68,7 @@ public class CouncilManager : MonoBehaviour
 
     public void StartDialogue(CouncilDialogue dialogue)
     {
+        sentenceIndex = 0;
         GameManager.Instance.playerController.lockControls = true;
         dialoguePanel.SetActive(true);
         currentDialogue = dialogue;
@@ -91,6 +96,12 @@ public class CouncilManager : MonoBehaviour
         SetCouncilCamera(sentence.npcName);
         StartCoroutine(TypeSentence(currentSentence,sentence.npcName));
 
+
+        if (sentenceIndex == 1)
+        {
+            GameManager.Instance.playerController.playerAnimator.SetTrigger("Wave");
+        }
+
         if (sentence.audioClip != null)
         {
             audioSource.clip = sentence.audioClip;
@@ -101,6 +112,9 @@ public class CouncilManager : MonoBehaviour
         {
             StartCoroutine(DisplaySentenceWithDelay(currentSentence.Length * typeSpeed + 2f));
         }
+
+
+        sentenceIndex++;
     }
 
 
@@ -185,12 +199,14 @@ public class CouncilManager : MonoBehaviour
     public void AcceptShip()
     {
         decision = 1;
+        DecisionPanel.SetActive(false);
         StartDialogue(acceptDialogue.dialogue);
     }
 
     public void RejectShip()
     {
         decision = 2;
+        DecisionPanel.SetActive(false);
         StartDialogue(rejectDialogue.dialogue);
     }
 

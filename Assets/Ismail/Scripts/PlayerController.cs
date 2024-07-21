@@ -257,6 +257,10 @@ public class PlayerController : MonoBehaviour
                 timer = 0f;
             }
         }
+        else
+        {
+            StopCoroutine(Blink());
+        }
        
         
     }
@@ -499,7 +503,7 @@ public class PlayerController : MonoBehaviour
     {
         int dice = UnityEngine.Random.Range(0, 100);
 
-        if(dice < 2 && playerAnimator.GetFloat(_speedFloat) < 0.1f)
+        if(dice < 2 && playerAnimator.GetFloat(_speedFloat) < 0.1f && !lockControls)
         {
             isBlinking = true;
             audioSource.volume = .1f;

@@ -113,9 +113,6 @@ MonoBehaviour:
     - npcName: Deer
       text: Anna, if you can go to the ship, we can support you from here.
       audioClip: {fileID: 0}
-    - npcName: Deer
-      text: Anna, if you can go to the ship, we can support you from here.
-      audioClip: {fileID: 0}
     - npcName: Bear
       text: Friends, even though Anna has special abilities, we can't force her to
         go there! Anna doesn't have to help us. Please, let's not manipulate her.
