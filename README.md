@@ -69,9 +69,13 @@
 
 # Sprint 2
 
+- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilmektedir.
+
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
 - **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken toplam 300 puanlık backlog bulunmaktadır. 3 sprinte bölündüğünde ikinci sprintin 100 puandan oluşması gerektiği kararlaştırıldı.
+
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz bir sonraki sprintlerin temelini atacak şekilde düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde görevler dağıtılmıştır. Miro Board'da gözüken pembe item'lar yazılım, mor item'lar ses, açık yeşil item'lar görsel efekt, koyu yeşil item'lar türü olmayan görevleri gösterirken, mavi item'lar tasarım görevlerini temsil etmektedir.
 
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılmasına devam edilmiştir. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 2 - Daily Scrum Chats](https://imgur.com/a/jF4E9xp)
 
