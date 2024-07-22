@@ -71,6 +71,8 @@
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
+- **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken toplam 300 puanlık backlog bulunmaktadır. 3 sprinte bölündüğünde ikinci sprintin 100 puandan oluşması gerektiği kararlaştırıldı.
+
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılmasına devam edilmiştir. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 2 - Daily Scrum Chats](https://imgur.com/a/jF4E9xp)
 
 - **Sprint board update**: Sprint board screenshot: 
