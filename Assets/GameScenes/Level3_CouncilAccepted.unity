@@ -96,7 +96,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: cd1879b67bd434e44a6cfcf795761ae9,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -11548,6 +11549,10 @@ MonoBehaviour:
   DecisionPanel: {fileID: 1940314619}
   dialoguePanel: {fileID: 350447623}
   timePanel: {fileID: 2086787594}
+  fadeImage: {fileID: 0}
+  achievementText: {fileID: 0}
+  achievementClip: {fileID: 0}
+  fadeDuration: 1
   decision: 0
 --- !u!4 &1951749367
 Transform:

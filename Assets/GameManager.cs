@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject startButton;
 
+    public PaintPuzzleManager paintPuzzleManager;
+
     // Singleton instance property
     public static GameManager Instance
     {

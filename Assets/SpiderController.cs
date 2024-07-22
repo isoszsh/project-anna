@@ -12,6 +12,7 @@ public class SpiderController : MonoBehaviour
     public Camera spiderCam2;
     public Camera AnnaCam;
     public Camera NotesCam;
+    public Camera fightCam;
 
     public AudioClip SpiderClip;
     public AudioClip annaMotherClip;
@@ -64,7 +65,8 @@ public class SpiderController : MonoBehaviour
         yield return new WaitForSeconds(14.5f);
         GameManager.Instance.playerController.Anger();
         yield return new WaitForSeconds(2f);
-        gameCam.gameObject.SetActive(true);
+        gameCam.gameObject.SetActive(false);
+        fightCam.gameObject.SetActive(true );
         spiderCam.gameObject.SetActive(false);
         AnnaCam.gameObject.SetActive(false);
         aus.Stop();

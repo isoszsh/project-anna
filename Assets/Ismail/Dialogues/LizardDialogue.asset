@@ -15,34 +15,41 @@ MonoBehaviour:
   dialogue:
     npcName: Lizard
     sentences:
-    - text: Hey are you trying to rob my house?
+    - npcName: 
+      text: Hey are you trying to rob my house?
       audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
     options:
     - question: Who are you?
       answers:
-      - text: I am a lizard. I have lived in these lands for centuries. As you can
-          see, I farm, but I haven't been able to enter my home for a long time;
-          I have to sleep outside. They've dubbed me the homeless lizard.
-        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
+      - npcName: 
+        text: I am the last living member of the lizard family. My family has been
+          farming here for centuries, and like them, I continue the profession. However,
+          I haven't been able to enter my home for a long time. That's why everyone
+          calls me the homeless lizard.
+        audioClip: {fileID: 8300000, guid: 231265c652289fa41aaf80af0c700899, type: 3}
     - question: Why can't you enter your house?
       answers:
-      - text: Come closer! I'll tell you a secret. There are tiny but very dangerous
+      - npcName: 
+        text: Come closer! I'll tell you a secret. There are tiny but very dangerous
           creatures living here, we call them Arachnis. They call themselves Oopsies.
           A few weeks ago, the Oopsies stole the key to my house.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: There must be a hideout around here somewhere. I've heard they stash
+        audioClip: {fileID: 8300000, guid: c5b33eb3a9e808f4a9e9d1235211d950, type: 3}
+      - npcName: 
+        text: There must be a hideout around here somewhere. I've heard they stash
           everything they steal in a high place, but no one has ever seen or been
           there before. If you can talk to them and help me get my house key back,
           I'm sure there will be something useful for you in my house.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: e70d56ea297a6a646942fd83658a0400, type: 3}
     - question: What do you know about butterflies?
       answers:
-      - text: Butterflies are beautiful creatures. Contrary to popular belief, they
+      - npcName: 
+        text: Butterflies are beautiful creatures. Contrary to popular belief, they
           can live for quite a long time here, but I suppose you're not asking about
           that.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: According to an old legend, butterflies, due to their heightened senses,
+        audioClip: {fileID: 8300000, guid: 34725d99cc64f0944a9f6ecc5cf22259, type: 3}
+      - npcName: 
+        text: According to an old legend, butterflies, due to their heightened senses,
           may be trying to help you find something you deeply desire, but of course,
           I don't know if those butterflies still exist or if they are searching
           for something in my house.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: 23664fc3b1efe25499b22fe7c9ea48a5, type: 3}

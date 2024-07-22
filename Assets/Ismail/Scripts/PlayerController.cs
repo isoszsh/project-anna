@@ -164,10 +164,12 @@ public class PlayerController : MonoBehaviour
         {
             if(currentEvent)
             {
+                ResetVelocity();
                 currentEvent.TriggerEvent();
             }
             else if(pickedItem != null)
             {
+                ResetVelocity();
                 string ItemType = pickedItem.GetComponent<PickUpItem>().type;
                 if (ItemType == "Stone" && !isThrowing)
                 {
@@ -266,15 +268,32 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
+    void ResetVelocity()
+    {
+        playerRigidBody.velocity = Vector3.zero;
+        playerAnimator.SetFloat("Speed", 0);
+    }
+
     IEnumerator Paint()
     {
         playerAnimator.SetTrigger("Paint");
         yield return null;
     }
 
+
+
+    public void RemovePickupItem()
+    {
+        pickedItem.transform.parent = null;
+        pickedItem.transform.rotation = Quaternion.Euler(0, 0, 0);
+        Destroy(pickedItem.gameObject);
+        pickedItem = null;
+    }
     IEnumerator Drop()
     {
         lockControls = true;
+        ResetVelocity();
         pickedItem.transform.parent = null;
         pickedItem.transform.rotation = Quaternion.Euler(0, 0, 0);
 
@@ -288,7 +307,7 @@ public class PlayerController : MonoBehaviour
         {
             itemHeight = 0;
         }
-        
+
         pickedItem.transform.position = new Vector3(pickedItem.transform.position.x, itemHeight, pickedItem.transform.position.z);
         pickedItem.GetComponent<BoxCollider>().enabled = true;
         pickedItem = null;
@@ -296,10 +315,13 @@ public class PlayerController : MonoBehaviour
         willPick = null;
         yield return null;
     }
+
+   
     IEnumerator PickUp()
     {
         playerAnimator.SetTrigger("Pick");
         lockControls = true;
+        ResetVelocity();
         yield return new WaitForSeconds(.7f);
         willPick.transform.position = pickPoint.position;
         willPick.transform.rotation = pickPoint.rotation;
@@ -314,6 +336,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator Dig()
     {
         lockControls = true;
+        ResetVelocity();
         playerAnimator.SetTrigger("Dig");
         audioSource.PlayOneShot(diggingSfx);
         Vector3 storedPos = pickedItem.transform.localPosition;

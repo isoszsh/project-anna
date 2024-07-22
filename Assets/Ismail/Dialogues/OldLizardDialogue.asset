@@ -15,25 +15,30 @@ MonoBehaviour:
   dialogue:
     npcName: Lizard (But 100 Times Older)
     sentences:
-    - text: Looks like you finally made it..
-      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    - npcName: 
+      text: Looks like you finally made it..
+      audioClip: {fileID: 8300000, guid: 3ffd0a61225259a469eddad2d7b8ca5b, type: 3}
     options:
     - question: What Happened?
       answers:
-      - text: You've been home for 200 years. I waited for you to find yourself and
+      - npcName: 
+        text: You've been home for 200 years. I waited for you to find yourself and
           come out. Finally, you did.
-        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
+        audioClip: {fileID: 8300000, guid: b007cf55fb73f754ca6a08e97fe7a677, type: 3}
     - question: What happened to the surroundings?
       answers:
-      - text: A lot has changed in 200 years. Harsh winds blew, drought came, and
+      - npcName: 
+        text: A lot has changed in 200 years. Harsh winds blew, drought came, and
           everything was shattered. The world is no longer the same, and almost nothing
           lives here anymore.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: b91502377a04f17488816d6832cfc100, type: 3}
     - question: What will happen now?
       answers:
-      - text: Life progresses on a different path for everyone, Anna. My journey
+      - npcName: 
+        text: Life progresses on a different path for everyone, Anna. My journey
           is almost complete, and when I look back, I see many beautiful things.
           You must find yourself and complete your own journey as well.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: Now go and fulfill your destiny!
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: 6da3ff3aae713ad41a3684222f2cd3ed, type: 3}
+      - npcName: 
+        text: Now go and fulfill your destiny!
+        audioClip: {fileID: 8300000, guid: d625cf2711534d94ba3aa26bb61106cf, type: 3}

@@ -278,6 +278,8 @@ public class DialogueManager : MonoBehaviour
 
         HideOptions(); // Se�enekleri gizle
 
+        audioSource.Stop();
+
         // Opsiyon dinleyicilerini temizle
         foreach (Button button in optionButtons)
         {

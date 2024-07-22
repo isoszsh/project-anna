@@ -5,7 +5,7 @@ using UnityEngine;
 public class AncientStoneController : Event
 {
 
-
+    public string stonePos;
     private void Start()
     {
         GetComponent<MeshRenderer>().materials[2].color = Color.white;
@@ -49,7 +49,9 @@ public class AncientStoneController : Event
         yield return new WaitForSeconds(2);
         GetComponent<MeshRenderer>().materials[2].color = GameManager.Instance.playerController.pickedItem.GetComponent<BrushController>().currentColor;
         yield return new WaitForSeconds(1);
+        GameManager.Instance.paintPuzzleManager.SetColor(GameManager.Instance.playerController.pickedItem.GetComponent<BrushController>().currentColor,stonePos);
         GameManager.Instance.playerController.lockControls = false;
+
     }
 
 }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9bc2737785d494fb62a76eda54c770, type: 3}
+  m_Name: GolemDialogueFinished
+  m_EditorClassIdentifier: 
+  dialogue:
+    npcName: Golem
+    sentences:
+    - npcName: 
+      text: Did you solve it?
+      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    options:
+    - question: I have solved it
+      answers:
+      - npcName: 
+        text: Every golem has to prove themselves after reaching a certain age. I
+          need to prove myself by solving this ancient puzzle, but it involves colors,
+          and I'm colorblind.
+        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}

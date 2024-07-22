@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9bc2737785d494fb62a76eda54c770, type: 3}
+  m_Name: GolemDialogue2
+  m_EditorClassIdentifier: 
+  dialogue:
+    npcName: Golem
+    sentences:
+    - text: Well, I can't distinguish colors; I'm a golem.
+      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    options:
+    - question: Why are you complaining about colors?
+      answers:
+      - text: Every golem has to prove themselves after reaching a certain age. I
+          need to prove myself by solving this ancient puzzle, but it involves colors,
+          and I'm colorblind.
+        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
+    - question: Which ancient puzzle?
+      answers:
+      - text: There is an ancient puzzle just a little further from here. It represents
+          the world and space, but I think it requires doing something with colors.
+          Since I can't distinguish colors, I didn't understand anything.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      - text: If I solve the puzzle, I will be able to start a family and live happily
+          with the one I love. He spends every day napping on the bridge while waiting
+          for me.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    - question: Can I take a look at the puzzle too?
+      answers:
+      - text: Of course, you can take a look. Don't forget to grab the brush on the
+          table before you go.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      - text: If you manage to solve it, could you tell everyone that I solved it
+          instead of you? That way, I can pass the test and move on with my life.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
