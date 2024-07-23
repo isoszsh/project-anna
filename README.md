@@ -1,6 +1,6 @@
 ## **Takım İsmi**
 
-**Imagine 5**  //deneme//
+**Imagine 5**  _deneme_
 
 ## Takım Elemanları
 
