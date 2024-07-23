@@ -14,6 +14,10 @@
 
 - The Ghost of Anna, derin duygusal içeriğiyle öne çıkan, hikaye odaklı ve keşfetmeye dayalı bir Adventure/Puzzle oyunudur. Oyuncular, genç kız Anna'nın iç dünyasını derinlemesine keşfederken, onun zihnindeki mücadeleleri deneyimler. Bulmacaları çözer, gizemleri ortaya çıkarır ve Anna'nın büyüme ve içsel dönüşüm sürecinde ona rehberlik ederler. Oyunun dokusu ve atmosferi, oyuncuları duygusal olarak etkileyerek, benzersiz ve unutulmaz bir oyun deneyimi sunar.
 
+##Oyun Hikayesi
+
+- 6 yaşındaki Anna, duyularını sınırlı şekilde kullanarak yaşar. Bir gece uyuduğunda ise beklenmedik bir şekilde bambaşka bir evrende uyanır. Bu büyülü dünyada, her bir korkusunu yendiğinde duyularını geri kazandığını fark etmeye başlar. Zorlu kanyon, buzul ve ormanlardaki düşmanlar, Anna'nın en büyük korkularından oluşmaktadır. Bu yolculukta, edindiği yoldaşların yardımı, sanata ve müziğe olan bağlığı ve annesinin günlük sayfalarından öğrendiği bilgilerle cesaret bulan Anna, sonunda tüm duyularını geri kazanır ve hem kendisi hem de annesinin geçmişi hakkında derin bir anlayışa ulaşır.
+
 ## Oyun Özellikleri
 
 - 3D
