@@ -269,7 +269,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    void ResetVelocity()
+    public void ResetVelocity()
     {
         playerRigidBody.velocity = Vector3.zero;
         playerAnimator.SetFloat("Speed", 0);

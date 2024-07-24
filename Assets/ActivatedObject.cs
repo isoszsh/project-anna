@@ -14,6 +14,9 @@ public class ActivatedObject : MonoBehaviour
     }
 
 
+    public GameObject playerCam;
+    public GameObject eqCam;
+
     // Inspector üzerinden seçilebilir hale getirilmiþ public bir deðiþken
     public ActivationFunction selectedActivationFunction;
 
@@ -55,12 +58,21 @@ public class ActivatedObject : MonoBehaviour
 
     IEnumerator ShakeCamera(float time)
     {
+
         CinemachineBasicMultiChannelPerlin noiseProfile = GameManager.Instance.virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         noiseProfile.m_FrequencyGain = 2f;
         noiseProfile.m_AmplitudeGain = 2f;
         yield return new WaitForSeconds(11);
         noiseProfile.m_FrequencyGain = .25f;
         noiseProfile.m_AmplitudeGain = .25f;
+        eqCam.SetActive(true);
+        playerCam.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        eqCam.SetActive(false);
+        playerCam.SetActive(true);
+        GameManager.Instance.playerController.lockControls = false;
+        GameManager.Instance.playerController.currentEvent = null;
+
     }
     void ActivateWithRigidbodyActivation()
     {

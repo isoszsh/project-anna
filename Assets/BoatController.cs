@@ -30,23 +30,33 @@ public class BoatController : Event
 
     public DialogueStarter oopsieDS;
     public GameObject oopsieDC;
+
+    public GameObject heartStoneDC;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && GameManager.Instance.playerController.pickedItem.GetComponent<PickUpItem>().type == "Heartstone")
+        if (other.CompareTag("Player") && GameManager.Instance.playerController.pickedItem != null)
         {
-            storedSprite = triggerHeadImage.sprite;
-            triggerHeadImage.sprite = desiredSprite;
-            GameManager.Instance.playerController.currentEvent = this;
+            if(GameManager.Instance.playerController.pickedItem.GetComponent<PickUpItem>().type == "Heartstone")
+            {
+                storedSprite = triggerHeadImage.sprite;
+                triggerHeadImage.sprite = desiredSprite;
+                GameManager.Instance.playerController.currentEvent = this;
+            }
+            
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player") && GameManager.Instance.playerController.pickedItem.GetComponent<PickUpItem>().type == "Heartstone")
+        if (other.CompareTag("Player") && GameManager.Instance.playerController.pickedItem != null)
         {
-            triggerHeadImage.sprite = storedSprite;
+            if (GameManager.Instance.playerController.pickedItem.GetComponent<PickUpItem>().type == "Heartstone")
+            {
+                triggerHeadImage.sprite = storedSprite;
 
-            GameManager.Instance.playerController.currentEvent = null;
+                GameManager.Instance.playerController.currentEvent = null;
+            }
+                
         }
     }
 
@@ -79,6 +89,7 @@ public class BoatController : Event
         playerCamera.gameObject.SetActive(true);
         oopsieDS.readyToTalk = false;
         oopsieDC.SetActive(false);
+        heartStoneDC.SetActive(true) ;
         GameManager.Instance.playerController.currentEvent = null;
 
     }
@@ -96,7 +107,7 @@ public class BoatController : Event
         GameManager.Instance.playerController.transform.position = annaPos.position;
         GameManager.Instance.playerController.transform.rotation = annaPos.rotation;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3f);
         GameManager.Instance.playerController.transform.position = endPos.position;
         GameManager.Instance.playerController.transform.rotation = endPos.rotation;
         GameManager.Instance.playerController.transform.parent = null;

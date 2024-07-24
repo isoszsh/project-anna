@@ -193,18 +193,22 @@ public class DialogueManager : MonoBehaviour
         
         for (int i = 0; i < optionButtons.Length; i++)
         {
-            if (i < currentDialogue.options.Length)
+            if(currentDialogue != null)
             {
-                optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentDialogue.options[i].question;
-                optionButtons[i].gameObject.SetActive(true);
-                int optionIndex = i;
-                optionButtons[i].onClick.RemoveAllListeners(); 
-                optionButtons[i].onClick.AddListener(() => OnOptionSelected(optionIndex));
+                if (i < currentDialogue.options.Length)
+                {
+                    optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentDialogue.options[i].question;
+                    optionButtons[i].gameObject.SetActive(true);
+                    int optionIndex = i;
+                    optionButtons[i].onClick.RemoveAllListeners();
+                    optionButtons[i].onClick.AddListener(() => OnOptionSelected(optionIndex));
+                }
+                else
+                {
+                    optionButtons[i].gameObject.SetActive(false);
+                }
             }
-            else
-            {
-                optionButtons[i].gameObject.SetActive(false);
-            }
+            
         }
 
         
