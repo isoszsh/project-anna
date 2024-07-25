@@ -216,209 +216,222 @@
       "velocity": 105,
       "color": "green"
     },
-    {
-      "time": 92.0,
-      "note": 59,
-      "velocity": 78,
-      "color": "blue"
-    },
-    {
-      "time": 92.5,
-      "note": 66,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 93.0,
-      "note": 67,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 94.5,
-      "note": 62,
-      "velocity": 78,
-      "color": "yellow"
-    },
-    {
-      "time": 95.25,
-      "note": 64,
-      "velocity": 78,
-      "color": "green"
-    },
-    {
-      "time": 95.5,
-      "note": 62,
-      "velocity": 78,
-      "color": "blue"
-    },
-    {
-      "time": 96.0,
-      "note": 59,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 98.0,
-      "note": 67,
-      "velocity": 78,
-      "color": "green"
-    },
-    {
-      "time": 98.5,
-      "note": 69,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 99.0,
-      "note": 71,
-      "velocity": 78,
-      "color": "green"
-    },
-    {
-      "time": 100.0,
-      "note": 71,
-      "velocity": 78,
-      "color": "green"
-    },
-    {
-      "time": 100.5,
-      "note": 67,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 101.0,
-      "note": 69,
-      "velocity": 78,
-      "color": "blue"
-    },
-    {
-      "time": 101.5,
-      "note": 64,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 102.0,
-      "note": 67,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 103.0,
-      "note": 67,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 103.5,
-      "note": 71,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 104.5,
-      "note": 71,
-      "velocity": 78,
-      "color": "green"
-    },
-    {
-      "time": 105.0,
-      "note": 67,
-      "velocity": 78,
-      "color": "yellow"
-    },
-    {
-      "time": 106.0,
-      "note": 67,
-      "velocity": 78,
-      "color": "yellow"
-    },
-    {
-      "time": 106.5,
-      "note": 62,
-      "velocity": 78,
-      "color": "blue"
-    },
-    {
-      "time": 107.0,
-      "note": 62,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 107.5,
-      "note": 62,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 108.0,
-      "note": 62,
-      "velocity": 78,
-      "color": "green"
-    },
-    {
-      "time": 108.25,
-      "note": 66,
-      "velocity": 78,
-      "color": "yellow"
-    },
-    {
-      "time": 109.0,
-      "note": 66,
-      "velocity": 78,
-      "color": "green"
-    },
-    {
-      "time": 109.5,
-      "note": 67,
-      "velocity": 78,
-      "color": "blue"
-    },
-    {
-      "time": 110.5,
-      "note": 67,
-      "velocity": 78,
-      "color": "yellow"
-    },
-    {
-      "time": 111.0,
-      "note": 66,
-      "velocity": 78,
-      "color": "green"
-    },
-    {
-      "time": 112.0,
-      "note": 64,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 112.5,
-      "note": 62,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 113.0,
-      "note": 62,
-      "velocity": 78,
-      "color": "red"
-    },
-    {
-      "time": 113.5,
-      "note": 62,
-      "velocity": 78,
-      "color": "blue"
-    },
-    {
-      "time": 114.0,
-      "note": 59,
-      "velocity": 78,
-      "color": "green"
-    }
+      {
+        "time": 63.0,
+        "note": 64,
+        "velocity": 105,
+        "color": "green"
+      },
+      {
+        "time": 64.0,
+        "note": 64,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 64.5,
+        "note": 71,
+        "velocity": 105,
+        "color": "green"
+      },
+      {
+        "time": 65.0,
+        "note": 71,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 65.5,
+        "note": 71,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 66.0,
+        "note": 66,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 66.75,
+        "note": 67,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 67.0,
+        "note": 66,
+        "velocity": 105,
+        "color": "green"
+      },
+      {
+        "time": 67.5,
+        "note": 64,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 69.0,
+        "note": 71,
+        "velocity": 105,
+        "color": "yellow"
+      },
+      {
+        "time": 70.0,
+        "note": 74,
+        "velocity": 105,
+        "color": "green"
+      },
+      {
+        "time": 70.5,
+        "note": 76,
+        "velocity": 105,
+        "color": "yellow"
+      },
+      {
+        "time": 71.5,
+        "note": 74,
+        "velocity": 105,
+        "color": "yellow"
+      },
+      {
+        "time": 72.0,
+        "note": 71,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 72.5,
+        "note": 73,
+        "velocity": 105,
+        "color": "green"
+      },
+      {
+        "time": 73.0,
+        "note": 69,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 73.5,
+        "note": 71,
+        "velocity": 105,
+        "color": "yellow"
+      },
+      {
+        "time": 74.5,
+        "note": 71,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 75.0,
+        "note": 76,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 76.0,
+        "note": 76,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 76.5,
+        "note": 74,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 77.5,
+        "note": 71,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 78.0,
+        "note": 71,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 78.5,
+        "note": 69,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 79.0,
+        "note": 67,
+        "velocity": 105,
+        "color": "green"
+      },
+      {
+        "time": 79.5,
+        "note": 66,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 79.75,
+        "note": 62,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 80.5,
+        "note": 62,
+        "velocity": 105,
+        "color": "red"
+      },
+      {
+        "time": 81.0,
+        "note": 64,
+        "velocity": 105,
+        "color": "yellow"
+      },
+      {
+        "time": 82.0,
+        "note": 71,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 82.5,
+        "note": 69,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 83.5,
+        "note": 67,
+        "velocity": 105,
+        "color": "yellow"
+      },
+      {
+        "time": 84.0,
+        "note": 66,
+        "velocity": 105,
+        "color": "green"
+      },
+      {
+        "time": 84.5,
+        "note": 64,
+        "velocity": 105,
+        "color": "green"
+      },
+      {
+        "time": 85.0,
+        "note": 62,
+        "velocity": 105,
+        "color": "blue"
+      },
+      {
+        "time": 85.5,
+        "note": 64,
+        "velocity": 105,
+        "color": "green"
+      }
+  
   ]
 }

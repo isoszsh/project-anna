@@ -29,7 +29,7 @@ public class PianoController : Event
 
     public override void TriggerEvent()
     {
-        spider.Out();
+        spider.GetSound();
         this.enabled = false;
     }
 

@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerCam;
 
     public GameObject butterflyVC;
+    public GameObject mainVC;
 
     public GameObject mainButterfy;
 
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
 
         //startbutton'un görünürlüğünü kapat
         startButton.SetActive(false);
+        mainVC.SetActive(false);
         
 
         
@@ -104,6 +106,7 @@ public class GameManager : MonoBehaviour
         introCam.gameObject.SetActive(false);
         mainIntroCam.gameObject.SetActive(false);
         playerCam.gameObject.SetActive(true);
+        mainVC.gameObject.SetActive(true);
         
         
     }

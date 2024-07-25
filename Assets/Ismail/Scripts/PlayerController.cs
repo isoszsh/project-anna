@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.X) && !lockControls)
+        if(Input.GetKeyDown(KeyCode.X) && !lockControls && pickedItem != null)
         {
             StartCoroutine(Drop());
         }
