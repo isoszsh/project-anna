@@ -110,8 +110,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StoryAudioSource.Play();
-        StoryAudioSource.Pause();
+        if(StoryAudioSource != null)
+        {
+            StoryAudioSource.Play();
+            StoryAudioSource.Pause();
+        }
+        
         if (SceneManager.GetActiveScene().name == "Level1")
         {
             playerController.enabled = false;
