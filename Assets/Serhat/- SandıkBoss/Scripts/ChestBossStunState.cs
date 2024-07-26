@@ -10,7 +10,7 @@ public class ChestBossStunState : ChestBossBaseState
     public override void Enter()
     {
         boss.GetComponent<Animator>().ResetTrigger("Run");
-        boss.GetComponent<Animator>().SetTrigger("Stun");
+        boss.GetComponent<Animator>().SetTrigger("HitWall");
 
         player = boss.GetComponent<ChestBossEnemy>().player;
 
@@ -42,6 +42,8 @@ public class ChestBossStunState : ChestBossBaseState
     {
         // Stun süresi boyunca bekle
         yield return new WaitForSeconds(stunTime);
+        boss.GetComponent<Animator>().ResetTrigger("HitWall");
+        boss.GetComponent<Animator>().SetTrigger("Stun");
         // 3 saniye boyunca oyuncuya dön
         readyToLook = true;
         yield return new WaitForSeconds(3);
