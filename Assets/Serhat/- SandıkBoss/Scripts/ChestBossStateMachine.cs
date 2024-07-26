@@ -7,12 +7,16 @@ public class ChestBossStateMachine : MonoBehaviour
     public ChestBossBaseState activeState;
     public ChestBossFollowState followState;
 
+    public ChestBossSpawnState spawnState;
+
     public ChestBossStunState stunState;
+
+    public ChestBossStarterState starterState;
 
 
     public void Initialise()
     {
-        ChangeStateToFollowState();
+        ChangeStateToStarterState();
     }
 
     public void ChangeStateToStunState(){
@@ -25,9 +29,19 @@ public class ChestBossStateMachine : MonoBehaviour
         ChangeState(followState);
     }
 
+    public void ChangeStateToSpawnState(){
+        spawnState = new ChestBossSpawnState();
+        ChangeState(spawnState);
+    }
+
+    public void ChangeStateToStarterState(){
+        starterState = new ChestBossStarterState();
+        ChangeState(starterState);
+    }
+
     void Start()
     {
-        
+        this.GetComponent<Animator>().speed = 0f;
     }
 
     // Update is called once per frame

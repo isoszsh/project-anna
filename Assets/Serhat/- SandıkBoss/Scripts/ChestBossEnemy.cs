@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class ChestBossEnemy : MonoBehaviour
 {
     public GameObject player;
+    public BoxCollider boxCollider;
     private ChestBossStateMachine stateMachine;
     private NavMeshAgent agent;
     
@@ -15,6 +16,15 @@ public class ChestBossEnemy : MonoBehaviour
     private string currentState;
 
     public List<GameObject> walls = new List<GameObject>();
+
+    public GameObject TrailParent;
+
+    public List<GameObject> topSpawnPoints = new List<GameObject>();
+    public List<GameObject> bottomSpawnPoints = new List<GameObject>();
+    public List<GameObject> leftSpawnPoints = new List<GameObject>();
+    public List<GameObject> rightSpawnPoints = new List<GameObject>();
+
+    public List<GameObject> spawnObject = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
