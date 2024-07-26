@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public GameObject mainVC;
 
     public GameObject mainButterfy;
+    public GameObject hintPanel;
 
     // Singleton instance property
     public static GameManager Instance
@@ -124,6 +125,10 @@ public class GameManager : MonoBehaviour
             playerController.enabled = false;
             playerController.playerAnimator.SetTrigger("Sleep");
         }
+        else
+        {
+            StartCoroutine(LNM());
+        }
        
         // Singleton instance'� bu GameManager nesnesine ata
         if (instance == null)
@@ -140,5 +145,12 @@ public class GameManager : MonoBehaviour
         }
         
         
+    }
+
+    IEnumerator LNM()
+    {
+        yield return new WaitForSeconds(2);
+        levelNameAnimator = levelNameText.GetComponent<Animator>();
+        levelNameAnimator.SetTrigger("LevelName");
     }
 }

@@ -747,6 +747,13 @@ MonoBehaviour:
     type: 3}
   startButton: {fileID: 0}
   paintPuzzleManager: {fileID: 0}
+  annaHand: {fileID: 0}
+  introCam: {fileID: 0}
+  mainIntroCam: {fileID: 0}
+  playerCam: {fileID: 0}
+  butterflyVC: {fileID: 0}
+  mainVC: {fileID: 0}
+  mainButterfy: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -3816,9 +3823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Colorblind
-
-'
+  m_text: 'Chapter 4.1: The Labyrinth''s Heart of Seeds'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3845,7 +3850,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.6
+  m_fontSize: 29.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

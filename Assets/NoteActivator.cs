@@ -5,6 +5,8 @@ public class NoteActivator : MonoBehaviour
     public KeyCode keyToPress;
     public float pressWindow = 0.4f; // Basma penceresi zamaný
     public GameObject currentObject;
+    public MeshRenderer mr;
+    public Color ktpColor;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,10 +18,23 @@ public class NoteActivator : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(keyToPress) && currentObject != null)
+        if (Input.GetKey(keyToPress))
         {
-            Destroy(currentObject);
-            currentObject = null;
+            if (currentObject != null )
+            {
+                Destroy(currentObject);
+                currentObject = null;
+            }
+
+            mr.material.color = ktpColor;
+
+        }
+        else
+        {
+            if(mr.material.color != Color.white)
+            {
+                mr.material.color = Color.white;
+            }
         }
     }
 

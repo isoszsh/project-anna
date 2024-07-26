@@ -15,33 +15,39 @@ MonoBehaviour:
   dialogue:
     npcName: Ant
     sentences:
-    - text: I entered a competition with the cicadas, but I am about to lose.
-      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    - npcName: 
+      text: I entered a competition with the cicadas, but I am about to lose.
+      audioClip: {fileID: 8300000, guid: 8e162726ba71da04da6371f42af032b3, type: 3}
     options:
     - question: Why are you competing with the cicadas?
       answers:
-      - text: According to an ancient book, there is a rivalry between cicadas and
+      - npcName: 
+        text: According to an ancient book, there is a rivalry between cicadas and
           ants. Every year, under the name of the Competition Festival, we ants hold
           a contest and, in the end, have a feast where we eat the food we have collected
           during the process.
-        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
+        audioClip: {fileID: 8300000, guid: c2bdb42894cc85f4eb6ed29ce9399f40, type: 3}
     - question: Why aren't you working?
       answers:
-      - text: I really want to work, but I lost the batteries for my antennas in
+      - npcName: 
+        text: I really want to work, but I lost the batteries for my antennas in
           a storm that just passed through, so I can't work right now.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: For an ant to navigate and function properly, its antennas are crucial.
+        audioClip: {fileID: 8300000, guid: c911bcdaa0d367546939bb4c5064d95c, type: 3}
+      - npcName: 
+        text: For an ant to navigate and function properly, its antennas are crucial.
           I'm afraid to even move because my antennas' batteries are dead, and I
           don't want to get lost. I can't even send signals to my friends. I'm stuck
           here.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: 10905df98e5c6094ab529c52ef3cbfb3, type: 3}
     - question: Can I help you?
       answers:
-      - text: I would be very happy! The batteries for my antennas are round and
+      - npcName: 
+        text: I would be very happy! The batteries for my antennas are round and
           very thin. I think they might have been buried in the sand during the sandstorm,
           but I'm afraid to even search for them.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
-      - text: If you want to help me, you can bring two batteries. I'll get my antennas
+        audioClip: {fileID: 8300000, guid: 487911e3dee445647aa3ce344a2d42b8, type: 3}
+      - npcName: 
+        text: If you want to help me, you can bring two batteries. I'll get my antennas
           working again and can go back to work with my friends. If you like, I can
           also give you one of my own tools. Maybe you need something sharp.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: 9a25a33e839f3da40a30ec685e98249c, type: 3}

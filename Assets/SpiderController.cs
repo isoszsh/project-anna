@@ -114,7 +114,16 @@ public class SpiderController : MonoBehaviour
         GameManager.Instance.playerController.playerAnimator.SetBool("PlayingPiano", true);
         StartCoroutine(ExplosionCounter());
         notesLoader.StartFight();
-        
+        yield return new WaitForSeconds(37);
+        animator.SetBool("isPlaying", true);
+        yield return new WaitForSeconds(23);
+        animator.SetBool("isPlaying", false);
+        yield return new WaitForSeconds(4.5f);
+        animator.SetBool("isPlaying", true);
+        yield return new WaitForSeconds(30);
+        animator.SetBool("isPlaying", false);
+
+
     }
 
 

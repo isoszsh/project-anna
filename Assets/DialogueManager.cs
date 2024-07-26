@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour
     public Button[] optionButtons;
     public AudioSource audioSource; // AudioSource bile�eni ekleyin
     private Queue<DialogueSentence> sentences;
-    private Dialogue currentDialogue;
+    public Dialogue currentDialogue;
 
     // Typewriter effect variables
     public float typeSpeed = 0.05f; // Character display speed
@@ -197,6 +197,19 @@ public class DialogueManager : MonoBehaviour
             {
                 if (i < currentDialogue.options.Length)
                 {
+                    if (optionButtons[i] != null)
+                    {
+                        Debug.Log("OptionButtonVar");
+                    }
+                    if(optionButtons[i].GetComponentInChildren<TextMeshProUGUI>() != null)
+                    {
+                        Debug.Log("Textmeshpro var");
+                    }
+
+                    if(currentDialogue.options[i].question !=  null)
+                    {
+                        Debug.Log("Question var");
+                    }
                     optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentDialogue.options[i].question;
                     optionButtons[i].gameObject.SetActive(true);
                     int optionIndex = i;

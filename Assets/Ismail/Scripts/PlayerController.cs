@@ -81,6 +81,8 @@ public class PlayerController : MonoBehaviour
     public GameObject scannerPrefab;
     public AudioClip scannerClip;
 
+    public float lastHintTime = 0f;
+
 
     private void Start()
     {
@@ -319,6 +321,7 @@ public class PlayerController : MonoBehaviour
    
     IEnumerator PickUp()
     {
+        StartCoroutine(ShowPUHint());
         playerAnimator.SetTrigger("Pick");
         lockControls = true;
         ResetVelocity();
@@ -331,6 +334,21 @@ public class PlayerController : MonoBehaviour
         pickedItem = willPick;
         willPick = null;
         lockControls = false;
+    }
+
+    IEnumerator ShowPUHint()
+    {
+
+        if(Time.time - lastHintTime > 20 || lastHintTime == 0f)
+        {
+
+            lastHintTime = Time.time;
+            GameManager.Instance.hintPanel.gameObject.SetActive(true);
+            yield return new WaitForSeconds(3);
+            GameManager.Instance.hintPanel.gameObject.SetActive(false);
+
+        }
+        
     }
 
     IEnumerator Dig()

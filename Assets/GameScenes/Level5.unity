@@ -23,10 +23,10 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.72
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: d4393bf45f92e74499f230d78e8cab9f, type: 2}
+  m_SubtractiveShadowColor: {r: 0.26913494, g: 0.27840433, b: 0.3018868, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 170f2a047c448444ca1b8e2d20f504f1, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -11509,6 +11509,7 @@ MonoBehaviour:
   mainIntroCam: {fileID: 0}
   playerCam: {fileID: 0}
   butterflyVC: {fileID: 0}
+  mainVC: {fileID: 0}
   mainButterfy: {fileID: 0}
 --- !u!4 &443515619
 Transform:
