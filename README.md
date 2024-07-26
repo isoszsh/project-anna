@@ -129,7 +129,7 @@
   ![Screenshot 4]()
   ![Screenshot 5]()
 
-  Daha fazla görsel için: [Oyun İçi Görseller](https://imgur.com/a/jF4E9xp)
+  Daha fazla görsel için: [Oyun İçi Görseller](https://imgur.com/a/Ln4C4Jv)
 
 - **Sprint Review**: 
   - Scrum boyunca eksiksiz çalışıldığı için ekip üyeleri birbirini tebrik etti.
