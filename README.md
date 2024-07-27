@@ -2,6 +2,10 @@
 
 **Imagine 5** 
 
+## **Takım Logosu**
+
+![Logo](https://github.com/user-attachments/assets/d3656d39-534d-46da-90d1-a48268980995)
+
 ## Takım Elemanları
 
 |    | <div align="center">Name</div>   | <div align="center">Title</div>  | <div align="center">Socials</div>     |
@@ -22,7 +26,7 @@
 
 ## Oyun Hikayesi
 
--   6 yaşındaki Anna, doğuştan gelen duyusal eksikliklerle hayatını sürdürmektedir. Görme, işitme, dokunma, tat ve koku gibi temel duyularından yoksun olmanın getirdiği zorluklarla büyüyen **Anna**, çevresini algılamak ve anlamak için büyük bir çaba harcamaktadır. Ancak, bir gece uyuduğunda, beklenmedik bir şekilde kendini tamamen farklı, büyülü bir evrende bulur.Bu büyülü evrenin aslında bir rüya olduğunu ve her bir korkusunu yendiğinde duyularını geri kazandığını fark etmeye başlar. Zorlu kanyon, kutuplar, karanlık labirent ve perili ormanlardaki düşmanlar, **Anna**'nın en büyük korkularından oluşmaktadır. Bu yolculukta, edindiği yoldaşların yardımı, sanata ve müziğe olan bağlığı ve annesinin günlük sayfalarından öğrendiği bilgilerle cesaret bulan **Anna**, korkularını yenmesinin ve çeşitli bulmacaları çözmesinin sonunda tüm duyularını geri kazanır ve hem kendisi hem de annesinin geçmişi hakkında derin bir anlayışa ulaşır.**Anna**, artık sadece duyularını geri kazanmış bir çocuk değil, aynı zamanda içsel gücünü ve cesaretini keşfetmiş bir birey olarak uyanır.
+-   6 yaşındaki **Anna**, doğuştan gelen duyusal eksikliklerle hayatını sürdürmektedir. Görme, işitme, dokunma, tat ve koku gibi temel duyularından yoksun olmanın getirdiği zorluklarla büyüyen **Anna**, çevresini algılamak ve anlamak için büyük bir çaba harcamaktadır. Ancak, bir gece uyuduğunda, beklenmedik bir şekilde kendini tamamen farklı, büyülü bir evrende bulur. Bu büyülü evrenin aslında bir rüya olduğunu ve her bir korkusunu yendiğinde duyularını geri kazandığını fark etmeye başlar. Zorlu kanyon, kutuplar, karanlık labirent ve perili ormanlardaki düşmanlar, **Anna**'nın en büyük korkularından oluşmaktadır. Bu yolculukta, edindiği yoldaşların yardımı, sanata ve müziğe olan bağlığı ve annesinin günlük sayfalarından öğrendiği bilgilerle cesaret bulan **Anna**, korkularını yenmesinin ve çeşitli bulmacaları çözmesinin sonunda tüm duyularını geri kazanır ve hem kendisi hem de annesinin geçmişi hakkında derin bir anlayışa ulaşır.**Anna**, artık sadece duyularını geri kazanmış bir çocuk değil, aynı zamanda içsel gücünü ve cesaretini keşfetmiş bir birey olarak uyanır.
 
 ## Oyun Özellikleri
 
