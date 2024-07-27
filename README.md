@@ -16,7 +16,7 @@
 
 ## Oyun Hikayesi
 
-- 6 yaşındaki **Anna**, duyularını sınırlı şekilde kullanarak yaşar. Bir gece uyuduğunda ise beklenmedik bir şekilde bambaşka bir evrende uyanır. Bu büyülü dünyada, her bir korkusunu yendiğinde duyularını geri kazandığını fark etmeye başlar. Zorlu kanyon, buzul ve ormanlardaki düşmanlar, **Anna**'nın en büyük korkularından oluşmaktadır. Bu yolculukta, edindiği yoldaşların yardımı, sanata ve müziğe olan bağlığı ve annesinin günlük sayfalarından öğrendiği bilgilerle cesaret bulan **Anna**, sonunda tüm duyularını geri kazanır ve hem kendisi hem de annesinin geçmişi hakkında derin bir anlayışa ulaşır.
+- 6 yaşındaki **Anna**, hayatı boyunca duyularını sınırlı şekilde kullanarak yaşamıştır. Bir gece uyuduğunda ise beklenmedik bir şekilde bambaşka bir evrende uyanır. Bu büyülü dünyada, her bir korkusunu yendiğinde duyularını geri kazandığını fark etmeye başlar. Zorlu kanyon, buzul ve ormanlardaki düşmanlar, **Anna**'nın en büyük korkularından oluşmaktadır. Bu yolculukta, edindiği yoldaşların yardımı, sanata ve müziğe olan bağlığı ve annesinin günlük sayfalarından öğrendiği bilgilerle cesaret bulan **Anna**, korkularını sonunda tüm duyularını geri kazanır ve hem kendisi hem de annesinin geçmişi hakkında derin bir anlayışa ulaşır.
 
 ## Oyun Özellikleri
 
@@ -29,7 +29,7 @@
 
 - Bağımsız (Indie) Oyun Severler
 - Strateji ve Planlama Meraklıları
-- 15 - 65 Yaş Arası Oyuncular
+- 13 - 65 Yaş Arası Oyuncular
 
 ## Product Backlog URL
 
@@ -145,6 +145,6 @@
 ---
 
 -**Diğer Notlar**:
-- N/A
+- Oyunumuz Steam üzerinden, oyun içi reklamsız olarak paylaşılacaktır.
 
 ---
