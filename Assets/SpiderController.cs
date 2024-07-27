@@ -41,6 +41,10 @@ public class SpiderController : MonoBehaviour
     public AudioClip afterLoseGo;
     public AudioClip afterLoseDont;
     public AudioClip annaVictory;
+    public GameObject portal;
+
+    public GameObject annaHearsCam;
+    public GameObject annaHearsCam2;
 
     public GameObject annaDecision;
 
@@ -60,8 +64,20 @@ public class SpiderController : MonoBehaviour
     IEnumerator GetSoundIE()
     {
         GameManager.Instance.playerController.lockControls = true;
+        GameManager.Instance.playerController.GetComponent<Rigidbody>().isKinematic = true;
+        GameManager.Instance.playerController.transform.position = new Vector3(-26.69323f, 0.008f, -118.303f);
         DialoguesAus.PlayOneShot(annaHears);
-        yield return new WaitForSeconds(20);
+        gameCam.gameObject.SetActive(false);
+        annaHearsCam.gameObject.SetActive(true);
+        annaHearsCam.GetComponent<Animator>().SetTrigger("Hear");
+        GameManager.Instance.playerController.playerAnimator.SetBool("PlayingPiano", true);
+        yield return new WaitForSeconds(10);
+        annaHearsCam2.gameObject.SetActive(true);
+        annaHearsCam2.GetComponent<Animator>().SetTrigger("Hear");
+        yield return new WaitForSeconds(10);
+        GameManager.Instance.playerController.playerAnimator.SetBool("PlayingPiano", false);
+        annaHearsCam.gameObject.SetActive(false);
+        
         Out();
     }
 
@@ -79,6 +95,7 @@ public class SpiderController : MonoBehaviour
         GameManager.Instance.playerController.lockControls = true;
         gameCam.gameObject.SetActive(false);
         spiderCam.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(2f);
         DialoguesAus.PlayOneShot(SpiderClip);
         yield return new WaitForSeconds(4f);
@@ -111,6 +128,7 @@ public class SpiderController : MonoBehaviour
         spiderCam.gameObject.SetActive(false);
         AnnaCam.gameObject.SetActive(false);
         aus.Stop();
+        GameManager.Instance.playerController.GetComponent<Rigidbody>().isKinematic = false;
         GameManager.Instance.playerController.playerAnimator.SetBool("PlayingPiano", true);
         StartCoroutine(ExplosionCounter());
         notesLoader.StartFight();
@@ -162,14 +180,58 @@ public class SpiderController : MonoBehaviour
     {
         GameManager.Instance.playerController.playerAnimator.SetBool("PlayingPiano", false);
         animator.SetTrigger("Lose");
+        fightCam.gameObject.SetActive(false);
         spiderLoseCam.gameObject.SetActive(true);
         yield return new WaitForSeconds(2);
         aus.PlayOneShot(annaVictory);
         DialoguesAus.PlayOneShot(spiderLoseSFX);
         yield return new WaitForSeconds(10);
+        AnnaCam.gameObject.SetActive(true);
+        spiderLoseCam.gameObject.SetActive(false);
+        yield return new WaitForSeconds(5);
+        AnnaCam.gameObject.SetActive(false);
+        spiderLoseCam.gameObject.SetActive(true);
+        yield return new WaitForSeconds(4);
         spiderLoseCam.gameObject.SetActive(false);
         annaLoseCam.gameObject.SetActive(true);
         annaDecision.gameObject.SetActive(true);
+
+    }
+
+    public void LetGo()
+    {
+        StartCoroutine(LGC());
+    }
+
+    IEnumerator LGC()
+    {
+        annaDecision.gameObject.SetActive(false);
+        annaLoseCam.gameObject.SetActive(false);
+        spiderLoseCam.gameObject.SetActive(true);
+        aus.PlayOneShot(afterLoseGo);
+        yield return new WaitForSeconds(11);
+        portal.gameObject.SetActive(true);
+        spiderLoseCam.gameObject.SetActive(false);
+        gameCam.gameObject.SetActive(true);
+
+
+    }
+
+    public void StayHere()
+    {
+        StartCoroutine(SH());
+    }
+
+    IEnumerator SH()
+    {
+        annaDecision.gameObject.SetActive(false);
+        annaLoseCam.gameObject.SetActive(false);
+        spiderLoseCam.gameObject.SetActive(true);
+        aus.PlayOneShot(afterLoseDont);
+        yield return new WaitForSeconds(9);
+        spiderLoseCam.gameObject.SetActive(false);
+        portal.gameObject.SetActive(true);
+        gameCam.gameObject.SetActive(true) ;
 
     }
 }
