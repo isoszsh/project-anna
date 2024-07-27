@@ -20,6 +20,10 @@ public class DialogueStarter : Event
 
     public Event relatedEvent;
 
+    public DialogueData firstFind;
+    public DialogueData secondFind;
+    public int findIndex = 0;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -53,7 +57,24 @@ public class DialogueStarter : Event
                 if (GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>())
                 {
                     ExtraData ed = GameManager.Instance.playerController.pickedItem.GetComponent<ExtraData>();
-                    DialogueManager.Instance.StartDialogue(ed.DialogueData.dialogue);
+
+                    if(ed.isCorrect)
+                    {
+                        if(findIndex == 0)
+                        {
+                            DialogueManager.Instance.StartDialogue(firstFind.dialogue);
+                            findIndex++;
+                        }
+                        else if (findIndex == 1)
+                        {
+                            relatedEvent.TriggerStartEvent();
+                        }
+                        GameManager.Instance.playerController.RemovePickupItem();
+                    }
+                    else
+                    {
+                        DialogueManager.Instance.StartDialogue(ed.DialogueData.dialogue);
+                    }
                 }
                 else
                 {

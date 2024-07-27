@@ -383,6 +383,10 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator PlayFlute()
     {
+        
+        playerAnimator.SetTrigger("Paint");
+        lockControls = true;
+        yield return new WaitForSeconds(1f);
         audioSource.PlayOneShot(scannerClip);
         Vector3 instantiatePos = new Vector3(transform.position.x,0,transform.position.z);
         Instantiate(scannerPrefab, instantiatePos, Quaternion.identity);
@@ -391,6 +395,8 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(.3f);
         Instantiate(scannerPrefab, instantiatePos, Quaternion.identity);
         yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(1f);
+        lockControls = false;
 
     }
 

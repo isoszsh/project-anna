@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9bc2737785d494fb62a76eda54c770, type: 3}
+  m_Name: Teddy Bear
+  m_EditorClassIdentifier: 
+  dialogue:
+    npcName: Ant
+    sentences:
+    - npcName: 
+      text: Aww looks like you found something
+      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+    options:
+    - question: is this your batteries?
+      answers:
+      - npcName: 
+        text: Let me look
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      - npcName: 
+        text: No, this is a teddy bear. It looks very cute, but this is not what
+          I want.
+        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
