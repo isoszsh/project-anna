@@ -2,9 +2,19 @@
 
 **Imagine 5** 
 
+## **Takım Logosu**
+
+![Logo](https://github.com/user-attachments/assets/d3656d39-534d-46da-90d1-a48268980995)
+
 ## Takım Elemanları
 
-[İsmail Dönmez: Product Owner](https://www.linkedin.com/in/ismail-dz/) <br/> [İncila Kırbaç: Scrum Master](https://www.linkedin.com/in/incila-kirbac/) <br/> [İbrahim Serhat Aktaş: Developer](https://www.linkedin.com/in/ibrahim-serhat-aktas/) <br/> [İpek Nezihe Can: Developer](https://www.linkedin.com/in/ipek-nezihe-can/) <br/> [İrfan Şenatlı: Developer](https://www.linkedin.com/in/irfan-%C5%9Fenatl%C4%B1-7a3963249/)
+|    | <div align="center">Name</div>   | <div align="center">Title</div>  | <div align="center">Socials</div>     |
+| :-----------: | :---------- | :---------- | :----------: |
+|  ![İsmailPhoto](https://github.com/user-attachments/assets/904d462c-f496-435e-99f4-1e5ddbdbe1c8)  | İsmail Dönmez     | Product Owneer     | [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/ismail-dz/)   | 
+|  ![İncilaPhoto](https://github.com/user-attachments/assets/dff428d7-8638-405f-b3a5-f820260f2572)    | İncila Kırbaç     | Scrum Master     |  [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/incila-kirbac/) |
+|  ![İbrahimPhoto](https://github.com/user-attachments/assets/4f717eb9-db3a-453f-a703-5f6afdd70f09)  | İbrahim Serhat Aktaş      | Developer      |  [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/ibrahim-serhat-aktas/)   |
+|   ![İpekPhoto](https://github.com/user-attachments/assets/563720b1-1bb6-445c-946b-ebcf1ae3d873)   | İpek Nezihe Can      | Developer     |    [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/ipek-nezihe-can/)    |
+|   ![İrfanPhoto]()   | İrfan Şenatlı      | Developer     |    [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/irfan-%C5%9Fenatl%C4%B1-7a3963249/)    |
 
 ## Oyun İsmi
 
@@ -16,20 +26,22 @@
 
 ## Oyun Hikayesi
 
-- 6 yaşındaki **Anna**, duyularını sınırlı şekilde kullanarak yaşar. Bir gece uyuduğunda ise beklenmedik bir şekilde bambaşka bir evrende uyanır. Bu büyülü dünyada, her bir korkusunu yendiğinde duyularını geri kazandığını fark etmeye başlar. Zorlu kanyon, buzul ve ormanlardaki düşmanlar, **Anna**'nın en büyük korkularından oluşmaktadır. Bu yolculukta, edindiği yoldaşların yardımı, sanata ve müziğe olan bağlığı ve annesinin günlük sayfalarından öğrendiği bilgilerle cesaret bulan **Anna**, sonunda tüm duyularını geri kazanır ve hem kendisi hem de annesinin geçmişi hakkında derin bir anlayışa ulaşır.
+-   6 yaşındaki **Anna**, doğuştan gelen duyusal eksikliklerle hayatını sürdürmektedir. Görme, işitme, dokunma, tat ve koku gibi temel duyularından yoksun olmanın getirdiği zorluklarla büyüyen **Anna**, çevresini algılamak ve anlamak için büyük bir çaba harcamaktadır. Ancak, bir gece uyuduğunda, beklenmedik bir şekilde kendini tamamen farklı, büyülü bir evrende bulur. Bu büyülü evrenin aslında bir rüya olduğunu ve her bir korkusunu yendiğinde duyularını geri kazandığını fark etmeye başlar. Zorlu kanyon, kutuplar, karanlık labirent ve perili ormanlardaki düşmanlar, **Anna**'nın en büyük korkularından oluşmaktadır. Bu yolculukta, edindiği yoldaşların yardımı, sanata ve müziğe olan bağlığı ve annesinin günlük sayfalarından öğrendiği bilgilerle cesaret bulan **Anna**, korkularını yenmesinin ve çeşitli bulmacaları çözmesinin sonunda tüm duyularını geri kazanır ve hem kendisi hem de annesinin geçmişi hakkında derin bir anlayışa ulaşır.**Anna**, artık sadece duyularını geri kazanmış bir çocuk değil, aynı zamanda içsel gücünü ve cesaretini keşfetmiş bir birey olarak uyanır.
 
 ## Oyun Özellikleri
 
 - 3D
-- Singleplayer
-- Adventure/Puzzle
-- Deep Lore
+- Tek oyunculu
+- Macera/Puzzle
+- Derin hikaye örgüsü
+- Low-poly
+- Interaktif Görevler
 
 ## Hedef Kitle
 
 - Bağımsız (Indie) Oyun Severler
-- Strateji ve Planlama Meraklıları
-- 15 - 65 Yaş Arası Oyuncular
+- Keşif ve Macera Severler
+- 13 - 65 Yaş Arası Oyuncular
 
 ## Product Backlog URL
 
@@ -50,15 +62,17 @@
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılması kararlaştırılmıştır. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 1 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
 
 - **Sprint board update**: Sprint board screenshot: 
-![Backlog 1](https://github.com/isoszsh/project-anna/assets/154831174/74a8a491-8bf8-4b72-9e05-506f48044979) 
+![Backlog 1](https://github.com/user-attachments/assets/11c6634d-5f65-4bfc-be3f-029a05083322) 
 
-- **Ürün Durumu**: Ekran görüntüleri:
+<details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
   ![Screenshot 1](https://github.com/user-attachments/assets/da1981ad-b5fa-4731-b737-b2d35f10bea9)
   ![Screenshot 2](https://github.com/isoszsh/project-anna/assets/154831174/1fbff295-eac4-41cb-bbec-3c77c458b289) 
   ![Screenshot 3](https://github.com/isoszsh/project-anna/assets/154831174/31ff440e-af36-4b93-bc22-f98fe08c5659)
   ![Screenshot 4](https://github.com/isoszsh/project-anna/assets/154831174/2db880d4-0aa8-4753-a9fc-51b31217a2a9)
   ![Screenshot 5](https://github.com/isoszsh/project-anna/assets/154831174/f8552310-d0b8-45ea-b776-9f4786dca256)
+
+  </details>
 
 - **Sprint Review**: 
   - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
@@ -86,13 +100,15 @@
 - **Sprint board update**: Sprint board screenshot: 
 ![Backlog 2](https://github.com/user-attachments/assets/693edf2a-fa8b-4126-8e44-a3ddaa37de6c)
 
-- **Ürün Durumu**: Ekran görüntüleri:
+<details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
   ![Screenshot 1](https://github.com/user-attachments/assets/b225057b-e3ab-4076-81e8-a62b029f1e4d)
   ![Screenshot 2](https://github.com/user-attachments/assets/a716a14c-23b3-4be6-9625-5e6b50e91d90) 
   ![Screenshot 3](https://github.com/user-attachments/assets/e2bcbb7e-accf-417e-8013-0cde77fd082c)
   ![Screenshot 4](https://github.com/user-attachments/assets/ea04e39e-42ab-4689-96a6-b1836415e05d)
   ![Screenshot 5](https://github.com/user-attachments/assets/ffe3c265-d758-491f-a9b4-db3bc7c00465)
+
+</details>
 
 - **Sprint Review**: 
   - Ekip, görevlerinin sağladığı gelişmeleri açıkladı. Güncel performansın arttırılması gerektiğinde anlaşıldı. Sprint içerisinde tasarlanmış olan leveller tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı, geliştirilebilecek noktalar tartışıldı.
@@ -121,13 +137,15 @@
 - **Sprint board update**: Sprint board screenshot: 
 ![Backlog 3](https://github.com/user-attachments/assets/693edf2a-fa8b-4126-8e44-a3ddaa37de6c)
 
-- **Ürün Durumu**: Ekran görüntüleri:
+<details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
-  ![Screenshot 1]()
-  ![Screenshot 2]() 
-  ![Screenshot 3]()
-  ![Screenshot 4]()
-  ![Screenshot 5]()
+  ![Screenshot 1](x)
+  ![Screenshot 2](x) 
+  ![Screenshot 3](x)
+  ![Screenshot 4](x)
+  ![Screenshot 5](x)
+
+</details>
 
   Daha fazla görsel için: [Oyun İçi Görseller](https://imgur.com/a/Ln4C4Jv)
 
@@ -145,6 +163,6 @@
 ---
 
 -**Diğer Notlar**:
-- N/A
+- 
 
 ---
