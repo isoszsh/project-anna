@@ -64,13 +64,15 @@
 - **Sprint board update**: Sprint board screenshot: 
 ![Backlog 1](https://github.com/user-attachments/assets/11c6634d-5f65-4bfc-be3f-029a05083322) 
 
-- **Ürün Durumu**: Ekran görüntüleri:
+<details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
   ![Screenshot 1](https://github.com/user-attachments/assets/da1981ad-b5fa-4731-b737-b2d35f10bea9)
   ![Screenshot 2](https://github.com/isoszsh/project-anna/assets/154831174/1fbff295-eac4-41cb-bbec-3c77c458b289) 
   ![Screenshot 3](https://github.com/isoszsh/project-anna/assets/154831174/31ff440e-af36-4b93-bc22-f98fe08c5659)
   ![Screenshot 4](https://github.com/isoszsh/project-anna/assets/154831174/2db880d4-0aa8-4753-a9fc-51b31217a2a9)
   ![Screenshot 5](https://github.com/isoszsh/project-anna/assets/154831174/f8552310-d0b8-45ea-b776-9f4786dca256)
+
+  </details>
 
 - **Sprint Review**: 
   - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun güncel tasarımının ve gidişatının beğenildiği belirtildi ve devamı üzerine yeni fikirler ortaya atıldı. Sprint içerisinde tasarlanmış olan level tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı.
@@ -98,13 +100,15 @@
 - **Sprint board update**: Sprint board screenshot: 
 ![Backlog 2](https://github.com/user-attachments/assets/693edf2a-fa8b-4126-8e44-a3ddaa37de6c)
 
-- **Ürün Durumu**: Ekran görüntüleri:
+<details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
   ![Screenshot 1](https://github.com/user-attachments/assets/b225057b-e3ab-4076-81e8-a62b029f1e4d)
   ![Screenshot 2](https://github.com/user-attachments/assets/a716a14c-23b3-4be6-9625-5e6b50e91d90) 
   ![Screenshot 3](https://github.com/user-attachments/assets/e2bcbb7e-accf-417e-8013-0cde77fd082c)
   ![Screenshot 4](https://github.com/user-attachments/assets/ea04e39e-42ab-4689-96a6-b1836415e05d)
   ![Screenshot 5](https://github.com/user-attachments/assets/ffe3c265-d758-491f-a9b4-db3bc7c00465)
+
+</details>
 
 - **Sprint Review**: 
   - Ekip, görevlerinin sağladığı gelişmeleri açıkladı. Güncel performansın arttırılması gerektiğinde anlaşıldı. Sprint içerisinde tasarlanmış olan leveller tüm ekip tarafından oynandı, herhangi bir sorun ile karşılaşılmadı, geliştirilebilecek noktalar tartışıldı.
@@ -133,13 +137,15 @@
 - **Sprint board update**: Sprint board screenshot: 
 ![Backlog 3](https://github.com/user-attachments/assets/693edf2a-fa8b-4126-8e44-a3ddaa37de6c)
 
-- **Ürün Durumu**: Ekran görüntüleri:
+<details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
-  ![Screenshot 1]()
-  ![Screenshot 2]() 
-  ![Screenshot 3]()
-  ![Screenshot 4]()
-  ![Screenshot 5]()
+  ![Screenshot 1](x)
+  ![Screenshot 2](x) 
+  ![Screenshot 3](x)
+  ![Screenshot 4](x)
+  ![Screenshot 5](x)
+
+</details>
 
   Daha fazla görsel için: [Oyun İçi Görseller](https://imgur.com/a/Ln4C4Jv)
 
@@ -157,6 +163,6 @@
 ---
 
 -**Diğer Notlar**:
-- Oyunumuz Steam üzerinden, oyun içi reklamsız olarak paylaşılacaktır.
+- 
 
 ---
