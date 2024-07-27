@@ -3459,7 +3459,7 @@ PrefabInstance:
     - target: {fileID: 6880880412289120327, guid: 43579104e86056c4d95a973fbd0ce4b7,
         type: 3}
       propertyPath: m_Volume
-      value: 0.4
+      value: 0.128
       objectReference: {fileID: 0}
     - target: {fileID: 6880880412289120327, guid: 43579104e86056c4d95a973fbd0ce4b7,
         type: 3}
@@ -4396,7 +4396,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -70, y: 65}
-  m_SizeDelta: {x: 400, y: 80}
+  m_SizeDelta: {x: 600, y: 80}
   m_Pivot: {x: 1, y: 0}
 --- !u!95 &1859010990
 Animator:
@@ -4466,7 +4466,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.25
+  m_fontSize: 48.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

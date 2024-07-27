@@ -5769,6 +5769,7 @@ MonoBehaviour:
   butterflyVC: {fileID: 0}
   mainVC: {fileID: 0}
   mainButterfy: {fileID: 0}
+  hintPanel: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -5805,6 +5806,10 @@ MonoBehaviour:
   - {fileID: 434909292}
   - {fileID: 162871638}
   audioSource: {fileID: 0}
+  currentDialogue:
+    npcName: 
+    sentences: []
+    options: []
   typeSpeed: 0.025
   isDialogueActive: 0
   npc: {fileID: 0}
@@ -13232,6 +13237,9 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 1702194643}
   readyToTalk: 1
   relatedEvent: {fileID: 1699223210}
+  firstFind: {fileID: 0}
+  secondFind: {fileID: 0}
+  findIndex: 0
 --- !u!136 &1012333237
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20443,7 +20451,7 @@ PrefabInstance:
     - target: {fileID: 6880880412289120327, guid: 43579104e86056c4d95a973fbd0ce4b7,
         type: 3}
       propertyPath: m_Volume
-      value: 0.4
+      value: 0.128
       objectReference: {fileID: 0}
     - target: {fileID: 6880880412289120327, guid: 43579104e86056c4d95a973fbd0ce4b7,
         type: 3}

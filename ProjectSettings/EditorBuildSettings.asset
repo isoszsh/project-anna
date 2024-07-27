@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/GameScenes/Level3_Council.unity
     guid: 2a1abfcf88dd8dc4686231acfb6c33e3
   - enabled: 1
+    path: Assets/GameScenes/Level3_CouncilAccepted.unity
+    guid: a3dc4f66de704dd4cb330f8ff478b7ab
+  - enabled: 1
+    path: Assets/GameScenes/Level3_Ship.unity
+    guid: 6f7bb0283611f1f4b92eee01aac52899
+  - enabled: 1
     path: Assets/GameScenes/Level4.unity
     guid: c26571fd193fd8a4fa2c8f4d41bf8118
   - enabled: 1
