@@ -43,6 +43,8 @@ public class ChestBossEnemy : MonoBehaviour
 
     public GameObject bossLookPosition;
 
+    public float shrinkageRate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,10 +57,6 @@ public class ChestBossEnemy : MonoBehaviour
         stateMachine = GetComponent<ChestBossStateMachine>();
         agent = GetComponent<NavMeshAgent>();
         
-        // tüm spawn pointler 
-        
-        
-        stateMachine.Initialise();
     }
 
 
@@ -69,6 +67,14 @@ public class ChestBossEnemy : MonoBehaviour
             Vector3 directionToTarget = target.position - point.transform.position;
             Vector3 oppositeDirection = -directionToTarget;
             point.transform.rotation = Quaternion.LookRotation(oppositeDirection);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player has entered the trigger");
         }
     }
 }

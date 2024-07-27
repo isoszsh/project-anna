@@ -12,6 +12,15 @@ public class UltiCode : MonoBehaviour
         StartCoroutine(MoveAfterDelay());
     }
 
+    //ontrigger enter
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player has entered the trigger in UltiCode");
+        }
+    }
+
     private IEnumerator MoveAfterDelay()
     {
         //ilk iki saniyede localSize'ı 0 dan başlıyarak büyüt ve 1 e getir

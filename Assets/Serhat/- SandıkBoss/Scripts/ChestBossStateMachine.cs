@@ -33,15 +33,12 @@ public class ChestBossStateMachine : MonoBehaviour
     }
 
     public void GameLoop(){
-        Debug.Log("stunNumber: " + stunNumber);
-        Debug.Log("spawnNumber: " + spawnNumber);
         if(stunNumber > 0){
             ChangeStateToFollowState();
             stunNumber--;
         }
         else if(spawnNumber > 0){
             ChangeStateToSpawnState();
-            spawnNumber--;
         }
         else{
             ChangeStateToEndState();

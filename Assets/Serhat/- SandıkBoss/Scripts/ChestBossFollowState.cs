@@ -50,7 +50,7 @@ public class ChestBossFollowState : ChestBossBaseState
         else if (Vector3.Distance(boss.transform.position, playerTransform) < 0.5f)
         {
             // Calculate the new player transform using the forward direction of the boss
-            playerTransform = boss.transform.position + boss.transform.forward * 2;
+            playerTransform = boss.transform.position + boss.transform.forward * 500;
         }
 
     }
@@ -65,7 +65,7 @@ public class ChestBossFollowState : ChestBossBaseState
 
     public void FindThePlayerTransform()
     {
-        playerTransform = boss.GetComponent<ChestBossEnemy>().player.transform.position;
+        playerTransform = boss.GetComponent<ChestBossEnemy>().player.transform.position + boss.transform.forward * 2;
         
         // player'a doğru döndüğündeki rotasyonunu kaydet
         direction = playerTransform - boss.transform.position;

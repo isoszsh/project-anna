@@ -13,13 +13,12 @@ public class ChestBossSpawnState : ChestBossBaseState
 
 
     public GameObject trailParent ;
-
-    // public float trailMinSize = 0.4f;
-    // public float trailMaxSize = 0.6f;
-
     public Vector3 tempPos;
 
     public Vector3 lavaWallTempPos;
+
+
+    public bool youShouldLook = true;
 
 
     public void Start() {
@@ -47,8 +46,13 @@ public class ChestBossSpawnState : ChestBossBaseState
         boss.GetComponent<Animator>().ResetTrigger("Run");
         boss.GetComponent<Animator>().SetTrigger("ReturnChest");
 
-        boss.StartCoroutine(RandomEvent());
         
+        if(bossStateMachine.spawnNumber == 2){
+            boss.StartCoroutine(EventLine1());
+        }
+        else if(bossStateMachine.spawnNumber == 1){
+            boss.StartCoroutine(EventLine2());
+        }        
     }
 
     public override void Perform()
@@ -62,7 +66,7 @@ public class ChestBossSpawnState : ChestBossBaseState
 
     private IEnumerator LookAtTarget()
     {
-        while (true)
+        while (youShouldLook)
         {
             Vector3 direction = boss.bossLookPosition.transform.position - boss.transform.position;
             direction.y = 0; // Keep only the horizontal direction
@@ -70,6 +74,7 @@ public class ChestBossSpawnState : ChestBossBaseState
             
             if (boss.transform.rotation == boss.bossLookPosition.transform.rotation)
             {
+                youShouldLook = false;
                 break;
             }
 
@@ -102,44 +107,63 @@ public class ChestBossSpawnState : ChestBossBaseState
         }
     }
 
-    private IEnumerator RandomEvent()
+    private IEnumerator EventLine1()
     {
 
         yield return new WaitForSeconds(2f);
+        youShouldLook = true;
         boss.StartCoroutine(LookAtTarget());
         yield return new WaitForSeconds(2f);
 
-        while (bossStateMachine.spawnNumber > 0)
-        {
-            int randomEvent = Random.Range(0, 5);
 
-            switch (randomEvent)
-            {
-                case 0:
-                    yield return Last4Spawn();
-                    break;
-                case 1:
-                    yield return SpiralSpawn();
-                    break;
-                case 2:
-                    yield return AllSpawn();
-                    break;
-                case 3:
-                    yield return ReversSpiralSpawn();
-                    break;
-                case 4:
-                    yield return FastAnd3Time();
-                    break;
-                case 5:
-                    yield return PartPartSpawn();
-                    break;
-            }
+        yield return Last4Spawn(boss.spawnerHolder1);
+        yield return new WaitForSeconds(1f);
+        yield return First4Spawn(boss.spawnerHolder2);
+        yield return new WaitForSeconds(1f);
+        yield return Last4Spawn(boss.spawnerHolder3);
+        yield return new WaitForSeconds(2f);
+        
+        yield return AllSpawn();
+        yield return new WaitForSeconds(1f);
+        yield return SpiralSpawn();
+        
+        yield return new WaitForSeconds(4f);
 
-            bossStateMachine.spawnNumber--;
-            yield return new WaitForSeconds(4f);
-        }
+        youShouldLook = false;
+        
+        bossStateMachine.stunNumber = 2;
+        bossStateMachine.spawnNumber--;
 
+        boss.GetComponent<Animator>().SetTrigger("Stun");
+        boss.GetComponent<Animator>().ResetTrigger("ReturnChest");
+
+        boss.GetComponent<ChestBossStateMachine>().ChangeStateToStunState();
+    }
+
+    private IEnumerator EventLine2()
+    {
+
+        yield return new WaitForSeconds(2f);
+        youShouldLook = true;
+        boss.StartCoroutine(LookAtTarget());
+        yield return new WaitForSeconds(2f);
+
+        
+        yield return AllSpawn();
+        yield return new WaitForSeconds(0.5f);
+        yield return SpiralSpawn();
+        yield return ReversSpiralSpawn();
+        yield return SpiralSpawn();
+        yield return new WaitForSeconds(1f);
+        yield return FastAnd3Time();
+        
+        yield return new WaitForSeconds(4f);
+
+        youShouldLook = false;
+
+        bossStateMachine.spawnNumber--;
         boss.GetComponent<ChestBossStateMachine>().GameLoop();
+
     }
 
 
@@ -182,12 +206,21 @@ public class ChestBossSpawnState : ChestBossBaseState
         movingObject.transform.position = Vector3.MoveTowards(movingObject.transform.position, targetObject.transform.position, step);
     }
 
-    private IEnumerator Last4Spawn()
+    private IEnumerator Last4Spawn(GameObject spanwerHolder)
     {
-        UltiSameTimeSpawn(0, topSpawnPoints.Count / 2, false, boss.spawnerHolder1 , "top");
-        UltiSameTimeSpawn(0, rightSpawnPoints.Count / 2, false, boss.spawnerHolder1 , "right");
-        UltiSameTimeSpawn(0, bottomSpawnPoints.Count / 2, false, boss.spawnerHolder1 , "bottom");
-        UltiSameTimeSpawn(0, leftSpawnPoints.Count / 2, false, boss.spawnerHolder1 , "left");
+        UltiSameTimeSpawn(0, topSpawnPoints.Count / 2, false, spanwerHolder , "top");
+        UltiSameTimeSpawn(0, rightSpawnPoints.Count / 2, false, spanwerHolder , "right");
+        UltiSameTimeSpawn(0, bottomSpawnPoints.Count / 2, false, spanwerHolder , "bottom");
+        UltiSameTimeSpawn(0, leftSpawnPoints.Count / 2, false, spanwerHolder , "left");
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator First4Spawn(GameObject spanwerHolder)
+    {
+        UltiSameTimeSpawn(topSpawnPoints.Count / 2, topSpawnPoints.Count, false, spanwerHolder , "top");
+        UltiSameTimeSpawn(rightSpawnPoints.Count / 2, rightSpawnPoints.Count, false, spanwerHolder , "right");
+        UltiSameTimeSpawn(bottomSpawnPoints.Count / 2, bottomSpawnPoints.Count, false, spanwerHolder , "bottom");
+        UltiSameTimeSpawn(leftSpawnPoints.Count / 2, leftSpawnPoints.Count, false, spanwerHolder , "left");
         yield return new WaitForSeconds(0.5f);
     }
 
@@ -244,8 +277,10 @@ public class ChestBossSpawnState : ChestBossBaseState
 
             TrailClone.transform.SetParent(ParentObject.transform);
 
-            // float TrailSize = Random.Range(trailMinSize, trailMaxSize);
-            // TrailClone.transform.localScale = new Vector3(TrailSize, TrailSize, TrailSize);
+            
+            TrailClone.transform.localScale = new Vector3(TrailClone.transform.localScale.x * boss.shrinkageRate, 
+                                                          TrailClone.transform.localScale.y * boss.shrinkageRate, 
+                                                          TrailClone.transform.localScale.z * boss.shrinkageRate);
         }
     }
 
@@ -266,8 +301,9 @@ public class ChestBossSpawnState : ChestBossBaseState
 
             TrailClone.transform.SetParent(ParentObject.transform);
 
-            // float TrailSize = Random.Range(trailMinSize, trailMaxSize);
-            // TrailClone.transform.localScale = new Vector3(TrailSize, TrailSize, TrailSize);
+            TrailClone.transform.localScale = new Vector3(TrailClone.transform.localScale.x * boss.shrinkageRate, 
+                                                          TrailClone.transform.localScale.y * boss.shrinkageRate, 
+                                                          TrailClone.transform.localScale.z * boss.shrinkageRate);
             yield return new WaitForSeconds(0.02f);
         }
     }
