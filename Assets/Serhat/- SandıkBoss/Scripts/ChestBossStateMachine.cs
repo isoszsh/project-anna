@@ -13,30 +13,59 @@ public class ChestBossStateMachine : MonoBehaviour
 
     public ChestBossStarterState starterState;
 
+    public ChestBossEndScript endState;
+
+    public int stunNumber;
+
+    public int spawnNumber;
+
 
     public void Initialise()
     {
+        starterState = new ChestBossStarterState();
+        spawnState = new ChestBossSpawnState();
+        followState = new ChestBossFollowState();
+        stunState = new ChestBossStunState();
+        endState = new ChestBossEndScript();
+
+
         ChangeStateToStarterState();
     }
 
+    public void GameLoop(){
+        Debug.Log("stunNumber: " + stunNumber);
+        Debug.Log("spawnNumber: " + spawnNumber);
+        if(stunNumber > 0){
+            ChangeStateToFollowState();
+            stunNumber--;
+        }
+        else if(spawnNumber > 0){
+            ChangeStateToSpawnState();
+            spawnNumber--;
+        }
+        else{
+            ChangeStateToEndState();
+        }
+    }
+
     public void ChangeStateToStunState(){
-        stunState = new ChestBossStunState();
         ChangeState(new ChestBossStunState());
     }
 
     public void ChangeStateToFollowState(){
-        followState = new ChestBossFollowState();
         ChangeState(followState);
     }
 
     public void ChangeStateToSpawnState(){
-        spawnState = new ChestBossSpawnState();
         ChangeState(spawnState);
     }
 
     public void ChangeStateToStarterState(){
-        starterState = new ChestBossStarterState();
         ChangeState(starterState);
+    }
+
+    public void ChangeStateToEndState(){
+        ChangeState(endState);
     }
 
     void Start()

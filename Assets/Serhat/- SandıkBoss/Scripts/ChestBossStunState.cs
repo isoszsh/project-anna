@@ -46,8 +46,11 @@ public class ChestBossStunState : ChestBossBaseState
         boss.GetComponent<Animator>().SetTrigger("Stun");
         // 3 saniye boyunca oyuncuya dön
         readyToLook = true;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
+        boss.GetComponent<Animator>().ResetTrigger("Stun");
+        boss.GetComponent<Animator>().SetTrigger("Run");
+        yield return new WaitForSeconds(2);
         // Takip state'ine geçiş yap
-        boss.GetComponent<ChestBossStateMachine>().ChangeStateToFollowState();
+        bossStateMachine.GameLoop();
     }
 }

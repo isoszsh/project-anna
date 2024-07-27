@@ -34,19 +34,19 @@ public class ChestBossFollowState : ChestBossBaseState
         // coliision check
         RaycastHit hit;
         // raycast'i görünür yap
-        Debug.DrawRay(boss.transform.position + boss.transform.forward, boss.transform.forward * 1f, Color.black);
+        Debug.DrawRay(boss.transform.position + boss.transform.forward, boss.transform.forward * 0.5f, Color.black);
 
         // raycast'in boyunu ayarla
 
-        if (Physics.Raycast(boss.transform.position + boss.transform.forward, boss.transform.forward * 1f, out hit, 1f))
+        if (Physics.Raycast(boss.transform.position + boss.transform.forward, boss.transform.forward * 0.5f, out hit, 0.5f))
         {
             if ( walls.Contains(hit.collider.gameObject) )
             {
+                
                 boss.GetComponent<ChestBossStateMachine>().ChangeStateToStunState();
             }
         }
 
-        // eğer player ile aranda 5 birimden fazla mesafe varsa
         else if (Vector3.Distance(boss.transform.position, playerTransform) < 0.5f)
         {
             // Calculate the new player transform using the forward direction of the boss

@@ -16,17 +16,18 @@ public class UltiCode : MonoBehaviour
     {
         //ilk iki saniyede localSize'ı 0 dan başlıyarak büyüt ve 1 e getir
         float elapsedTime = 0;
+        Vector3 targetScale = transform.localScale;
         Vector3 startingScale = transform.localScale * 0;
-        Vector3 targetScale = Vector3.one;
+        
 
-        while (elapsedTime < 2)
+        while (elapsedTime < 0.5)
         {
-            transform.localScale = Vector3.Lerp(startingScale, targetScale, (elapsedTime / 2));
+            transform.localScale = Vector3.Lerp(startingScale, targetScale, elapsedTime / 0.5f);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        yield return new WaitForSeconds(2); // 2 saniye bekle
+        yield return new WaitForSeconds(0.5f); // 2 saniye bekle
         while (true) // Sürekli hareket et
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime); // X yönünde hareket

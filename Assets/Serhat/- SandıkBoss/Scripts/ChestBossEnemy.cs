@@ -24,13 +24,51 @@ public class ChestBossEnemy : MonoBehaviour
     public List<GameObject> leftSpawnPoints = new List<GameObject>();
     public List<GameObject> rightSpawnPoints = new List<GameObject>();
 
+    public GameObject spawnPointLookPosition;
+
     public List<GameObject> spawnObject = new List<GameObject>();
+
+    public GameObject lavaWall;
+
+    public GameObject allSpawnPointParentObject;
+
+    public GameObject spawnPointTop;
+    public GameObject spawnPointMid;
+    public GameObject spawnPointDown;
+
+
+    public GameObject spawnerHolder1;
+    public GameObject spawnerHolder2;
+    public GameObject spawnerHolder3;
+
+    public GameObject bossLookPosition;
 
     // Start is called before the first frame update
     void Start()
     {
+        LookAwayFrom(spawnPointLookPosition.transform, topSpawnPoints);
+        LookAwayFrom(spawnPointLookPosition.transform, bottomSpawnPoints);
+        LookAwayFrom(spawnPointLookPosition.transform, leftSpawnPoints);
+        LookAwayFrom(spawnPointLookPosition.transform, rightSpawnPoints);
+
+
         stateMachine = GetComponent<ChestBossStateMachine>();
         agent = GetComponent<NavMeshAgent>();
+        
+        // tüm spawn pointler 
+        
+        
         stateMachine.Initialise();
+    }
+
+
+     void LookAwayFrom(Transform target, List<GameObject> points)
+    {
+        foreach (var point in points)
+        {
+            Vector3 directionToTarget = target.position - point.transform.position;
+            Vector3 oppositeDirection = -directionToTarget;
+            point.transform.rotation = Quaternion.LookRotation(oppositeDirection);
+        }
     }
 }
