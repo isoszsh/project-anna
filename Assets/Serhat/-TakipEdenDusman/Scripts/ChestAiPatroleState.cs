@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ChestAiPatroleState : ChestAiBaseState
 {
-    public int waypointIndex;
+    public bool isPatroling;
     public override void Enter()
-    {
+    {  
+        Debug.Log("Patrole State");
+        enemy.GetComponent<Animator>().SetTrigger("Walk");
+        enemy.Agent.SetDestination(enemy.path.waypoints[stateMachine.activeWaypointIndex].position);
     }
     public override void Perform()
     {
@@ -22,16 +25,16 @@ public class ChestAiPatroleState : ChestAiBaseState
         //Patrol the path
         if(enemy.Agent.remainingDistance < 0.2f)
         {
-            if (waypointIndex < enemy.path.waypoints.Count - 1)
+            if (stateMachine.activeWaypointIndex < enemy.path.waypoints.Count - 1)
             {
-                waypointIndex++;
+                stateMachine.activeWaypointIndex++;
+                
             }
             else
             {
-                waypointIndex = 0;
+                stateMachine.activeWaypointIndex = 0;
             }
-
-            enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
+            stateMachine.IdleState();
         }
     }
 }
