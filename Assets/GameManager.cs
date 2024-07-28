@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         playerController.playerAnimator.SetTrigger("Play");
         yield return new WaitForSeconds(8);
 
-        mainIntroCam.gameObject.SetActive(false);
+        mainIntroCam.gameObject.GetComponent<Camera>().enabled = false;
         introCam.gameObject.SetActive(true);
         introCam.GetComponent<Animator>().SetTrigger("Pan");
         butterflyVC.SetActive(false);
@@ -108,6 +108,8 @@ public class GameManager : MonoBehaviour
         mainIntroCam.gameObject.SetActive(false);
         playerCam.gameObject.SetActive(true);
         mainVC.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5);
+        mainIntroCam.gameObject.SetActive(false);
         
         
     }
@@ -124,6 +126,7 @@ public class GameManager : MonoBehaviour
         {
             playerController.enabled = false;
             playerController.playerAnimator.SetTrigger("Sleep");
+            Play();
         }
         else
         {

@@ -26,9 +26,11 @@ public class LizardDoorEvent : MonoBehaviour
         GameManager.Instance.playerController.ResetVelocity();
         GameManager.Instance.playerController.playerAnimator.SetTrigger("Paint");
         yield return new WaitForSeconds(1);
+        door.GetComponent<Animator>().enabled = true;
         door.GetComponent<Animator>().SetTrigger("Open");
         GameManager.Instance.playerController.RemovePickupItem();
         yield return new WaitForSeconds(1.5f);
+        door.GetComponent<BoxCollider>().enabled = false;
         GameManager.Instance.playerController.lockControls = false;
 
     }
