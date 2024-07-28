@@ -101,6 +101,7 @@ public class VisionCone : MonoBehaviour
         }
         else
         {
+            transform.GetComponent<MeshRenderer>().material = VisionConeMaterial;
         }
     }
 

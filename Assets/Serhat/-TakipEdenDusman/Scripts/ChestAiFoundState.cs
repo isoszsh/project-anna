@@ -37,13 +37,16 @@ public class ChestAiFoundState : ChestAiBaseState
 
         Color targetColor = Color.Lerp( enemy.redMaterial.color, enemy.yellowMaterial.color, lerpValue);
 
+        // Yeni malzeme oluşturma ve rengini ayarlama
+        Material newMat = new Material(enemy.visionCone.GetComponent<MeshRenderer>().material);
+        newMat.color = targetColor;
         // Renk geçişi
-        enemy.visionCone.GetComponent<VisionCone>().VisionConeMaterial.color = targetColor;
+        enemy.visionCone.GetComponent<MeshRenderer>().material = newMat;
 
 
         if (distance < 3)
         {
-            enemy.visionCone.GetComponent<VisionCone>().VisionConeMaterial = enemy.redMaterial;
+            enemy.visionCone.GetComponent<MeshRenderer>().material = enemy.redMaterial;
 
             enemy.Agent.SetDestination(enemy.transform.position);
             //yeni bir state oluşturulup bu state'e geçiş yapılabilir.
