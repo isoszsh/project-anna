@@ -19,6 +19,10 @@ public class ChestBossStateMachine : MonoBehaviour
 
     public int spawnNumber;
 
+    // [HideInInspector]
+    public Vector3 playerTransform;
+    // [HideInInspector]
+    public Vector3 direction;
 
     public void Initialise()
     {
