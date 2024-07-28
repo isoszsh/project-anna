@@ -34,10 +34,13 @@ public class CollectableScript : MonoBehaviour
         {
             Debug.Log("Player collected the object");
             // yok olmadan önce partical effect spawnla
+            // transform position un biraz altından spawnla
+            var newTransrom = transform.position;
+            newTransrom.y -= 0.5f;
 
             foreach (var particalEffect in particalEffects)
             {
-                Instantiate(particalEffect, transform.position, Quaternion.identity);
+                Instantiate(particalEffect, newTransrom, Quaternion.identity);
             }
 
             Destroy(gameObject);
