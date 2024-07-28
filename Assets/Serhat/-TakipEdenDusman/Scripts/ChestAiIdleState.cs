@@ -6,7 +6,6 @@ public class ChestAiIdleState : ChestAiBaseState
 {
     public override void Enter()
     {  
-        Debug.Log("Idle State");
         enemy.GetComponent<Animator>().SetTrigger("Idle");
         enemy.StartCoroutine(IdleCycle());
     }

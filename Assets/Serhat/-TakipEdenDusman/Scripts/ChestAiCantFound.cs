@@ -6,7 +6,6 @@ public class ChestAiCantFound : ChestAiBaseState
 {
     public override void Enter()
     { 
-        Debug.Log("Cant Found State");
     }
     public override void Perform()
     {

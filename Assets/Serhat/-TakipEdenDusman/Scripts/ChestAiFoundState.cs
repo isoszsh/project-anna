@@ -6,7 +6,6 @@ public class ChestAiFoundState : ChestAiBaseState
 {
     public GameObject target;
 
-
     public ChestAiFoundState(GameObject Target)
     {
         target = Target;

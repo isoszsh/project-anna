@@ -107,7 +107,6 @@ public class VisionCone : MonoBehaviour
 
     public void OnPlayerSeen()
     {
-        Debug.Log("Player is seen");
         player.GetComponent<ChestAiEnemy>().ChangeStateToFoundState(target);
     }
 }

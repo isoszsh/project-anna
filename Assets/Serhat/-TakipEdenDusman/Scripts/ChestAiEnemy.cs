@@ -29,6 +29,11 @@ public class ChestAiEnemy : MonoBehaviour
 
     public void ChangeStateToFoundState(GameObject target)
     {
-        stateMachine.FounPlayerState(target);
+        stateMachine.FoundPlayerState(target);
+    }
+
+    public void ChangeStateToCantRockState(GameObject target)
+    {
+        stateMachine.RockState(target);
     }
 }

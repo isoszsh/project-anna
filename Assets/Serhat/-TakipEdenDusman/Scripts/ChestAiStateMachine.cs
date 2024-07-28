@@ -14,6 +14,8 @@ public class ChestAiStateMachine : MonoBehaviour
 
     public ChestAiIdleState idleState;
 
+    public ChestAiHearRock rockState;
+
     public int activeWaypointIndex = 0;
 
 
@@ -24,10 +26,16 @@ public class ChestAiStateMachine : MonoBehaviour
         //setup default state
     }
 
-    public void FounPlayerState(GameObject Target)
+    public void FoundPlayerState(GameObject Target)
     {
         foundState = new ChestAiFoundState(Target);
         ChangeState(foundState);
+    }
+
+    public void RockState(GameObject Target)
+    {
+        rockState = new ChestAiHearRock(Target);
+        ChangeState(rockState);
     }
 
     public void EndState()
