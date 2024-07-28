@@ -14,26 +14,26 @@ public class ChestAiEnemy : MonoBehaviour
     private string currentState;
     public Path path;
 
+    public GameObject visionCone;
+
+    public Material redMaterial;
+    public Material yellowMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
         stateMachine = GetComponent<ChestAiStateMachine>();
-        if (stateMachine == null)
-        {
-            Debug.LogError("ChestAiStateMachine component is missing.");
-        }
-
         agent = GetComponent<NavMeshAgent>();
-        if (agent == null)
-        {
-            Debug.LogError("NavMeshAgent component is missing.");
-        }
-
-        stateMachine.Initialise();
+        stateMachine.PatroleState();
     }
 
     public void ChangeStateToFoundState(GameObject target)
     {
-        stateMachine.Initialise2(target);
+        stateMachine.FoundPlayerState(target);
+    }
+
+    public void ChangeStateToCantRockState(GameObject target)
+    {
+        stateMachine.RockState(target);
     }
 }

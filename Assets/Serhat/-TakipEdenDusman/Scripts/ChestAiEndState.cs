@@ -6,6 +6,7 @@ public class ChestAiEndState : ChestAiBaseState
 {
     public override void Enter()
     {
+        enemy.GetComponent<Animator>().SetTrigger("Catch");
         EndCycle();
     }
     public override void Perform()

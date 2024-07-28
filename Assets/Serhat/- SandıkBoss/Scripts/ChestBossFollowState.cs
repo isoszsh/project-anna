@@ -1,22 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ChestBossFollowState : ChestBossBaseState
 {
-    private Vector3 playerTransform;
-
-    private Vector3 direction;
-
     private List<GameObject> walls = new List<GameObject>();
 
     public override void Enter()
     {
         boss.GetComponent<Animator>().ResetTrigger("Stun");
         boss.GetComponent<Animator>().SetTrigger("Run");
-        
-        FindThePlayerTransform();
         walls = boss.GetComponent<ChestBossEnemy>().walls;
+        
     }
 
     public override void Perform()
@@ -31,44 +25,40 @@ public class ChestBossFollowState : ChestBossBaseState
     public void RunToPlayer()
     {
         FollowCycle();
-        // coliision check
-        RaycastHit hit;
-        // raycast'i görünür yap
-        Debug.DrawRay(boss.transform.position + boss.transform.forward, boss.transform.forward * 0.5f, Color.black);
-
-        // raycast'in boyunu ayarla
-
-        if (Physics.Raycast(boss.transform.position + boss.transform.forward, boss.transform.forward * 0.5f, out hit, 0.5f))
-        {
-            if ( walls.Contains(hit.collider.gameObject) )
-            {
-                
-                boss.GetComponent<ChestBossStateMachine>().ChangeStateToStunState();
-            }
-        }
-
-        else if (Vector3.Distance(boss.transform.position, playerTransform) < 0.5f)
-        {
-            // Calculate the new player transform using the forward direction of the boss
-            playerTransform = boss.transform.position + boss.transform.forward * 500;
-        }
-
     }
 
     public void FollowCycle()
     {
-        if (playerTransform != null)
+        if (bossStateMachine.playerTransform != null)
         {
-            boss.Agent.SetDestination(playerTransform);
+            Vector3 newPosition = boss.transform.position + bossStateMachine.direction * Time.deltaTime * boss.Agent.speed;
+
+            // Duvarlar ile çarpışma kontrolü
+            if (!IsCollidingWithWalls(newPosition))
+            {
+                boss.transform.position = newPosition;
+            }
+            else
+            {
+                boss.GetComponent<ChestBossStateMachine>().ChangeStateToStunState();
+            }
         }
     }
 
-    public void FindThePlayerTransform()
+    private bool IsCollidingWithWalls(Vector3 position)
     {
-        playerTransform = boss.GetComponent<ChestBossEnemy>().player.transform.position + boss.transform.forward * 2;
-        
-        // player'a doğru döndüğündeki rotasyonunu kaydet
-        direction = playerTransform - boss.transform.position;
-
+        RaycastHit hit;
+        // Duvarların her birine bir raycast gönder
+        foreach (var wall in walls)
+        {
+            if (Physics.Raycast(position, bossStateMachine.direction, out hit, 1f))
+            {
+                if (hit.collider.gameObject == wall)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

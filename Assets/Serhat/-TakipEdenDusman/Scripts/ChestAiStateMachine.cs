@@ -8,27 +8,52 @@ public class ChestAiStateMachine : MonoBehaviour
     public ChestAiPatroleState patroleState;
 
     public ChestAiFoundState foundState;
+    public ChestAiCantFound cantFoundState;
 
     public ChestAiEndState endState;
 
+    public ChestAiIdleState idleState;
 
-    public void Initialise()
+    public ChestAiHearRock rockState;
+
+    public int activeWaypointIndex = 0;
+
+
+    public void PatroleState()
     {
         patroleState = new ChestAiPatroleState();
         ChangeState(patroleState);
         //setup default state
     }
 
-    public void Initialise2(GameObject Target)
+    public void FoundPlayerState(GameObject Target)
     {
         foundState = new ChestAiFoundState(Target);
         ChangeState(foundState);
     }
 
-    public void Initialise3()
+    public void RockState(GameObject Target)
+    {
+        rockState = new ChestAiHearRock(Target);
+        ChangeState(rockState);
+    }
+
+    public void EndState()
     {
         endState = new ChestAiEndState();
         ChangeState(endState);
+    }
+
+    public void CantFoundState()
+    {
+        cantFoundState = new ChestAiCantFound();
+        ChangeState(cantFoundState);
+    }
+
+    public void IdleState()
+    {
+        idleState = new ChestAiIdleState();
+        ChangeState(idleState);
     }
 
     // Start is called before the first frame update

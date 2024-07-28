@@ -9,6 +9,7 @@ TagManager:
   - Note
   - Mantar
   - Key
+  - Wall
   layers:
   - Default
   - TransparentFX

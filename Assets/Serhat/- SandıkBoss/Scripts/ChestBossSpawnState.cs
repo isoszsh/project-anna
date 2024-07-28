@@ -42,6 +42,7 @@ public class ChestBossSpawnState : ChestBossBaseState
 
         trailParent = boss.TrailParent;
 
+        boss.Agent.isStopped = false;
         boss.Agent.SetDestination(boss.allSpawnPointParentObject.transform.position);
         boss.GetComponent<Animator>().ResetTrigger("Run");
         boss.GetComponent<Animator>().SetTrigger("ReturnChest");
@@ -137,6 +138,8 @@ public class ChestBossSpawnState : ChestBossBaseState
         boss.GetComponent<Animator>().SetTrigger("Stun");
         boss.GetComponent<Animator>().ResetTrigger("ReturnChest");
 
+        boss.Agent.isStopped = true;
+
         boss.GetComponent<ChestBossStateMachine>().ChangeStateToStunState();
     }
 
@@ -160,6 +163,8 @@ public class ChestBossSpawnState : ChestBossBaseState
         yield return new WaitForSeconds(4f);
 
         youShouldLook = false;
+
+        boss.Agent.isStopped = true;
 
         bossStateMachine.spawnNumber--;
         boss.GetComponent<ChestBossStateMachine>().GameLoop();
