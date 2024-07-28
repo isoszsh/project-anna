@@ -12,13 +12,14 @@ public class VisionCone : MonoBehaviour
     public int VisionConeResolution = 120; //the vision cone will be made up of triangles, the higher this value is the pretier the vision cone will be
     Mesh VisionConeMesh;
     MeshFilter MeshFilter_;
-
-    public bool oneShote = true;
     public GameObject player;
 
     public GameObject anna;
 
     public GameObject target;
+
+
+    public GameObject enemyHead;
 
     void Start()
     {
@@ -31,6 +32,12 @@ public class VisionCone : MonoBehaviour
     void Update()
     {
         DrawVisionCone(); //calling the vision cone function everyframe just so the cone is updated every frame
+        SetRotationToEnemyHeadRotation();
+    }
+
+    public void SetRotationToEnemyHeadRotation()
+    {
+        transform.rotation= Quaternion.Euler(0, enemyHead.transform.rotation.eulerAngles.y,0);
     }
 
     void DrawVisionCone() //this method creates the vision cone mesh
@@ -90,20 +97,16 @@ public class VisionCone : MonoBehaviour
         // Player'ı gördüyse rengini sarıya ayarla
         if (playerSeen)
         {
-            if (oneShote)
-                OnPlayerSeen();
+            OnPlayerSeen();
         }
         else
         {
-            VisionConeMaterial.color = Color.white; // Orijinal rengi beyaz kabul ediyorum, isteğe bağlı değiştirilebilir
         }
     }
 
     public void OnPlayerSeen()
     {
         Debug.Log("Player is seen");
-        oneShote = false;
-        VisionConeMaterial.color = Color.yellow;
         player.GetComponent<ChestAiEnemy>().ChangeStateToFoundState(target);
     }
 }
