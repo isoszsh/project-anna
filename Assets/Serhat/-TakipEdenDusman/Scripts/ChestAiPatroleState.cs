@@ -7,7 +7,6 @@ public class ChestAiPatroleState : ChestAiBaseState
     public bool isPatroling;
     public override void Enter()
     {  
-        Debug.Log("Patrole State");
         enemy.GetComponent<Animator>().SetTrigger("Walk");
         enemy.Agent.SetDestination(enemy.path.waypoints[stateMachine.activeWaypointIndex].position);
     }
