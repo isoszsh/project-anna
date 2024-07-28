@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1059932771403553372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 603845376589050276, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8aecf836006b76a48ac9f4346ddd9213, type: 2}
+    - target: {fileID: 1372362315362573471, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: SizeModule.separateAxes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372362315362573471, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.90718
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.97391
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 43.965588
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935767212177402728, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032543150964833618, guid: 3d87fa2155d4db0468a828896c5b0d33,
+        type: 3}
+      propertyPath: m_Name
+      value: CollectableParticalEffectFlower
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d87fa2155d4db0468a828896c5b0d33, type: 3}
