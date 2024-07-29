@@ -72,6 +72,7 @@ public class SpiderController : MonoBehaviour
         annaHearsCam.GetComponent<Animator>().SetTrigger("Hear");
         GameManager.Instance.playerController.playerAnimator.SetBool("PlayingPiano", true);
         yield return new WaitForSeconds(10);
+        annaHearsCam.gameObject.SetActive(false );
         annaHearsCam2.gameObject.SetActive(true);
         annaHearsCam2.GetComponent<Animator>().SetTrigger("Hear");
         yield return new WaitForSeconds(10);
@@ -92,6 +93,7 @@ public class SpiderController : MonoBehaviour
 
     IEnumerator SpiderSequence()
     {
+        annaHearsCam2.SetActive(false);
         GameManager.Instance.playerController.lockControls = true;
         gameCam.gameObject.SetActive(false);
         spiderCam.gameObject.SetActive(true);
@@ -208,11 +210,13 @@ public class SpiderController : MonoBehaviour
         annaDecision.gameObject.SetActive(false);
         annaLoseCam.gameObject.SetActive(false);
         spiderLoseCam.gameObject.SetActive(true);
-        aus.PlayOneShot(afterLoseGo);
-        yield return new WaitForSeconds(11);
-        portal.gameObject.SetActive(true);
+        DialoguesAus.PlayOneShot(afterLoseGo);
+        yield return new WaitForSeconds(13);
         spiderLoseCam.gameObject.SetActive(false);
+        portal.gameObject.SetActive(true);
         gameCam.gameObject.SetActive(true);
+        GameManager.Instance.playerController.lockControls = false;
+        transform.parent.gameObject.SetActive(false);
 
 
     }
@@ -227,11 +231,13 @@ public class SpiderController : MonoBehaviour
         annaDecision.gameObject.SetActive(false);
         annaLoseCam.gameObject.SetActive(false);
         spiderLoseCam.gameObject.SetActive(true);
-        aus.PlayOneShot(afterLoseDont);
-        yield return new WaitForSeconds(9);
+        DialoguesAus.PlayOneShot(afterLoseDont);
+        yield return new WaitForSeconds(11);
         spiderLoseCam.gameObject.SetActive(false);
         portal.gameObject.SetActive(true);
-        gameCam.gameObject.SetActive(true) ;
+        gameCam.gameObject.SetActive(true);
+        GameManager.Instance.playerController.lockControls = false;
+        transform.parent.gameObject.SetActive(false);
 
     }
 }

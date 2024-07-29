@@ -17,7 +17,7 @@ MonoBehaviour:
     sentences:
     - npcName: 
       text: Waiting here all day for my lover is very exhausting for me.
-      audioClip: {fileID: 8300000, guid: 09bb030e96c2eb54db13b1c50e9270c3, type: 3}
+      audioClip: {fileID: 8300000, guid: c60b087877118be4c9463c4fd43d6e9b, type: 3}
     options:
     - question: Who is your lover?
       answers:
@@ -25,18 +25,18 @@ MonoBehaviour:
         text: My lover is a very beautiful golem. Its stones are extremely shiny
           and hard. A true golem classic. However, I haven't seen it for a long time
           because it needs to prove itself, and I promised to wait here.
-        audioClip: {fileID: 8300000, guid: 019d6564190fb694d8fa7f78ecedac6d, type: 3}
+        audioClip: {fileID: 8300000, guid: ab5b5cd30fb5e18499880cb52aa3011e, type: 3}
     - question: Will you allow me to pass?
       answers:
       - npcName: 
         text: I would love to let you pass, but I've been waiting here for 70 years,
           and I can't go anywhere until my lover solves the puzzle and proves himself.
           So I'm sorry, but you can't pass through here.
-        audioClip: {fileID: 8300000, guid: b4d1189e901eac0419df9d5300f5955b, type: 3}
+        audioClip: {fileID: 8300000, guid: bab3e9cb771efa440aeab6f0a6950bae, type: 3}
     - question: Where can I find her?
       answers:
       - npcName: 
         text: There's a wooden bridge on the left that will take you to the floating
           island on the left. If you follow that bridge, you can reach my lover.
-          Tell him that I've been waiting for him and that I love him very much.
-        audioClip: {fileID: 8300000, guid: 255472606146f54468e8a76d4a991932, type: 3}
+          Tell her that I've been waiting for her and that I love her very much.
+        audioClip: {fileID: 8300000, guid: db91cce754b9e6c43ba5ca9d78877737, type: 3}

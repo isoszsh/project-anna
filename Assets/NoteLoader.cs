@@ -81,7 +81,7 @@ public class NoteLoader : MonoBehaviour
     IEnumerator StartSong()
     {
 
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(2.25f);
         startTime = (float)AudioSettings.dspTime; // Müziðin baþlama zamanýný kaydet
         audioSource.PlayScheduled(startTime); // Müziði baþlat (planlanmýþ zamanla)
         audioSource2.PlayScheduled(startTime);
