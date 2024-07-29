@@ -10,11 +10,11 @@
 
 |    | <div align="center">Name</div>   | <div align="center">Title</div>  | <div align="center">Socials</div>     |
 | :-----------: | :---------- | :---------- | :----------: |
-|  ![İsmailPhoto](https://github.com/user-attachments/assets/904d462c-f496-435e-99f4-1e5ddbdbe1c8)  | İsmail Dönmez     | Product Owneer     | [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/ismail-dz/)   | 
+|  ![İsmailPhoto](https://github.com/user-attachments/assets/904d462c-f496-435e-99f4-1e5ddbdbe1c8)  | İsmail Dönmez     | Product Owner     | [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/ismail-dz/)   | 
 |  ![İncilaPhoto](https://github.com/user-attachments/assets/dff428d7-8638-405f-b3a5-f820260f2572)    | İncila Kırbaç     | Scrum Master     |  [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/incila-kirbac/) |
 |  ![İbrahimPhoto](https://github.com/user-attachments/assets/4f717eb9-db3a-453f-a703-5f6afdd70f09)  | İbrahim Serhat Aktaş      | Developer      |  [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/ibrahim-serhat-aktas/)   |
 |   ![İpekPhoto](https://github.com/user-attachments/assets/563720b1-1bb6-445c-946b-ebcf1ae3d873)   | İpek Nezihe Can      | Developer     |    [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/ipek-nezihe-can/)    |
-|   ![İrfanPhoto]()   | İrfan Şenatlı      | Developer     |    [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/irfan-%C5%9Fenatl%C4%B1-7a3963249/)    |
+|   X   | İrfan Şenatlı(X)      | Developer     |    [![linkedin](https://github.com/user-attachments/assets/3baa645a-33bc-4786-8327-cb0f92356f0a)](https://www.linkedin.com/in/irfan-%C5%9Fenatl%C4%B1-7a3963249/)    |
 
 ## Oyun İsmi
 
@@ -22,7 +22,7 @@
 
 ## Oyun Logosu
 
-![OyunLogo](https://github.com/user-attachments/assets/7ffdf8ab-bbc8-482d-8445-cc782f3ff38a)
+![OyunLogo](https://github.com/user-attachments/assets/7ffdf8ab-bbc8-482d-8445-cc782f3ff38a) ![TextLogo](https://github.com/user-attachments/assets/6c792bb1-3ff9-4cba-836c-e7faf64f1694) 
 
 ## Oyun Açıklaması
 
@@ -46,6 +46,13 @@
 - Bağımsız (Indie) Oyun Severler
 - Keşif ve Macera Severler
 - 13 - 65 Yaş Arası Oyuncular
+
+## Pazarlama Planı
+
+- Ekip dinamiğinden ve ortaya çıkan üründen ötürü oyunumuzun derece alacağına ve gelecek vaadettiğine inanıyoruz. Bu nedenle oyunumuza reklam eklemek yerine bir Steam sayfası oluşturmayı hedefliyoruz.
+- Ürün değerlendirmesi sonrasında oyunumuzu geliştirmeye devam edip, güncel tutarak bir satış planı oluşturacağız.
+- Oyunumuzun başlangıç fiyatı 5-10$ aralığında belirlenmiştir.
+- Oyunumuzun severlerine yönelik özel merchandise (tişörtler, kupalar, posterler vb.) ürünleri de piyasaya sürülecektir. Bu, markamızın bilinirliğini artırırken, sadık müşterilerimize farklı kanallardan ulaşmamızı sağlayacaktır.
 
 ## Product Backlog URL
 
@@ -155,7 +162,7 @@
 
 - **Sprint Review**: 
   - Scrum boyunca eksiksiz çalışıldığı için ekip üyeleri birbirini tebrik etti.
-  - 1 karakter tasarımı, 6 adet map tasarımı, birçok farklı mekanikler, karakter ve platform animasyonları yapılmıştır.
+  - 1 karakter tasarımı, 7 adet map tasarımı, birçok farklı mekanik, karakter ve animasyonlar yapılmıştır.
   - Tamamlanması gereken 300 puanlık backlog puanı tamamlanmıştır.
   - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
 
@@ -166,7 +173,8 @@
 
 ---
 
--**Diğer Notlar**:
+-**Jüri Notları**:
+- Ekibimizde herhangi bir designer/artist bulunmadığı için 3D modellerde ücretsiz asset'lerden faydalandık. Kullanılan assetlere ise [buradan](https://drive.google.com/file/d/1qA1LSu2YoReAVTQpT6-Lp9ibRBvqkJD6/view?usp=sharing) ulaşılabilir.
 - 
 
 ---
