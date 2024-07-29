@@ -20,6 +20,10 @@
 
 **The Ghost of Anna**
 
+## Oyun Logosu
+
+![OyunLogo](https://github.com/user-attachments/assets/7ffdf8ab-bbc8-482d-8445-cc782f3ff38a)
+
 ## Oyun Açıklaması
 
 - **The Ghost of Anna**, derin duygusal içeriğiyle öne çıkan, hikaye odaklı ve keşfetmeye dayalı bir Adventure/Puzzle oyunudur. Oyuncular, genç kız **Anna**'nın iç dünyasını derinlemesine keşfederken, onun zihnindeki mücadeleleri deneyimler. Bulmacaları çözer, gizemleri ortaya çıkarır ve **Anna**'nın büyüme ve içsel dönüşüm sürecinde ona rehberlik ederler. Oyunun dokusu ve atmosferi, oyuncuları duygusal olarak etkileyerek, benzersiz ve unutulmaz bir oyun deneyimi sunar.
@@ -62,7 +66,7 @@
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılması kararlaştırılmıştır. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 1 - Daily Scrum Chats](https://imgur.com/a/daily-scrum-chats-1-VpkQl6x)
 
 - **Sprint board update**: Sprint board screenshot: 
-![Backlog 1](https://github.com/user-attachments/assets/11c6634d-5f65-4bfc-be3f-029a05083322) 
+![Backlog 1](https://github.com/user-attachments/assets/e9f43ef7-2d0b-472d-8211-f27f1a2e5eec) 
 
 <details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
@@ -135,7 +139,7 @@
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılmasına devam edilmiştir. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 3 - Daily Scrum Chats](https://imgur.com/a/DIUzktA)
 
 - **Sprint board update**: Sprint board screenshot: 
-![Backlog 3](https://github.com/user-attachments/assets/693edf2a-fa8b-4126-8e44-a3ddaa37de6c)
+![Backlog 3](https://github.com/user-attachments/assets/3f2eb3ac-c640-41ff-b8b8-e1d706340979)
 
 <details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
