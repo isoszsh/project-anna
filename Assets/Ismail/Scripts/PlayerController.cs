@@ -310,7 +310,7 @@ public class PlayerController : MonoBehaviour
             itemHeight = 0;
         }
 
-        pickedItem.transform.position = new Vector3(pickedItem.transform.position.x, itemHeight, pickedItem.transform.position.z);
+        pickedItem.transform.position = new Vector3(pickedItem.transform.position.x, transform.position.y +  itemHeight, pickedItem.transform.position.z);
         pickedItem.GetComponent<BoxCollider>().enabled = true;
         pickedItem = null;
         lockControls = false;
