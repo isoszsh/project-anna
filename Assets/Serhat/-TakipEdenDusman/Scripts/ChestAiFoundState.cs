@@ -21,46 +21,47 @@ public class ChestAiFoundState : ChestAiBaseState
 
     public override void Perform()
     {
-        FoundTarget();
-
-        // Mesafe hesaplama
-        float distance = Vector3.Distance(enemy.transform.position, target.transform.position);
-
-        // Normalize mesafe 3 ile 5 arasında
-        float minDistance = 3f;
-        float maxDistance = 5f;
-        float lerpValue = Mathf.InverseLerp(minDistance, maxDistance, distance);
-
-        Color red = enemy.redMaterial.color;
-        Color yellow = enemy.yellowMaterial.color;
-
-        Color targetColor = Color.Lerp( enemy.redMaterial.color, enemy.yellowMaterial.color, lerpValue);
-
-        // Yeni malzeme oluşturma ve rengini ayarlama
-        Material newMat = new Material(enemy.visionCone.GetComponent<MeshRenderer>().material);
-        newMat.color = targetColor;
-        // Renk geçişi
-        enemy.visionCone.GetComponent<MeshRenderer>().material = newMat;
-
-
-        if (distance < 3)
+        if(stateMachine.isPlayerFound == false)
         {
-            enemy.visionCone.GetComponent<MeshRenderer>().material = enemy.redMaterial;
+            FoundTarget();
+            // Mesafe hesaplama
+            float distance = Vector3.Distance(enemy.transform.position, target.transform.position);
 
-            enemy.Agent.SetDestination(enemy.transform.position);
-            //yeni bir state oluşturulup bu state'e geçiş yapılabilir.
+            // Normalize mesafe 3 ile 5 arasında
+            float minDistance = 1.5f;
+            float maxDistance = 4f;
+            float lerpValue = Mathf.InverseLerp(minDistance, maxDistance, distance);
 
-            stateMachine.EndState();
+            Color red = enemy.redMaterial.color;
+            Color yellow = enemy.yellowMaterial.color;
+
+            Color targetColor = Color.Lerp( enemy.redMaterial.color, enemy.yellowMaterial.color, lerpValue);
+
+            // Yeni malzeme oluşturma ve rengini ayarlama
+            Material newMat = new Material(enemy.visionCone.GetComponent<MeshRenderer>().material);
+            newMat.color = targetColor;
+            // Renk geçişi
+            enemy.visionCone.GetComponent<MeshRenderer>().material = newMat;
+
+
+            if (distance < 1.5 && enemy.visionCone.GetComponent<MeshRenderer>().material != enemy.defouldMaterial)
+            {
+                enemy.visionCone.GetComponent<MeshRenderer>().material = enemy.redMaterial;
+
+                enemy.Agent.SetDestination(enemy.transform.position);
+                //yeni bir state oluşturulup bu state'e geçiş yapılabilir.
+
+                stateMachine.EndState();
+            }
+
+            //eğer mat eski rengine gönerse 
+
+            if (distance > 10)
+            {
+                enemy.GetComponent<Animator>().ResetTrigger("Run");
+                stateMachine.CantFoundState();
+            }
         }
-
-        //eğer mat eski rengine gönerse 
-
-        if (distance > 10)
-        {
-            enemy.GetComponent<Animator>().ResetTrigger("Run");
-            stateMachine.CantFoundState();
-        }
-
     }   
 
     public override void Exit()

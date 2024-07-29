@@ -24,7 +24,7 @@ public class ChestAiHearRock : ChestAiBaseState
         float distance = Vector3.Distance(enemy.transform.position, target.transform.position);
         enemy.Agent.SetDestination(target.transform.position);
 
-        if (distance > 1)
+        if (distance > 0.5)
         {
             enemy.GetComponent<Animator>().SetTrigger("Run");
             stateMachine.CantFoundState();
