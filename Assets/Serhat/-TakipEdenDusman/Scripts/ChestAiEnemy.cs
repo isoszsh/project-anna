@@ -17,6 +17,8 @@ public class ChestAiEnemy : MonoBehaviour
     public GameObject visionCone;
 
     public Material redMaterial;
+
+    public Material defouldMaterial;
     public Material yellowMaterial;
 
     // Start is called before the first frame update
@@ -29,7 +31,9 @@ public class ChestAiEnemy : MonoBehaviour
 
     public void ChangeStateToFoundState(GameObject target)
     {
-        stateMachine.FoundPlayerState(target);
+        if(stateMachine.isPlayerFound == false){
+            stateMachine.FoundPlayerState(target);
+        }
     }
 
     public void ChangeStateToCantRockState(GameObject target)

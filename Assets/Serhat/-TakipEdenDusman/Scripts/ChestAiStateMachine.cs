@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChestAiStateMachine : MonoBehaviour
 {
+    public bool isPlayerFound = false;
+
     public ChestAiBaseState activeState;
     public ChestAiPatroleState patroleState;
 

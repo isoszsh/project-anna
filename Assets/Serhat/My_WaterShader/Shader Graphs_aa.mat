@@ -38,17 +38,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FoamAmount: 1.26
-    - _FoamCutOff: 1.43
-    - _FoamScale: 1000
-    - _FoamSpeed: 0.2
+    - _FoamAmount: 0.75
+    - _FoamCutOff: 1.25
+    - _FoamScale: 15
+    - _FoamSpeed: -0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReflectionScale: 5
-    - _ReflectionSpeed: 0.02
-    - _ReflectionStrenght: 5
-    - _WaterDeepFloat: 10
-    - _WaterDepth: 5.4
+    - _ReflectionScale: 13.21
+    - _ReflectionSpeed: 7.35
+    - _ReflectionStrenght: 6.9
+    - _WaterDeepFloat: 3.77
+    - _WaterDepth: 2.13
     m_Colors:
     - _DeepWater: {r: 0, g: 0.19655418, b: 1, a: 0.5529412}
     - _DeepstColor: {r: 0, g: 0.10501179, b: 0.5169811, a: 1}

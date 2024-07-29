@@ -6,6 +6,8 @@ public class ChestAiEndState : ChestAiBaseState
 {
     public override void Enter()
     {
+        stateMachine.isPlayerFound = true;
+        enemy.Agent.SetDestination(enemy.transform.position);
         enemy.GetComponent<Animator>().SetTrigger("Catch");
         EndCycle();
     }
