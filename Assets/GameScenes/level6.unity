@@ -7254,7 +7254,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -12905,7 +12905,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cdad7a7dc63b2de41bd233b3a48cb379, type: 2}
+      objectReference: {fileID: 2100000, guid: ed080fdf978c9404a951d84b23519571, type: 2}
     - target: {fileID: 1944058612866529578, guid: 232d8e808921c4d4cb7d6f3d85a263b2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13570,7 +13570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1776112406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13612,7 +13612,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f25d12a0f9db3844087296cdd036665d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13651,7 +13651,7 @@ Transform:
   m_GameObject: {fileID: 1776112405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.96, y: 3.438, z: -3.01}
+  m_LocalPosition: {x: -3, y: 3.438, z: -3}
   m_LocalScale: {x: 6, y: 1, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
