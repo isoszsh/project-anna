@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Cinemachine;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,6 +36,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject mainButterfy;
     public GameObject hintPanel;
+
+    public GameObject letterPanel;
+    public TextMeshProUGUI letterText;
+
+    public AudioSource letterSource;
+
+    public bool letterOpened = false;
 
     // Singleton instance property
     public static GameManager Instance
@@ -76,6 +84,13 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (letterOpened && Input.anyKeyDown)
+        {
+            LetterStop();
+        }
+    }
 
     IEnumerator Story()
     {
@@ -150,6 +165,43 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void OpenLetter(string letter, AudioClip clip)
+    {
+        Debug.Log("letter acildi");
+        letterPanel.SetActive(true);
+        letterOpened = true;
+        playerController.lockControls = true;
+        playerController.ResetVelocity();
+        if(clip != null)
+        {
+            letterSource.clip = clip;
+            letterSource.Play();
+        }
+
+
+        StartCoroutine(TypeLetter(letter));
+    }
+
+    public void LetterStop()
+    {
+        playerController.lockControls = false;
+        StopAllCoroutines();
+        letterText.text = "";
+        letterPanel.SetActive(false);
+        letterOpened = false;
+    }
+
+
+     IEnumerator TypeLetter(string letter)
+    {
+        letterText.text = ""; 
+
+        foreach (char letterChar in letter)
+        {
+            letterText.text += letterChar; 
+            yield return new WaitForSeconds(0.05f); 
+        }
+    }
     IEnumerator LNM()
     {
         yield return new WaitForSeconds(2);

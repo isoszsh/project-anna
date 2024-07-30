@@ -10,6 +10,12 @@ public class CollectableScript : MonoBehaviour
     public float floatAmplitude = 1f; // Yükselme ve alçalma mesafesi
     private float initialY;
 
+    [TextArea]
+    public string letterContent;
+
+    public AudioClip letterClip;
+
+
     public List<GameObject> particalEffects;
 
     private void Start()
@@ -32,9 +38,7 @@ public class CollectableScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player collected the object");
-            // yok olmadan önce partical effect spawnla
-            // transform position un biraz altından spawnla
+            GetComponent<BoxCollider>().enabled = false;
             var newTransrom = transform.position;
             newTransrom.y -= 0.5f;
 
@@ -43,7 +47,9 @@ public class CollectableScript : MonoBehaviour
                 Instantiate(particalEffect, newTransrom, Quaternion.identity);
             }
 
-            Destroy(gameObject);
+            GetComponentInChildren<MeshRenderer>().enabled = false;
+
+            GameManager.Instance.OpenLetter(letterContent, letterClip);
         }
     }
 }

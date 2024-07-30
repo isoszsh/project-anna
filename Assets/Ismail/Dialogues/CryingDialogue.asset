@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9bc2737785d494fb62a76eda54c770, type: 3}
+  m_Name: CryingDialogue
+  m_EditorClassIdentifier: 
+  dialogue:
+    npcName: Ice Cream
+    sentences:
+    - npcName: 
+      text: Please bear fruit now... Please...
+      audioClip: {fileID: 8300000, guid: 77ba094b55c4fa84da5463a8291effaa, type: 3}
+    options:
+    - question: Why are you crying?
+      answers:
+      - npcName: 
+        text: There was someone who helped me since I first came to these lands and
+          enabled me to grow here, but he is no longer here. I am crying for him.
+        audioClip: {fileID: 8300000, guid: cfd11ab2dcc5c784ba07eb3b9c0da0ba, type: 3}
+    - question: Will he come back?
+      answers:
+      - npcName: 
+        text: He might... I mean, according to the legend, if someone eats the fruit
+          of this tree, they could return from where they went. But I have been waiting
+          for 200 years, and this tree hasn't borne a single fruit.
+        audioClip: {fileID: 8300000, guid: a33a6c49226edf14488e6406d6019b37, type: 3}
+      - npcName: 
+        text: I think there's a problem with the well. Because the tree has dried
+          up and there's no water.
+        audioClip: {fileID: 8300000, guid: 9b123646133f4d84cb92c179b0972769, type: 3}
+    - question: Can i help you?
+      answers:
+      - npcName: 
+        text: Really? I would be so happy. This way, maybe we can bring him back.
+        audioClip: {fileID: 8300000, guid: 7f50a8a4aa56d594c8102df599cda68a, type: 3}

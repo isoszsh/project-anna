@@ -73,6 +73,8 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         GameManager.Instance.playerController.lockControls = true;
+        audioSource.Stop();
+        audioSource.loop = false;
 
         currentDialogue = dialogue;
         npcNameText.text = dialogue.npcName + ":";

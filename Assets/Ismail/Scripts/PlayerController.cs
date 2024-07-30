@@ -218,6 +218,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Handle");
                     HandleInteraction();
                 }
             }
@@ -609,13 +610,15 @@ public class PlayerController : MonoBehaviour
 
     void HandleInteraction()
     {
-        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward);
+        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z), transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 1f, raycastLayerMask) && hit.collider.CompareTag("MoveObject"))
         {
+            Debug.Log(hit.collider.tag);
             if (!isInteracted)
             {
+                Debug.Log("interacting");
                 InteractWithObject(hit);
             }
             else
