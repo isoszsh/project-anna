@@ -8440,6 +8440,88 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9113361, y: 0.9977961, z: 0.2371524}
   m_Center: {x: -0.015486985, y: 0.0067609977, z: 0.02953878}
+--- !u!1001 &659208383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterContent
+      value: "Sevgili g\xFCnl\xFCk,\r\nGece televizyonu a\xE7\u0131k unuttu\u011Fumu
+        fark etmem biraz zaman\u0131m\u0131 ald\u0131. Anna sabah uyand\u0131\u011F\u0131
+        gibi televizyon ba\u015F\u0131na ge\xE7mi\u015F ve \u2018Kutuplarda Ya\u015Fam\u2019
+        adl\u0131 hayvan belgeselini izlemeye koyulmu\u015F. Bana bir kutup ay\u0131s\u0131
+        istedi\u011Fini s\xF6yleyip duruyor ama canl\u0131s\u0131yla pek anla\u015Famayaca\u011F\u0131na
+        eminim. Ayr\u0131ca bir kutup ay\u0131s\u0131yla ya\u015Fayabilmemiz i\xE7in
+        ta\u015F\u0131nmam\u0131z gerekti\u011Fine kararl\u0131 \xE7\xFCnk\xFC onlar
+        karl\u0131 yerlerde ya\u015F\u0131yormu\u015F ve yaz\u0131n ay\u0131m\u0131z
+        eriyebilirmi\u015F. Bazen sadece tekrar bir \xE7ocuk olmak ve mesai saatlerim
+        yerine b\xF6yle \u015Feylere kafa yormak istiyorum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -45.255283
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -76.24347
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793620431690640713, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCollectable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbdebba5b7b18024ead1c7a6d5660a15, type: 3}
 --- !u!1 &666844418
 GameObject:
   m_ObjectHideFlags: 0
@@ -17709,6 +17791,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2045780211}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -377.18}
+--- !u!1001 &1374853546
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterContent
+      value: "Sevgili g\xFCnl\xFCk,\r\nBug\xFCn \xE7ok nadir bir olay ya\u015Fand\u0131!
+        Do\u011Fa sanki k\u0131z\u0131m\u0131n kar g\xF6rmesini istiyormu\u015F\xE7as\u0131na\r\nbulutlar\u0131
+        buraya s\xFCrd\xFC. En son ne zaman buraya kar ya\u011Fd\u0131\u011F\u0131n\u0131
+        hat\u0131rlam\u0131yorum bile.\r\nHemen ko\u015Fup biraz k\xF6m\xFCr ve havu\xE7
+        almal\u0131y\u0131m galiba. Ah, bodrumun bir yerlerinde eski\r\nbir k\u0131zak
+        olmal\u0131yd\u0131, nerede acaba? Anna karlar\u0131n \xFCzerinde y\xFCr\xFCd\xFC\u011F\xFCnde
+        neler\r\nhissedecek, \xE7ok merak ediyorum. \xC7ok fazla yazamayaca\u011F\u0131m,
+        \xE7\xFCnk\xFC gidip m\xFCkemmel bir kar g\xFCn\xFC planlamam gerekiyor!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -63.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793620431690640713, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCollectable (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbdebba5b7b18024ead1c7a6d5660a15, type: 3}
 --- !u!1 &1374973078
 GameObject:
   m_ObjectHideFlags: 0
@@ -32201,3 +32363,5 @@ SceneRoots:
   - {fileID: 1098940137}
   - {fileID: 113179642}
   - {fileID: 1275594846}
+  - {fileID: 659208383}
+  - {fileID: 1374853546}
