@@ -141,7 +141,7 @@
 
 - **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken toplam 300 puanlık backlog bulunmaktadır. 3 sprinte bölündüğünde üçüncü sprintin 100 puandan oluşması gerektiği kararlaştırıldı.
 
-- **Backlog düzeni ve Story seçimleri**: Backlog'umuz oyunu final product haline getirmeyi temel almıştır. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde görevler dağıtılmıştır. Miro Board'da gözüken pembe item'lar _yazılım_, mor item'lar _ses_, açık yeşil item'lar _görsel efekt_, koyu yeşil item'lar _türü olmayan görevleri_ gösterirken, mavi item'lar _tasarım_ görevlerini temsil etmektedir.
+- **Backlog düzeni ve Story seçimleri**: Bu backlog'umuz oyunu final product haline getirmeyi temel almıştır. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde görevler dağıtılmıştır. Miro Board'da gözüken pembe item'lar _yazılım_, mor item'lar _ses_, açık yeşil item'lar _görsel efekt_, koyu yeşil item'lar _türü olmayan görevleri_ gösterirken, mavi item'lar _tasarım_ görevlerini temsil etmektedir.
 
 - **Daily Scrum**: Daily Scrum toplantılarının Discord üzerinden yapılmasına devam edilmiştir. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız Imgur'da toplanmıştır.: [Sprint 3 - Daily Scrum Chats](https://imgur.com/a/DIUzktA)
 
@@ -168,13 +168,10 @@
 
 - **Sprint Retrospective:** 
  
-
-
-
 ---
 
  **Jüri Notları**:
-- Ekibimizde herhangi bir designer/artist bulunmadığı için 3D modellerde ücretsiz asset'lerden faydalandık. Kullanılan assetlere ise [buradan](https://drive.google.com/file/d/1qA1LSu2YoReAVTQpT6-Lp9ibRBvqkJD6/view?usp=sharing) ulaşılabilir.
+- Ekibimizde herhangi bir designer/artist bulunmadığı için 3D modellerde ücretsiz asset'lerden faydalandık. Kullanılan assetlere ise [buradan](https://drive.google.com/file/d/1ZXC6znB-ZxTyP2zP8O3_v-5lX6S98q4M/view?usp=sharing) ulaşılabilir.
 
 
 ---
