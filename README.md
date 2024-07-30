@@ -1,6 +1,6 @@
 ## **Takım İsmi**
 
-**Imagine 5** 
+**Imagine 4** 
 
 ## **Takım Logosu**
 
@@ -150,11 +150,11 @@
 
 <details> <summary><h3>Ürün Durumu: Ekran Görüntüleri</h3></summary>
   
-  ![Screenshot 1](x)
-  ![Screenshot 2](x) 
-  ![Screenshot 3](x)
-  ![Screenshot 4](x)
-  ![Screenshot 5](x)
+  ![Screenshot 1](https://github.com/user-attachments/assets/ddfdaa57-cf4d-4dba-961a-1b75ea107f14)
+  ![Screenshot 2](https://github.com/user-attachments/assets/f8e41da4-d95a-4710-a813-a270c2267589) 
+  ![Screenshot 3](https://github.com/user-attachments/assets/1bb0b4a5-171c-42a6-83e2-aff324f617e3)
+  ![Screenshot 4](https://github.com/user-attachments/assets/eec03244-2746-48b5-af0d-a449a8130e1b)
+  ![Screenshot 5](https://github.com/user-attachments/assets/4c8be489-482f-4ed6-be55-70fb3396a07f)
 
 </details>
 
@@ -173,8 +173,8 @@
 
 ---
 
--**Jüri Notları**:
+ **Jüri Notları**:
 - Ekibimizde herhangi bir designer/artist bulunmadığı için 3D modellerde ücretsiz asset'lerden faydalandık. Kullanılan assetlere ise [buradan](https://drive.google.com/file/d/1qA1LSu2YoReAVTQpT6-Lp9ibRBvqkJD6/view?usp=sharing) ulaşılabilir.
-- 
+
 
 ---
