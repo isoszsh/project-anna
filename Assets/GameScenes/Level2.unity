@@ -22155,17 +22155,17 @@ PrefabInstance:
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.696024
+      value: -22.49
       objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.337
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -117.31581
+      value: -54.65
       objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
@@ -49328,6 +49328,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1270938129}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1271837859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterContent
+      value: "Sevgili g\xFCnl\xFCk,\r\nAnna\u2019n\u0131n hala duymakta s\u0131k\u0131nt\u0131
+        \xE7ekti\u011Fi bir ger\xE7ek ama buna ra\u011Fmen piyano \xE7al\u0131\u015F\u0131m\u0131
+        dinlemeye bay\u0131l\u0131yor. Tu\u015Flara basmak onun i\xE7in bir oyuna
+        d\xF6n\xFC\u015Ft\xFC, tabi bunun pek i\u015Fime geldi\u011Fini s\xF6yleyemem.
+        Kom\u015Fumuz Bayan Dozni bu g\xFCr\xFClt\xFCden hi\xE7 ho\u015Fnut de\u011Fil,
+        kedileri mi ne rahats\u0131z oluyormu\u015F. Haftada birka\xE7 g\xFCn ona
+        baz\u0131 besteleri \xE7al\u0131yor, baz\u0131 \u015Fark\u0131lar\u0131 ise
+        \xE7alarken s\xF6yl\xFCyorum. Ne kadar\u0131n\u0131 duyuyor oldu\u011Funu
+        bilmesem de \u015Fark\u0131 s\xF6ylememe bay\u0131l\u0131yor, geceleri ona
+        \u2018\xF6zel\u2019 ninnisini s\xF6ylemeden gitmeme izin yok. Bir g\xFCn
+        bu ninniyi fark etmeden son kez s\xF6yleyecek olmak beni korkutuyor. Ke\u015Fke
+        hep benim k\xFC\xE7\xFCk Anna\u2019m olarak kalsa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -93.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793620431690640713, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCollectable (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbdebba5b7b18024ead1c7a6d5660a15, type: 3}
 --- !u!1 &1276296146
 GameObject:
   m_ObjectHideFlags: 0
@@ -64284,6 +64368,90 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0027796363, y: 0.0030863197, z: 0.010076296}
   m_Center: {x: -0.00018326759, y: -0.00045992612, z: 0.00493088}
+--- !u!1001 &1555660510
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterContent
+      value: "Sevgili g\xFCnl\xFCk,\r\n\r\nAnna bug\xFCn ilk f\u0131r\xE7as\u0131n\u0131
+        tuttu fakat kendisini tuval olarak g\xF6rmesi pek i\u015Fime gelmedi. Sana
+        \xF6nceden sesimi duymaya ba\u015Flad\u0131\u011F\u0131n\u0131 s\xF6ylemi\u015F
+        ama sonra vazge\xE7mi\u015Ftim hat\u0131rl\u0131yor musun? Bug\xFCn kendisine
+        seslendi\u011Fimde k\u0131k\u0131rdad\u0131. \u0130nanabiliyor musun, beni
+        duyuyor! Doktorlara hi\xE7 inanmam\u0131\u015Ft\u0131m, y\u0131llarca bekledim
+        ama bir \u015Fey g\xF6zlemleyemedim \u015Fimdi ise beni duyuyor. Mr. Broad
+        ile konu\u015Fup Per\u015Fembe g\xFCn\xFC i\xE7in randevu ald\u0131m. Birka\xE7
+        test yapacak. Belki k\u0131z\u0131m iyile\u015Febilir, di\u011Fer \xE7ocuklar
+        gibi y\xFCr\xFCyebilir, g\xF6rebilir. Bunun nelerimi vermezdim. Her g\xFCn
+        o yatakta ya\u015Famas\u0131 ihtimali ile y\xFCz y\xFCze olmak m\u0131 daha
+        korkun\xE7 yoksa bir g\xFCn onun yan\u0131nda olamayaca\u011F\u0131m\_m\u0131,\_bilmiyorum."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -79.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -83.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793620431690640713, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCollectable (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbdebba5b7b18024ead1c7a6d5660a15, type: 3}
 --- !u!1 &1560278183
 GameObject:
   m_ObjectHideFlags: 0
@@ -90366,3 +90534,5 @@ SceneRoots:
   - {fileID: 1087111597}
   - {fileID: 1645281463}
   - {fileID: 574091794}
+  - {fileID: 1555660510}
+  - {fileID: 1271837859}

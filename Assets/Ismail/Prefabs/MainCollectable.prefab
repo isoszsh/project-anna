@@ -32,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2128527743063345379}
+  - {fileID: 115872703443001639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7686119236685843264
@@ -71,15 +72,19 @@ MonoBehaviour:
   speed: 60
   floatSpeed: 1
   floatAmplitude: 0.5
-  letterContent: Summer has finally arrived. During this period, when we enjoy hot
-    days and cool evenings, one of Anna's and my favorite activities is to sit in
-    the garden while eating our ice creams and comparing clouds to objects. As the
-    sunlight filters through the leaves, we savor the pleasure of cooling down by
-    licking our delicious ice creams. Yesterday, I told Anna that when I was her
-    age, I used to imagine ice creams falling from the sky. She seemed to like the
-    idea. It's hard to tell how much she can taste them, but I saw the sparkle in
-    her eyes. After I told her about it, we lay back and started watching the sky,
-    imagining ice creams falling from above.
+  letterContent: "Sevgili g\xFCnl\xFCk,\r\nBug\xFCn Anna ile kanyona gittik. G\xFCne\u015Fin
+    bizi eritece\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm bir g\xFCnd\xFC,\r\nama
+    o hi\xE7 ald\u0131rmadan elindeki ay\u0131c\u0131\u011F\u0131yla s\u0131cac\u0131k
+    kumlar\u0131n \xFCst\xFCne oturdu. Doktorlara\r\ng\xF6re ilerleme pek yokmu\u015F,
+    ama ben g\xF6zlerimle g\xF6rd\xFCklerime inan\u0131yorum. Kazadan beri\r\ncesaret
+    edemedi\u011Fim bir \u015Feyi yapmaya haz\u0131rlan\u0131yorum: Anna\u2019ya
+    piyano \xE7alaca\u011F\u0131m.\r\nKumlar\u0131n \xFCzerinde tahta bloklarla kaleler
+    yaparken, kelebe\u011Fim d\xFCnyay\u0131 nas\u0131l alg\u0131l\u0131yor\r\nacaba?
+    Onun o masum d\xFCnyas\u0131nda benim ona ne kadar b\xFCy\xFCk bir d\xFCnya sundu\u011Fumu\r\nmerak
+    ediyorum. Belki de m\xFCzi\u011Fi duydu\u011Funda nas\u0131l tepki verece\u011Fini
+    kestiremiyorum.\r\nAnnesinin en sevdi\u011Fi \u015Fark\u0131y\u0131 piyanonun
+    melodileriyle m\u0131r\u0131ldand\u0131\u011F\u0131nda, onun y\xFCz\xFCndeki\r\nifadeyi
+    g\xF6rmek i\xE7in sab\u0131rs\u0131zlan\u0131yorum."
   letterClip: {fileID: 0}
   particalEffects:
   - {fileID: 5032543150964833618, guid: 3d87fa2155d4db0468a828896c5b0d33, type: 3}
@@ -169,3 +174,138 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &651975424547778072
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1207091546956343432}
+    m_Modifications:
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176298100094417697, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 9121ed6366b829f44b492dcff9588b7a,
+        type: 2}
+    - target: {fileID: 2176298100094417697, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455001961820261622, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_Name
+      value: LetterPanel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20114d468b540ee48a90a7408cf76bf0, type: 3}
+--- !u!224 &115872703443001639 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 619211609643290431, guid: 20114d468b540ee48a90a7408cf76bf0,
+    type: 3}
+  m_PrefabInstance: {fileID: 651975424547778072}
+  m_PrefabAsset: {fileID: 0}
