@@ -164,7 +164,7 @@
   - Scrum boyunca eksiksiz çalışıldığı için ekip üyeleri birbirini tebrik etti.
   - 1 karakter tasarımı, 7 adet map tasarımı, birçok farklı mekanik, karakter ve animasyonlar yapılmıştır.
   - Tamamlanması gereken 300 puanlık backlog puanı tamamlanmıştır.
-  - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can, İrfan Şenatlı.
+  - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can.
 
 - **Sprint Retrospective:** 
  
