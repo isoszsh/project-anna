@@ -332,7 +332,9 @@ public class PlayerController : MonoBehaviour
         willPick.transform.parent = pickPoint.parent;
         willPick.GetComponent<BoxCollider>().enabled = false;
         yield return new WaitForSeconds(2f);
+        
         pickedItem = willPick;
+
         willPick = null;
         lockControls = false;
     }
@@ -511,6 +513,7 @@ public class PlayerController : MonoBehaviour
     {
         lockControls = true;
         playerAnimator.SetTrigger("Plant");
+ 
         yield return new WaitForSeconds(2);
         pickedItem.transform.parent = null;
         pickedItem.transform.rotation = Quaternion.Euler(0, 0, 0);

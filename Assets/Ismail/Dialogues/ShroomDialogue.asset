@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9bc2737785d494fb62a76eda54c770, type: 3}
+  m_Name: ShroomDialogue
+  m_EditorClassIdentifier: 
+  dialogue:
+    npcName: Shroom
+    sentences:
+    - npcName: 
+      text: I don't know how to grow these plants anymore.
+      audioClip: {fileID: 8300000, guid: 77ba094b55c4fa84da5463a8291effaa, type: 3}
+    options:
+    - question: Are you a farmer?
+      answers:
+      - npcName: 
+        text: Yes. I've been farming since I was a child, and I love it, but my main
+          special interest is flowers. I grow fragrant flowers and beautify nature.
+          We also bring happiness to the other people in the village.
+        audioClip: {fileID: 8300000, guid: cfd11ab2dcc5c784ba07eb3b9c0da0ba, type: 3}
+      - npcName: 
+        text: But growing flowers has become very difficult now. The swamp is advancing
+          towards our village every day, and I can't plant enough flowers to stop
+          it. Finding seeds has also become very hard.
+        audioClip: {fileID: 8300000, guid: cfd11ab2dcc5c784ba07eb3b9c0da0ba, type: 3}
+    - question: Why is the swamp advancing?
+      answers:
+      - npcName: 
+        text: Because a wicked, terrible witch came and started using the essences
+          of all the plants to make spells and potions for herself. But instead of
+          the flowers she takes, she plants bad wild plants. Also, the fumes from
+          the boiling potions in her cauldron smell so awful that no one can go near
+          there. This place has become uninhabitable.
+        audioClip: {fileID: 8300000, guid: a33a6c49226edf14488e6406d6019b37, type: 3}
+      - npcName: 
+        text: For now, I need to plant these to be able to fight back. Will you help
+          me plant them?
+        audioClip: {fileID: 8300000, guid: 9b123646133f4d84cb92c179b0972769, type: 3}
+    - question: How can I plant the flowers?
+      answers:
+      - npcName: 
+        text: Planting the flowers is very simple, but growing them requires some
+          effort. Can you plant the last three flowers from those pots over there
+          in the field below? First, gently remove them from the pots and then go
+          place them in suitable spots.
+        audioClip: {fileID: 8300000, guid: 7f50a8a4aa56d594c8102df599cda68a, type: 3}
