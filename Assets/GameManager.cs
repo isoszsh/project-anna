@@ -185,6 +185,7 @@ public class GameManager : MonoBehaviour
     public void LetterStop()
     {
         playerController.lockControls = false;
+        letterSource.Stop();
         StopAllCoroutines();
         letterText.text = "";
         letterPanel.SetActive(false);

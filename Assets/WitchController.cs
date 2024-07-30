@@ -25,8 +25,15 @@ public class WitchController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+    }
+
+
+    public void Attack()
+    {
         StartCoroutine(AttackRoutine());
     }
+
 
     IEnumerator AttackRoutine()
     {
