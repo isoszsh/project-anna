@@ -1,0 +1,11 @@
+Model Information:
+* title:	Carpet-02-Tetris-170x240-SophieDecor
+* source:	https://sketchfab.com/3d-models/carpet-02-tetris-170x240-sophiedecor-ace3ebf262cb485e8beb4f7f17edf068
+* author:	Alexander.Xas (https://sketchfab.com/a7xasik)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Carpet-02-Tetris-170x240-SophieDecor" (https://sketchfab.com/3d-models/carpet-02-tetris-170x240-sophiedecor-ace3ebf262cb485e8beb4f7f17edf068) by Alexander.Xas (https://sketchfab.com/a7xasik) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
