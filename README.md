@@ -45,7 +45,7 @@
 
 - Bağımsız (Indie) Oyun Severler
 - Keşif ve Macera Severler
-- 13 - 65 Yaş Arası Oyuncular
+- 13 ve Üzeri Yaş Arası Oyuncular
 
 ## Pazarlama Planı
 
