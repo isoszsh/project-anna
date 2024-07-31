@@ -44,8 +44,11 @@ public class ChestAiFoundState : ChestAiBaseState
             enemy.visionCone.GetComponent<MeshRenderer>().material = newMat;
 
 
-            if (distance < 1.5 && enemy.visionCone.GetComponent<MeshRenderer>().material != enemy.defouldMaterial)
+            if (distance < 4.5 && enemy.visionCone.GetComponent<MeshRenderer>().material != enemy.defouldMaterial)
             {
+                // look at yapmamız gerek
+                enemy.StartCoroutine(SmoothLookAt(target.transform.position));
+
                 enemy.visionCone.GetComponent<MeshRenderer>().material = enemy.redMaterial;
 
                 enemy.Agent.SetDestination(enemy.transform.position);
@@ -63,6 +66,26 @@ public class ChestAiFoundState : ChestAiBaseState
             }
         }
     }   
+
+public IEnumerator SmoothLookAt(Vector3 target)
+{
+    Vector3 direction = target - enemy.transform.position;
+    Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+    float elapsedTime = 0f;
+    float rotationTime = 1f;  // This value is increased to 1 second for smoother rotation
+
+    while (elapsedTime < rotationTime)
+    {
+        enemy.transform.rotation = Quaternion.Slerp(enemy.transform.rotation, targetRotation, elapsedTime / rotationTime);
+        elapsedTime += Time.deltaTime;
+        yield return null;
+    }
+
+    // Ensure final rotation is set to the target rotation after the loop
+    enemy.transform.rotation = targetRotation;
+}
+
 
     public override void Exit()
     {

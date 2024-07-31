@@ -45,6 +45,8 @@ public class ChestBossEnemy : MonoBehaviour
 
     public float shrinkageRate;
 
+    public GameObject popParticleEffectObject;
+
     // Start is called before the first frame update
     void Start()
     {

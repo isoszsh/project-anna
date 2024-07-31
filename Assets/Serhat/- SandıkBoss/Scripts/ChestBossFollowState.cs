@@ -10,6 +10,7 @@ public class ChestBossFollowState : ChestBossBaseState
         boss.GetComponent<Animator>().ResetTrigger("Stun");
         boss.GetComponent<Animator>().SetTrigger("Run");
         walls = boss.GetComponent<ChestBossEnemy>().walls;
+        PlayEffectMusic();
         
     }
 
@@ -60,5 +61,10 @@ public class ChestBossFollowState : ChestBossBaseState
             }
         }
         return false;
+    }
+
+    public void PlayEffectMusic()
+    {
+        boss.GetComponent<PlayMusicBoss>().BrustMusic();
     }
 }

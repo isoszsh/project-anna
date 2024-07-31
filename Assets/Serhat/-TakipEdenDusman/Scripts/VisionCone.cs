@@ -9,6 +9,7 @@ public class VisionCone : MonoBehaviour
     public float VisionRange;
     public float VisionAngle;
     public LayerMask VisionObstructingLayer; //layer with objects that obstruct the enemy view, like walls, for example
+    public LayerMask BoxLayer; //layer with the player
     public int VisionConeResolution = 120; //the vision cone will be made up of triangles, the higher this value is the pretier the vision cone will be
     Mesh VisionConeMesh;
     MeshFilter MeshFilter_;
@@ -57,11 +58,16 @@ public class VisionCone : MonoBehaviour
             Cosine = Mathf.Cos(Currentangle);
             Vector3 RaycastDirection = (transform.forward * Cosine) + (transform.right * Sine);
             Vector3 VertForward = (Vector3.forward * Cosine) + (Vector3.right * Sine);
-            if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hit, VisionRange, VisionObstructingLayer))
+            if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hit, VisionRange, VisionObstructingLayer | BoxLayer)) //raycast to check if the enemy can see the player
             {
                 Vertices[i + 1] = VertForward * hit.distance;
 
             }
+            // if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hita, VisionRange, BoxLayer))
+            // {
+            //     Vertices[i + 1] = VertForward * hita.distance;
+
+            // }
             else
             {
                 Vertices[i + 1] = VertForward * VisionRange;
