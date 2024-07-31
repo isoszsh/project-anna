@@ -56,7 +56,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.3078468
+        functionName: OpeningChestMusic
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -115,16 +123,24 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
+      - time: 0.056112364
+        functionName: RunStepMusic
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
+          type: 3}
+        floatParameter: 0
+        intParameter: 1
+        messageOptions: 0
       - time: 0.29265404
-        functionName: NewEvent
+        functionName: RunStepMusic
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
           type: 3}
         floatParameter: 0
         intParameter: 2
         messageOptions: 0
-      - time: 0.56230855
-        functionName: NewEvent
+      - time: 0.56610006
+        functionName: RunStepMusic
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
           type: 3}
@@ -132,20 +148,12 @@ ModelImporter:
         intParameter: 1
         messageOptions: 0
       - time: 0.8159269
-        functionName: NewEvent
+        functionName: RunStepMusic
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
           type: 3}
         floatParameter: 0
         intParameter: 2
-        messageOptions: 0
-      - time: 0.056112364
-        functionName: NewEvent
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
-          type: 3}
-        floatParameter: 0
-        intParameter: 1
         messageOptions: 0
       transformMask: []
       maskType: 3
@@ -181,15 +189,15 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 9.14
     - serializedVersion: 16
-      name: idle
+      name: MIMIC-RIG|COMBO (1)
       takeName: MIMIC-RIG|COMBO
       internalID: -579195325069455433
-      firstFrame: 71
-      lastFrame: 82
+      firstFrame: 63
+      lastFrame: 75
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
-      cycleOffset: 0
+      cycleOffset: 75
       loop: 0
       hasAdditiveReferencePose: 1
       loopTime: 1
@@ -208,7 +216,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 9.14
+      additiveReferencePoseFrame: 75
     - serializedVersion: 16
       name: MIMIC-RIG|COMBO
       takeName: MIMIC-RIG|COMBO
@@ -268,7 +276,7 @@ ModelImporter:
           postInfinity: 3
           rotationOrder: 4
       events:
-      - time: 0.99586064
+      - time: 0.64525044
         functionName: HitEvent
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
@@ -333,7 +341,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.4211029
+        functionName: ToLaughMusic
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -391,7 +407,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.4527162
+        functionName: ClosingChestMusic
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -449,7 +473,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.22944652
+        functionName: OpenChestMusic
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -478,7 +510,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.48358572
+        functionName: GrumbleMusic
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 99d043396e9c2f8428dad242fb3913f3,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

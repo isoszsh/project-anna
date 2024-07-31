@@ -10,16 +10,13 @@ public class ChestBossSpawnState : ChestBossBaseState
     public List<GameObject> leftSpawnPoints = new List<GameObject>();
     public List<GameObject> rightSpawnPoints = new List<GameObject>();
     public List<GameObject> spawnObject = new List<GameObject>();
-
-
     public GameObject trailParent ;
     public Vector3 tempPos;
-
     public Vector3 lavaWallTempPos;
-
-
     public bool youShouldLook = true;
-
+    public float spownPointTopY;
+    public float spownPointMidY;
+    public float spownPointDownY;
 
     public void Start() {
 
@@ -42,6 +39,10 @@ public class ChestBossSpawnState : ChestBossBaseState
 
         trailParent = boss.TrailParent;
 
+        spownPointTopY = boss.spawnPointTop.transform.position.y;
+        spownPointMidY = boss.spawnPointMid.transform.position.y;
+        spownPointDownY = boss.spawnPointDown.transform.position.y;
+
         boss.Agent.isStopped = false;
         boss.Agent.SetDestination(boss.allSpawnPointParentObject.transform.position);
         boss.GetComponent<Animator>().ResetTrigger("Run");
@@ -58,7 +59,6 @@ public class ChestBossSpawnState : ChestBossBaseState
 
     public override void Perform()
     {
-
     }
 
     public override void Exit()
@@ -117,22 +117,30 @@ public class ChestBossSpawnState : ChestBossBaseState
         yield return new WaitForSeconds(2f);
 
 
-        yield return Last4Spawn(boss.spawnerHolder1);
+        yield return Last4Spawn(boss.spawnerHolder1, spownPointDownY);
         yield return new WaitForSeconds(1f);
-        yield return First4Spawn(boss.spawnerHolder2);
+        yield return First4Spawn(boss.spawnerHolder2, spownPointMidY);
         yield return new WaitForSeconds(1f);
-        yield return Last4Spawn(boss.spawnerHolder3);
+        yield return Last4Spawn(boss.spawnerHolder3, spownPointTopY);
         yield return new WaitForSeconds(2f);
         
-        yield return AllSpawn();
+        yield return AllSpawn(spownPointDownY);
         yield return new WaitForSeconds(1f);
-        yield return SpiralSpawn();
+        yield return AllSpawn(spownPointMidY);
+        yield return new WaitForSeconds(1f);
+        yield return AllSpawn(spownPointTopY);
+        yield return new WaitForSeconds(1f);
+
+        yield return new WaitForSeconds(1f);
+        yield return SpiralSpawn(spownPointMidY);
+        yield return ReversSpiralSpawn(spownPointMidY);
         
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
 
         youShouldLook = false;
         
         bossStateMachine.stunNumber = 2;
+        boss.Agent.speed = 10;
         bossStateMachine.spawnNumber--;
 
         boss.GetComponent<Animator>().SetTrigger("Stun");
@@ -152,120 +160,154 @@ public class ChestBossSpawnState : ChestBossBaseState
         yield return new WaitForSeconds(2f);
 
         
-        yield return AllSpawn();
+        yield return AllSpawn(spownPointTopY);
         yield return new WaitForSeconds(0.5f);
-        yield return SpiralSpawn();
-        yield return ReversSpiralSpawn();
-        yield return SpiralSpawn();
+        yield return AllSpawn(spownPointMidY);
+        yield return new WaitForSeconds(0.5f);
+        yield return AllSpawn(spownPointDownY);
+
         yield return new WaitForSeconds(1f);
+
+        yield return SpiralSpawn(spownPointDownY);
+        yield return ReversSpiralSpawn(spownPointDownY);
+        yield return SpiralSpawn(spownPointMidY);
+        yield return ReversSpiralSpawn(spownPointMidY);
+        yield return SpiralSpawn(spownPointTopY);
+        yield return ReversSpiralSpawn(spownPointTopY);
+
+        yield return new WaitForSeconds(1f);
+
         yield return FastAnd3Time();
         
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
+
+        yield return FastAnd3TimeWithTime();
 
         youShouldLook = false;
 
-        boss.Agent.isStopped = true;
+        yield return new WaitForSeconds(2f);
 
+        boss.Agent.isStopped = true;
         bossStateMachine.spawnNumber--;
         boss.GetComponent<ChestBossStateMachine>().GameLoop();
 
     }
 
-
     private IEnumerator FastAnd3Time()
     {
-        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder1 , "top");
-        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder1 , "bottom");
+        PlayEffectMusic();
+        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder1 , "top", spownPointDownY);
+        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder1 , "bottom", spownPointDownY);
         yield return new WaitForSeconds(0.5f);
-        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder1 , "right");
-        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder1 , "left");
-        MoveTowards(boss.spawnerHolder1, boss.spawnPointTop, 0.1f);
+        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder1 , "right", spownPointDownY);
+        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder1 , "left", spownPointDownY);
 
-        
+        PlayEffectMusic();
         yield return new WaitForSeconds(0.5f);
-        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder2 , "top");
-        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder2 , "bottom");
+        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder2 , "top", spownPointMidY);
+        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder2 , "bottom", spownPointMidY);
         yield return new WaitForSeconds(0.5f);
-        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder2 , "right");
-        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder2 , "left");
+        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder2 , "right", spownPointMidY);
+        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder2 , "left", spownPointMidY);
         SetAllSpawnPointParentObject(boss.spawnerHolder2, boss.spawnPointMid);
-        MoveTowards(boss.spawnerHolder2, boss.spawnPointMid, 0.1f);
 
-        
+        PlayEffectMusic();
         yield return new WaitForSeconds(0.5f);
-        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder3 , "top");
-        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder3 , "bottom");
+        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder3 , "top", spownPointTopY);
+        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder3 , "bottom", spownPointTopY);
         yield return new WaitForSeconds(0.5f);
-        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder3 , "right");
-        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder3 , "left");
-        MoveTowards(boss.spawnerHolder2, boss.spawnPointDown, 0.1f);
+        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder3 , "right", spownPointTopY);
+        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder3 , "left", spownPointTopY);
         yield return new WaitForSeconds(0.5f);
     }
 
-    public void MoveTowards(GameObject movingObject, GameObject targetObject, float speed)
-    {
-        // Calculate the step size based on speed and time
-        float step = speed * Time.deltaTime;
-        
-        // Move the movingObject towards the targetObject
-        movingObject.transform.position = Vector3.MoveTowards(movingObject.transform.position, targetObject.transform.position, step);
-    }
+    private IEnumerator FastAnd3TimeWithTime(){
+        PlayEffectMusic();
+        RespectivelySpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder1 , "top", spownPointDownY);
+        RespectivelySpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder1 , "bottom", spownPointDownY);
+        yield return new WaitForSeconds(0.5f);
+        RespectivelySpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder1 , "right", spownPointDownY);
+        RespectivelySpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder1 , "left", spownPointDownY);
 
-    private IEnumerator Last4Spawn(GameObject spanwerHolder)
-    {
-        UltiSameTimeSpawn(0, topSpawnPoints.Count / 2, false, spanwerHolder , "top");
-        UltiSameTimeSpawn(0, rightSpawnPoints.Count / 2, false, spanwerHolder , "right");
-        UltiSameTimeSpawn(0, bottomSpawnPoints.Count / 2, false, spanwerHolder , "bottom");
-        UltiSameTimeSpawn(0, leftSpawnPoints.Count / 2, false, spanwerHolder , "left");
+        PlayEffectMusic();
+        yield return new WaitForSeconds(0.5f);
+        RespectivelySpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder2 , "top", spownPointMidY);
+        RespectivelySpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder2 , "bottom", spownPointMidY);
+        yield return new WaitForSeconds(0.5f);
+        RespectivelySpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder2 , "right", spownPointMidY);
+        RespectivelySpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder2 , "left", spownPointMidY);
+        SetAllSpawnPointParentObject(boss.spawnerHolder2, boss.spawnPointMid);
+
+        PlayEffectMusic();
+        yield return new WaitForSeconds(0.5f);
+        RespectivelySpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder3 , "top", spownPointTopY);
+        RespectivelySpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder3 , "bottom", spownPointTopY);
+        yield return new WaitForSeconds(0.5f);
+        RespectivelySpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder3 , "right", spownPointTopY);
+        RespectivelySpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder3 , "left", spownPointTopY);
         yield return new WaitForSeconds(0.5f);
     }
 
-    private IEnumerator First4Spawn(GameObject spanwerHolder)
+    private IEnumerator Last4Spawn(GameObject spanwerHolder,float spawnPointY)
     {
-        UltiSameTimeSpawn(topSpawnPoints.Count / 2, topSpawnPoints.Count, false, spanwerHolder , "top");
-        UltiSameTimeSpawn(rightSpawnPoints.Count / 2, rightSpawnPoints.Count, false, spanwerHolder , "right");
-        UltiSameTimeSpawn(bottomSpawnPoints.Count / 2, bottomSpawnPoints.Count, false, spanwerHolder , "bottom");
-        UltiSameTimeSpawn(leftSpawnPoints.Count / 2, leftSpawnPoints.Count, false, spanwerHolder , "left");
+        PlayEffectMusic();
+        UltiSameTimeSpawn(0, topSpawnPoints.Count / 2, false, spanwerHolder , "top", spawnPointY);
+        UltiSameTimeSpawn(0, rightSpawnPoints.Count / 2, false, spanwerHolder , "right", spawnPointY);
+        UltiSameTimeSpawn(0, bottomSpawnPoints.Count / 2, false, spanwerHolder , "bottom", spawnPointY);
+        UltiSameTimeSpawn(0, leftSpawnPoints.Count / 2, false, spanwerHolder , "left", spawnPointY);
         yield return new WaitForSeconds(0.5f);
     }
 
-    private IEnumerator AllSpawn()
+    private IEnumerator First4Spawn(GameObject spanwerHolder,float spawnPointY)
     {
-        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder1 , "top");
-        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder1 , "right");
-        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder1 , "bottom");
-        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder1 , "left");
+        PlayEffectMusic();
+        UltiSameTimeSpawn(topSpawnPoints.Count / 2, topSpawnPoints.Count, false, spanwerHolder , "top", spawnPointY);
+        UltiSameTimeSpawn(rightSpawnPoints.Count / 2, rightSpawnPoints.Count, false, spanwerHolder , "right", spawnPointY);
+        UltiSameTimeSpawn(bottomSpawnPoints.Count / 2, bottomSpawnPoints.Count, false, spanwerHolder , "bottom", spawnPointY);
+        UltiSameTimeSpawn(leftSpawnPoints.Count / 2, leftSpawnPoints.Count, false, spanwerHolder , "left", spawnPointY);
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator AllSpawn(float spawnPointY)
+    {
+        PlayEffectMusic();
+        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder1 , "top",spawnPointY);
+        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder1 , "right",spawnPointY);
+        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder1 , "bottom",spawnPointY);
+        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder1 , "left",spawnPointY);
         yield return new WaitForSeconds(0.5f);  
     }
 
-    private IEnumerator PartPartSpawn()
+    private IEnumerator PartPartSpawn(float spawnPointY)
     {
-        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder1 , "top");
-        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder1 , "right");
+        PlayEffectMusic();
+        UltiSameTimeSpawn(0, topSpawnPoints.Count, false, boss.spawnerHolder1 , "top",spawnPointY);
+        UltiSameTimeSpawn(0, rightSpawnPoints.Count, false, boss.spawnerHolder1 , "right",spawnPointY);
         yield return new WaitForSeconds(0.1f);
-        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder1 , "bottom");
-        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder1 , "left");
+        UltiSameTimeSpawn(0, bottomSpawnPoints.Count, false, boss.spawnerHolder1 , "bottom",spawnPointY);
+        UltiSameTimeSpawn(0, leftSpawnPoints.Count, false, boss.spawnerHolder1 , "left",spawnPointY);
         yield return new WaitForSeconds(0.5f);  
     }
 
-    private IEnumerator SpiralSpawn()
+    private IEnumerator SpiralSpawn(float spawnPointY)
     {
-        yield return RespectivelySpawn(0, topSpawnPoints.Count,false, boss.spawnerHolder1 ,  "top");
-        yield return RespectivelySpawn(0, leftSpawnPoints.Count,false, boss.spawnerHolder1 ,  "left");
-        yield return RespectivelySpawn(0, bottomSpawnPoints.Count,false, boss.spawnerHolder1 ,  "bottom");
-        yield return RespectivelySpawn(0, rightSpawnPoints.Count,false, boss.spawnerHolder1 ,  "right");
+        PlayEffectMusic();
+        yield return RespectivelySpawn(0, topSpawnPoints.Count,false, boss.spawnerHolder1 ,  "top",spawnPointY);
+        yield return RespectivelySpawn(0, leftSpawnPoints.Count,false, boss.spawnerHolder1 ,  "left",spawnPointY);
+        yield return RespectivelySpawn(0, bottomSpawnPoints.Count,false, boss.spawnerHolder1 ,  "bottom",spawnPointY);
+        yield return RespectivelySpawn(0, rightSpawnPoints.Count,false, boss.spawnerHolder1 ,  "right",spawnPointY);
     }
 
-    private IEnumerator ReversSpiralSpawn()
+    private IEnumerator ReversSpiralSpawn(float spawnPointY)
     {
-        yield return RespectivelySpawn(topSpawnPoints.Count - 1, 0, true, boss.spawnerHolder1 , "top");
-        yield return RespectivelySpawn(leftSpawnPoints.Count - 1, 0, true, boss.spawnerHolder1 , "left");
-        yield return RespectivelySpawn(bottomSpawnPoints.Count - 1, 0, true, boss.spawnerHolder1 , "bottom");
-        yield return RespectivelySpawn(rightSpawnPoints.Count - 1, 0, true, boss.spawnerHolder1 , "right");
+        PlayEffectMusic();
+        yield return RespectivelySpawn(topSpawnPoints.Count - 1, 0, true, boss.spawnerHolder1 , "top",spawnPointY);
+        yield return RespectivelySpawn(leftSpawnPoints.Count - 1, 0, true, boss.spawnerHolder1 , "left",spawnPointY);
+        yield return RespectivelySpawn(bottomSpawnPoints.Count - 1, 0, true, boss.spawnerHolder1 , "bottom",spawnPointY);
+        yield return RespectivelySpawn(rightSpawnPoints.Count - 1, 0, true, boss.spawnerHolder1 , "right", spawnPointY);
     }
 
-
-    public void UltiSameTimeSpawn(int firstParam, int secondParam, bool isNegative, GameObject ParentObject , string direction)
+    public void UltiSameTimeSpawn(int firstParam, int secondParam, bool isNegative, GameObject ParentObject , string direction, float spawnPointY)
     {
         List<GameObject> spawnPoints = GetSpawnPoints(direction);
         if (spawnPoints == null) return;
@@ -278,7 +320,10 @@ public class ChestBossSpawnState : ChestBossBaseState
 
             GameObject spawningObject = spawnObject[Random.Range(0, spawnObject.Count)];
 
-            GameObject TrailClone = GameObject.Instantiate(spawningObject, spawnPointPos.transform.position, spawnPointPos.transform.rotation * Quaternion.Euler(0, 270, 0));
+            Vector3 newPos = spawnPointPos.transform.position;
+            newPos.y = spawnPointY;
+
+            GameObject TrailClone = GameObject.Instantiate(spawningObject, newPos, spawnPointPos.transform.rotation * Quaternion.Euler(0, 270, 0));
 
             TrailClone.transform.SetParent(ParentObject.transform);
 
@@ -286,10 +331,12 @@ public class ChestBossSpawnState : ChestBossBaseState
             TrailClone.transform.localScale = new Vector3(TrailClone.transform.localScale.x * boss.shrinkageRate, 
                                                           TrailClone.transform.localScale.y * boss.shrinkageRate, 
                                                           TrailClone.transform.localScale.z * boss.shrinkageRate);
+
+            TrailClone.GetComponentInChildren<Light>().color = DecideColor(spawnPointY);
         }
     }
 
-    public IEnumerator RespectivelySpawn(int firstParam, int secondParam, bool isNegative, GameObject ParentObject ,string direction)
+    public IEnumerator RespectivelySpawn(int firstParam, int secondParam, bool isNegative, GameObject ParentObject ,string direction , float spawnPointY)
     {
         List<GameObject> spawnPoints = GetSpawnPoints(direction);
         if (spawnPoints == null) yield break;
@@ -302,13 +349,17 @@ public class ChestBossSpawnState : ChestBossBaseState
 
             GameObject spawningObject = spawnObject[Random.Range(0, spawnObject.Count)];
 
-            GameObject TrailClone = GameObject.Instantiate(spawningObject, spawnPointPos.transform.position, spawnPointPos.transform.rotation * Quaternion.Euler(0, 270, 0));
+            Vector3 newPos = spawnPointPos.transform.position;
+            newPos.y = spawnPointY;
+
+            GameObject TrailClone = GameObject.Instantiate(spawningObject, newPos, spawnPointPos.transform.rotation * Quaternion.Euler(0, 270, 0));
 
             TrailClone.transform.SetParent(ParentObject.transform);
 
             TrailClone.transform.localScale = new Vector3(TrailClone.transform.localScale.x * boss.shrinkageRate, 
                                                           TrailClone.transform.localScale.y * boss.shrinkageRate, 
                                                           TrailClone.transform.localScale.z * boss.shrinkageRate);
+            TrailClone.GetComponentInChildren<Light>().color = DecideColor(spawnPointY);
             yield return new WaitForSeconds(0.02f);
         }
     }
@@ -329,5 +380,32 @@ public class ChestBossSpawnState : ChestBossBaseState
                 Debug.LogError("Invalid direction specified");
                 return null;
         }
+    }
+
+    public Color DecideColor(float spawnPointY)
+    {
+        Color orange = new Color(1, 0.5f, 0);
+
+        if (spawnPointY == spownPointTopY)
+        {
+            return Color.red;
+        }
+        else if (spawnPointY == spownPointMidY)
+        {
+            return orange;
+        }
+        else if (spawnPointY == spownPointDownY)
+        {
+            return Color.yellow;
+        }
+        else
+        {
+            return Color.yellow;
+        }
+    }
+
+    public void PlayEffectMusic()
+    {
+        boss.GetComponent<PlayMusicBoss>().SpawnMusic();
     }
 }

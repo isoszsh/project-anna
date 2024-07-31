@@ -13,11 +13,10 @@ public class ChestBossStunState : ChestBossBaseState
     public float animationSpeed = 1.0f;
 
     private float animationTime = 0.0f;
-    private float lineHeightOffset = 0.5f; // Çizginin yerden yüksekte oluşması için offset
+    private float lineHeightOffset = 0.2f; // Çizginin yerden yüksekte oluşması için offset
 
     public override void Enter()
     {
-        Debug.Log("Stun State");
         readyToLook = false;
         boss.GetComponent<Animator>().ResetTrigger("Run");
         boss.GetComponent<Animator>().SetTrigger("HitWall");
@@ -53,7 +52,7 @@ public class ChestBossStunState : ChestBossBaseState
         Vector3 direction = player.transform.position - boss.transform.position;
         direction.y = 0; // Y ekseninde dönmeyi engellemek için
         Quaternion targetRotation = Quaternion.LookRotation(direction);
-        boss.transform.rotation = Quaternion.Slerp(boss.transform.rotation, targetRotation, Time.deltaTime * 2);
+        boss.transform.rotation = Quaternion.Slerp(boss.transform.rotation, targetRotation, Time.deltaTime * 4);
     }
 
     private IEnumerator StunRoutine()
@@ -65,18 +64,21 @@ public class ChestBossStunState : ChestBossBaseState
         }
         boss.GetComponent<Animator>().ResetTrigger("HitWall");
         boss.GetComponent<Animator>().SetTrigger("Stun");
-        if(bossStateMachine.stunNumber == 0)
+        if (bossStateMachine.stunNumber == 0)
         {
             player = boss.allSpawnPointParentObject;
         }
         readyToLook = true;
-        yield return new WaitForSeconds(1.5f);
-        readyToLook = false;
+        yield return new WaitForSeconds(2f);
         if (bossStateMachine.stunNumber > 0)
         {
             boss.StartCoroutine(DrawLineRenderer());
-            yield return new WaitForSeconds(2);
-        }        
+        }
+        readyToLook = false;
+        if (bossStateMachine.stunNumber != 0)
+        {
+            yield return new WaitForSeconds(2f);
+        }
         boss.GetComponent<Animator>().ResetTrigger("Stun");
         boss.GetComponent<Animator>().SetTrigger("Run");
         // Takip state'ine geçiş yap
@@ -85,6 +87,7 @@ public class ChestBossStunState : ChestBossBaseState
 
     private IEnumerator DrawLineRenderer()
     {
+        PlayEffectMusic();
         FindThePlayerTransform();
 
         Vector3 start = boss.transform.position;
@@ -96,6 +99,8 @@ public class ChestBossStunState : ChestBossBaseState
 
         lineRenderer.positionCount = 2;
         lineRenderer.SetPosition(0, start);
+
+        drawDuration = 10 / boss.Agent.speed;
 
         while (elapsedTime < drawDuration)
         {
@@ -110,16 +115,29 @@ public class ChestBossStunState : ChestBossBaseState
     {
         float elapsedTime = 0;
 
+        drawDuration = 10 / boss.Agent.speed;
+
+        Gradient gradient = lineRenderer.colorGradient;
+        GradientColorKey[] colorKeys = gradient.colorKeys;
+        GradientAlphaKey[] alphaKeys = gradient.alphaKeys;
+
         while (elapsedTime < drawDuration)
         {
             elapsedTime += Time.deltaTime;
             float alpha = Mathf.Clamp01(1 - (elapsedTime / drawDuration));
-            Color startColor = lineRenderer.startColor;
-            Color endColor = lineRenderer.endColor;
-            startColor.a = alpha;
-            endColor.a = alpha;
-            lineRenderer.startColor = startColor;
-            lineRenderer.endColor = endColor;
+
+            for (int i = 0; i < alphaKeys.Length; i++)
+            {
+                alphaKeys[i].alpha = alpha;
+            }
+
+            alphaKeys[0].alpha = 0.5f;
+            alphaKeys[1].alpha = 1.0f;
+            alphaKeys[2].alpha = 0.0f;
+
+            gradient.SetKeys(colorKeys, alphaKeys);
+            lineRenderer.colorGradient = gradient;
+
             yield return null;
         }
 
@@ -143,8 +161,15 @@ public class ChestBossStunState : ChestBossBaseState
 
         gradient = new Gradient();
         gradient.SetKeys(
-            new GradientColorKey[] { new GradientColorKey(Color.red, 0.0f), new GradientColorKey(Color.black, 1.0f) },
-            new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) }
+            new GradientColorKey[] {
+                new GradientColorKey(Color.black, 0.0f),
+                new GradientColorKey(new Color(1.0f, 0.0f, 1.0f), 1.0f) // Mor renk
+            },
+            new GradientAlphaKey[] {
+                new GradientAlphaKey(0.0f, 0.0f), // Başlangıçta opak
+                new GradientAlphaKey(1.0f, 0.1f),
+                new GradientAlphaKey(0.0f, 1.0f) // Sonda şeffaf
+            }
         );
 
         lineRenderer.colorGradient = gradient;
@@ -162,10 +187,14 @@ public class ChestBossStunState : ChestBossBaseState
         GradientColorKey[] colorKeys = gradient.colorKeys;
         GradientAlphaKey[] alphaKeys = gradient.alphaKeys;
 
-        for (int i = 0; i < alphaKeys.Length; i++)
+        for (int i = 1; i < alphaKeys.Length; i++)
         {
             alphaKeys[i].alpha = alpha;
         }
+        // İlk alpha key her zaman 1 (opak)
+        alphaKeys[0].alpha = 0.5f;
+        alphaKeys[1].alpha = 1.0f;
+        alphaKeys[2].alpha = 0.0f; // Son alpha key her zaman 0 (şeffaf)
 
         gradient.SetKeys(colorKeys, alphaKeys);
         lineRenderer.colorGradient = gradient;
@@ -181,5 +210,10 @@ public class ChestBossStunState : ChestBossBaseState
         bossStateMachine.playerTransform = end;
         Vector3 newDirection = (end - boss.transform.position).normalized;
         bossStateMachine.direction = newDirection;
+    }
+
+    public void PlayEffectMusic()
+    {
+        boss.GetComponent<PlayMusicBoss>().PurpleEffectMusic();
     }
 }
