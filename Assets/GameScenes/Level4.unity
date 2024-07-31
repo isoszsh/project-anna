@@ -63618,19 +63618,16 @@ PrefabInstance:
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent
-      value: "Sevgili g\xFCnl\xFCk,\r\nY\xFCr\xFCy\xFC\u015Fe \xE7\u0131kt\u0131\u011F\u0131mda
-        \xE7ocuklar\u0131n koca \xE7\u0131nar\u0131n tepesinden ba\u011Fr\u0131\u015Ft\u0131\u011F\u0131n\u0131
-        duydum. Tepede m\xFCkemmel bir a\u011Fa\xE7 ev vard\u0131; her \xE7ocu\u011Fun
-        hayalindeki en haval\u0131 s\u0131\u011F\u0131nak. A\u011Fa\xE7 ev yapmak,
-        ger\xE7ekten de maharet ve \xF6zveri gerektiren bir i\u015F ama bu i\u015Fin
-        ustas\u0131 olabilecek yetene\u011Fe sahip oldu\u011Fum s\xF6ylenemez. Elimden
-        geldi\u011Fi kadar\u0131yla Anna\u2019ya o g\xFCzelim a\u011Fa\xE7 evin bir
-        resmini \xE7izdim ve b\xFCy\xFCkbabas\u0131n\u0131n da zaman\u0131nda bana
-        bir tane yapt\u0131\u011F\u0131 s\xF6yledim. \u015Eimdi merak ediyorum, acaba
-        o eski a\u011Fa\xE7 ev hala duruyor mudur? Her neyse belki a\u011Fa\xE7 ev
-        yapamayabilirim ama \xE7ar\u015Faf ve yast\u0131ktan yap\u0131lm\u0131\u015F
-        bir s\u0131\u011F\u0131nakta beni kimse yenemez. O y\xFCzden kollar\u0131
-        s\u0131vay\u0131p en g\xFCzel s\u0131\u011F\u0131na\u011F\u0131 yapma vakti."
+      value: "Dear Diary,\r\n\r\nWhile out for a walk, I heard children shouting
+        from the top of a large oak tree. There was a perfect treehouse up there,
+        the coolest hideout every child dreams of. Building a treehouse truly requires
+        skill and dedication, but I can't say I possess the talent for it. I did
+        my best to draw a picture of that beautiful treehouse for Anna and told her
+        that her grandfather had once built one for me. Now, I wonder if that old
+        treehouse is still standing. Anyway, I might not be able to build a treehouse,
+        but no one can beat me when it comes to making a hideout out of sheets and
+        pillows. So, it\u2019s time to roll up my sleeves and create the best hideout
+        ever."
       objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
@@ -77770,18 +77767,18 @@ PrefabInstance:
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent
-      value: "Sevgili g\xFCnl\xFCk,\r\n\r\nYaz mevsimi geldi \xE7att\u0131. S\u0131cak
-        g\xFCnlerin ve serin ak\u015Famlar\u0131n tad\u0131n\u0131 \xE7\u0131kard\u0131\u011F\u0131m\u0131z
-        bu d\xF6nemde, Anna\u2019yla yapmay\u0131 en sevdi\u011Fimiz aktivite dondurmalar\u0131m\u0131z\u0131
-        yerken bah\xE7ede oturmak. G\xFCne\u015Fin \u0131\u015F\u0131klar\u0131 yapraklar\u0131n
-        aras\u0131ndan s\xFCz\xFCl\xFCrken, biz de birbirinden lezzetli dondurmalar\u0131m\u0131z\u0131
-        yalay\u0131p serinlemenin keyfini \xE7\u0131kar\u0131yoruz. D\xFCn, Anna\u2019ya
-        onun ya\u015F\u0131ndayken g\xF6ky\xFCz\xFCnden dondurmalar\u0131n d\xFC\u015Fmesini
-        hayal etti\u011Fimi anlatt\u0131m. Bu fikir ho\u015Funa gitmi\u015F gibi
-        g\xF6z\xFCk\xFCyor. Tatlar\u0131n\u0131 ne derece alabiliyor anlamak zor
-        ama g\xF6zlerindeki par\u0131lt\u0131y\u0131 g\xF6rd\xFCm. Anlatt\u0131klar\u0131mdan
-        sonra uzan\u0131p, g\xF6ky\xFCz\xFCnden d\xFC\u015Fecek dondurmalar\u0131
-        hayal ederek seyre dald\u0131k."
+      value: 'Dear Diary,
+
+        
+
+        Summer has arrived. During this time
+        when we enjoy hot days and cool evenings, Anna and I love to sit in the garden
+        while eating our ice cream. As the sunlight filters through the leaves, we
+        savor our delicious ice creams and enjoy the refreshing treat. Yesterday,
+        I told Anna that when I was her age, I used to imagine ice creams falling
+        from the sky. She seemed to like this idea. It''s hard to tell how much she
+        can taste, but I saw the sparkle in her eyes. After I shared my story, we
+        lay down and gazed at the sky, imagining ice creams falling from above.'
       objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}

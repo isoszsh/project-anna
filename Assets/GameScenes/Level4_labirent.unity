@@ -11740,6 +11740,90 @@ PrefabInstance:
       addedObject: {fileID: 338702480}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e52da9831d79e1647ab2ddde4d6b7223, type: 3}
+--- !u!1001 &293895576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterContent
+      value: "Dear Diary,\r\n\r\nIt seems that Anna has come up with an interesting
+        idea about her toys. Gathering the toys and putting them in the chest has
+        become a challenging process for us. Every time we tidy up, she insists that
+        the toys don\u2019t like being confined there and continues to wander around
+        me. I don\u2019t know what to do; I need to counter Anna\u2019s theory with
+        a creative idea because the notion that the chest is the toys\u2019 home
+        doesn\u2019t seem very appealing to her."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -64.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -84.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.20817113
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.97809243
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 204.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675211135026484537, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793620431690640713, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCollectable (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbdebba5b7b18024ead1c7a6d5660a15, type: 3}
 --- !u!1 &294809624
 GameObject:
   m_ObjectHideFlags: 0
@@ -79376,6 +79460,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1952855323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2052697230
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterContent
+      value: "Dear Diary,\r\n\r\nAccording to the caregiver, Anna got locked in her
+        room while playing hide and seek today. Now, she\u2019s afraid of being in
+        places with closed doors. Closed boxes, chests, tight spaces, even bathrooms
+        have become like nightmares for her. I hope she doesn\u2019t react the same
+        way to the house door, because I\u2019m not sure what I\u2019d do then. Her
+        room\u2019s door is always left open now, and I keep the volume low on the
+        drama series I watch at night. It\u2019s uncertain if she can hear it, but
+        I have no intention of taking any risks. Anna is a sensitive girl, and sometimes
+        I can\u2019t keep up with her thoughts. When she\u2019s alone in a room,
+        she fears she\u2019ll run out of breath and suffocate, and her creativity
+        doesn\u2019t help much with these fears."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -38.97249
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -60.57924
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793620431690640713, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCollectable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbdebba5b7b18024ead1c7a6d5660a15, type: 3}
 --- !u!4 &2054875433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4818200688038083081, guid: e52da9831d79e1647ab2ddde4d6b7223,
@@ -90409,3 +90576,5 @@ SceneRoots:
   - {fileID: 1349506431}
   - {fileID: 674786961}
   - {fileID: 2056748943}
+  - {fileID: 2052697230}
+  - {fileID: 293895576}
