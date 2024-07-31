@@ -30,7 +30,7 @@ MonoBehaviour:
       answers:
       - npcName: 
         text: I would love to let you pass, but I've been waiting here for 70 years,
-          and I can't go anywhere until my lover solves the puzzle and proves himself.
+          and I can't go anywhere until my lover solves the puzzle and proves herself.
           So I'm sorry, but you can't pass through here.
         audioClip: {fileID: 8300000, guid: bab3e9cb771efa440aeab6f0a6950bae, type: 3}
     - question: Where can I find her?

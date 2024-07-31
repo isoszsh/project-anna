@@ -205,8 +205,8 @@ public class CouncilManager : MonoBehaviour
 
     IEnumerator GoToLevel3_2()
     {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Level3_Accepted");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Level3_CouncilAccepted");
     }
 
     IEnumerator GoToLevel4()
