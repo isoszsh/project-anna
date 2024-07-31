@@ -21988,6 +21988,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterContent
+      value: "Dear Diary,\r\n\r\nToday, Anna and I went to the canyon. It was a day
+        I thought the sun would melt us, but she sat on the warm sand with her teddy
+        bear without a care. According to the doctors, there hasn't been much progress,
+        but I believe what I see with my own eyes. I'm preparing to do something
+        I haven't dared since the accident: play the piano for Anna. While building
+        castles with wooden blocks on the sand, I wonder how my butterfly perceives
+        the world. I wonder if she realizes the vast world I\u2019m offering her
+        within her innocent world. Maybe I can't predict how she'll react when she
+        hears the music. I'm eager to see her expression when her mother hums her
+        favorite song to the melodies of the piano."
+      objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48872,18 +48886,16 @@ PrefabInstance:
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent
-      value: "Sevgili g\xFCnl\xFCk,\r\nAnna\u2019n\u0131n hala duymakta s\u0131k\u0131nt\u0131
-        \xE7ekti\u011Fi bir ger\xE7ek ama buna ra\u011Fmen piyano \xE7al\u0131\u015F\u0131m\u0131
-        dinlemeye bay\u0131l\u0131yor. Tu\u015Flara basmak onun i\xE7in bir oyuna
-        d\xF6n\xFC\u015Ft\xFC, tabi bunun pek i\u015Fime geldi\u011Fini s\xF6yleyemem.
-        Kom\u015Fumuz Bayan Dozni bu g\xFCr\xFClt\xFCden hi\xE7 ho\u015Fnut de\u011Fil,
-        kedileri mi ne rahats\u0131z oluyormu\u015F. Haftada birka\xE7 g\xFCn ona
-        baz\u0131 besteleri \xE7al\u0131yor, baz\u0131 \u015Fark\u0131lar\u0131 ise
-        \xE7alarken s\xF6yl\xFCyorum. Ne kadar\u0131n\u0131 duyuyor oldu\u011Funu
-        bilmesem de \u015Fark\u0131 s\xF6ylememe bay\u0131l\u0131yor, geceleri ona
-        \u2018\xF6zel\u2019 ninnisini s\xF6ylemeden gitmeme izin yok. Bir g\xFCn
-        bu ninniyi fark etmeden son kez s\xF6yleyecek olmak beni korkutuyor. Ke\u015Fke
-        hep benim k\xFC\xE7\xFCk Anna\u2019m olarak kalsa."
+      value: "Dear Diary,\r\n\r\nIt\u2019s true that Anna still has trouble hearing,
+        but she loves listening to me play the piano. Pressing the keys has become
+        a game for her, though I can\u2019t say it\u2019s very convenient for me.
+        Our neighbor, Mrs. Dozni, isn\u2019t pleased with the noise; apparently,
+        it disturbs her cats. A few days a week, I play some compositions for her,
+        and I sing some songs while playing. Even though I don\u2019t know how much
+        she can hear, she loves it when I sing. At night, she won\u2019t let me leave
+        without singing her \u2018special\u2019 lullaby. The thought of one day singing
+        this lullaby for the last time without realizing it scares me. I wish she
+        could always stay my little Anna."
       objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
@@ -63967,18 +63979,16 @@ PrefabInstance:
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent
-      value: "Sevgili g\xFCnl\xFCk,\r\n\r\nAnna bug\xFCn ilk f\u0131r\xE7as\u0131n\u0131
-        tuttu fakat kendisini tuval olarak g\xF6rmesi pek i\u015Fime gelmedi. Sana
-        \xF6nceden sesimi duymaya ba\u015Flad\u0131\u011F\u0131n\u0131 s\xF6ylemi\u015F
-        ama sonra vazge\xE7mi\u015Ftim hat\u0131rl\u0131yor musun? Bug\xFCn kendisine
-        seslendi\u011Fimde k\u0131k\u0131rdad\u0131. \u0130nanabiliyor musun, beni
-        duyuyor! Doktorlara hi\xE7 inanmam\u0131\u015Ft\u0131m, y\u0131llarca bekledim
-        ama bir \u015Fey g\xF6zlemleyemedim \u015Fimdi ise beni duyuyor. Mr. Broad
-        ile konu\u015Fup Per\u015Fembe g\xFCn\xFC i\xE7in randevu ald\u0131m. Birka\xE7
-        test yapacak. Belki k\u0131z\u0131m iyile\u015Febilir, di\u011Fer \xE7ocuklar
-        gibi y\xFCr\xFCyebilir, g\xF6rebilir. Bunun nelerimi vermezdim. Her g\xFCn
-        o yatakta ya\u015Famas\u0131 ihtimali ile y\xFCz y\xFCze olmak m\u0131 daha
-        korkun\xE7 yoksa bir g\xFCn onun yan\u0131nda olamayaca\u011F\u0131m\_m\u0131,\_bilmiyorum."
+      value: "Dear Diary,\r\n\r\nToday, Anna held her first brush, but her seeing
+        herself as the canvas wasn\u2019t exactly what I had in mind. Do you remember
+        when I told you she started to hear my voice, but then I gave up? Today,
+        she giggled when I called her. Can you believe it, she hears me! I never
+        believed the doctors. I waited for years but observed nothing, and now she
+        hears me. I talked to Mr. Broad and made an appointment for Thursday. He\u2019s
+        going to run some tests. Maybe my daughter can recover, walk, and see like
+        other children. I would give anything for that. I don\u2019t know what\u2019s
+        more frightening: facing the possibility of her living in that bed every
+        day or the thought that one day I might not be there with her."
       objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
