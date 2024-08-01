@@ -9,6 +9,10 @@ public class ChestBossEnemy : MonoBehaviour
     public BoxCollider boxCollider;
     private ChestBossStateMachine stateMachine;
     private NavMeshAgent agent;
+
+    public GameObject valveDC;
+
+    public AudioSource bossAus;
     
     public NavMeshAgent Agent { get => agent; }
 

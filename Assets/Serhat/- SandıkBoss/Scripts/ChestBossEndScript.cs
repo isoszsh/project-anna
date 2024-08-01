@@ -42,7 +42,13 @@ public class ChestBossEndScript : ChestBossBaseState
             boss.transform.localScale = Vector3.Lerp(boss.transform.localScale, Vector3.zero, Time.deltaTime * 2);
             yield return null;
         }
+
+        yield return new WaitForSeconds(2);
+        boss.bossAus.Stop();
+        boss.valveDC.SetActive(true);
     }
+
+
 
     private void popParticleEffect(){
         GameObject popParticleEffect = GameObject.Instantiate(boss.popParticleEffectObject, boss.transform.position, Quaternion.identity);

@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
 
     public bool letterOpened = false;
 
+    public PostRequest pr;
+
     // Singleton instance property
     public static GameManager Instance
     {

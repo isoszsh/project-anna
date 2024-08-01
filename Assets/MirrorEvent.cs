@@ -101,6 +101,8 @@ public class MirrorEvent : Event
 
     IEnumerator LookYourself()
     {
+        GameManager.Instance.pr.SaveDecision("Level_1", 1);
+        decisionPanel.SetActive(false );
         mirrorCam2.SetActive(false);
         mirrorCam3.SetActive(true);
         mirrorCam3.GetComponent<Animator>().SetTrigger("Look");
@@ -114,6 +116,8 @@ public class MirrorEvent : Event
 
     IEnumerator DontLookYourself()
     {
+        GameManager.Instance.pr.SaveDecision("Level_1", 2);
+        decisionPanel.SetActive(false);
         mirrorCam2.SetActive(false);
         mirrorCam4.SetActive(true);
         mirrorCam3.GetComponent<Animator>().SetTrigger("Look");
