@@ -111,7 +111,7 @@ public class MirrorEvent : Event
         darkenPanel.SetActive(true);
         darkenPanel.GetComponent<Animator>().SetTrigger("Darken");
         yield return new WaitForSeconds(2);
-        SceneManager.LoadSceneAsync("Level2");
+        SceneManager.LoadSceneAsync("lv1_to_lv2");
     }
 
     IEnumerator DontLookYourself()
@@ -126,6 +126,6 @@ public class MirrorEvent : Event
         darkenPanel.SetActive(true);
         darkenPanel.GetComponent<Animator>().SetTrigger("Darken");
         yield return new WaitForSeconds(2);
-        SceneManager.LoadSceneAsync("Level2");
+        SceneManager.LoadSceneAsync("lv1_to_lv2");
     }
 }

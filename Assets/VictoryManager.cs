@@ -27,7 +27,7 @@ public class VictoryManager : MonoBehaviour
         darkenPanel.SetActive(true);
         darkenPanel.GetComponent<Animator>().SetTrigger("Darken");
         yield return new WaitForSeconds(3);
-        SceneManager.LoadSceneAsync("Level4");
+        SceneManager.LoadSceneAsync("lv3_to_lv4");
 
     }
 

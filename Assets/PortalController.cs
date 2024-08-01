@@ -9,7 +9,7 @@ public class PortalController : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            SceneManager.LoadSceneAsync("Level3");
+            SceneManager.LoadSceneAsync("lv2_to_lv3");
         }
     }
 }

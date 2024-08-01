@@ -48,6 +48,9 @@ public class SpiderController : MonoBehaviour
 
     public GameObject annaDecision;
 
+    public GameObject cacoon;
+    public GameObject cacoonDoor;
+
     public void GetSound()
     {
         AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
@@ -85,8 +88,18 @@ public class SpiderController : MonoBehaviour
     public void Out()
     {
         animator.SetTrigger("Out");
+        
+        StartCoroutine(CacoonCRT());
         aus.Play();
         StartCoroutine(SpiderSequence());
+    }
+
+    IEnumerator CacoonCRT()
+    {
+        yield return new WaitForSeconds (0.5f);
+        cacoonDoor.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2);
+        cacoon.SetActive(false);
     }
 
 
@@ -207,6 +220,7 @@ public class SpiderController : MonoBehaviour
 
     IEnumerator LGC()
     {
+        GameManager.Instance.pr.SaveDecision("Level_2", 1);
         annaDecision.gameObject.SetActive(false);
         annaLoseCam.gameObject.SetActive(false);
         spiderLoseCam.gameObject.SetActive(true);
@@ -228,6 +242,7 @@ public class SpiderController : MonoBehaviour
 
     IEnumerator SH()
     {
+        GameManager.Instance.pr.SaveDecision("Level_2", 2);
         annaDecision.gameObject.SetActive(false);
         annaLoseCam.gameObject.SetActive(false);
         spiderLoseCam.gameObject.SetActive(true);

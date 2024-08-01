@@ -25,5 +25,5 @@ MonoBehaviour:
         text: Let me look
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
       - npcName: 
-        text: No, unfortunately. This is probably a 1 kilogram bag of gold.
+        text: No, this is not a battery.
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}

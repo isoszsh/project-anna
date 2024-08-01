@@ -16173,6 +16173,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2176298100094417697, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 4455001961820261622, guid: 20114d468b540ee48a90a7408cf76bf0,
         type: 3}
       propertyPath: m_Name

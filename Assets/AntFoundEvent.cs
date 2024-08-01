@@ -26,7 +26,11 @@ public class AntFoundEvent : Event
 
     public override void TriggerStartEvent()
     {
-        StartCoroutine(AntFoundCoroutine());
+        if(antDS.findIndex == 2)
+        {
+            StartCoroutine(AntFoundCoroutine());
+
+        }
     }
 
 

@@ -213,7 +213,7 @@ public class CouncilManager : MonoBehaviour
     {
         yield return StartCoroutine(FadeToBlack(fadeDuration));
         yield return new WaitForSeconds(10);
-        SceneManager.LoadScene("Level4");
+        SceneManager.LoadScene("lv3_to_lv4");
 
     }
 
@@ -243,6 +243,7 @@ public class CouncilManager : MonoBehaviour
 
     public void AcceptShip()
     {
+        GameManager.Instance.pr.SaveDecision("Level_3", 1);
         decision = 1;
         DecisionPanel.SetActive(false);
         StartDialogue(acceptDialogue.dialogue);
@@ -250,6 +251,7 @@ public class CouncilManager : MonoBehaviour
 
     public void RejectShip()
     {
+        GameManager.Instance.pr.SaveDecision("Level_3", 2);
         decision = 2;
         DecisionPanel.SetActive(false);
         StartDialogue(rejectDialogue.dialogue);

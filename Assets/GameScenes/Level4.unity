@@ -15045,6 +15045,7 @@ MonoBehaviour:
   letterText: {fileID: 1311344957}
   letterSource: {fileID: 443515621}
   letterOpened: 0
+  pr: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -77769,16 +77770,16 @@ PrefabInstance:
       propertyPath: letterContent
       value: 'Dear Diary,
 
-        
 
-        Summer has arrived. During this time
-        when we enjoy hot days and cool evenings, Anna and I love to sit in the garden
-        while eating our ice cream. As the sunlight filters through the leaves, we
-        savor our delicious ice creams and enjoy the refreshing treat. Yesterday,
-        I told Anna that when I was her age, I used to imagine ice creams falling
-        from the sky. She seemed to like this idea. It''s hard to tell how much she
-        can taste, but I saw the sparkle in her eyes. After I shared my story, we
-        lay down and gazed at the sky, imagining ice creams falling from above.'
+
+        Summer has arrived. During this time when we
+        enjoy hot days and cool evenings, Anna and I love to sit in the garden while
+        eating our ice cream. As the sunlight filters through the leaves, we savor
+        our delicious ice creams and enjoy the refreshing treat. Yesterday, I told
+        Anna that when I was her age, I used to imagine ice creams falling from the
+        sky. She seemed to like this idea. It''s hard to tell how much she can taste,
+        but I saw the sparkle in her eyes. After I shared my story, we lay down and
+        gazed at the sky, imagining ice creams falling from above.'
       objectReference: {fileID: 0}
     - target: {fileID: 1207091546956343432, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
@@ -77947,6 +77948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176298100094417697, guid: 20114d468b540ee48a90a7408cf76bf0,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4455001961820261622, guid: 20114d468b540ee48a90a7408cf76bf0,
         type: 3}

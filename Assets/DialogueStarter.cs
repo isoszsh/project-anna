@@ -67,6 +67,7 @@ public class DialogueStarter : Event
                         }
                         else if (findIndex == 1)
                         {
+                            findIndex++;
                             relatedEvent.TriggerStartEvent();
                         }
                         GameManager.Instance.playerController.RemovePickupItem();

@@ -25,6 +25,5 @@ MonoBehaviour:
         text: Let me look
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
       - npcName: 
-        text: No, this is a teddy bear. It looks very cute, but this is not what
-          I want.
+        text: No, this is not a battery.
         audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
