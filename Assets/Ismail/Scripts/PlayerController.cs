@@ -110,8 +110,9 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = lastCheckPoint.transform.position;
         }
+        ResetVelocity();
         playerAnimator.SetTrigger("WakeUp");
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5f);
         lockControls = false;
     }
     public void OnMove(InputAction.CallbackContext context)

@@ -23,6 +23,7 @@ public class DeathManagerScript : MonoBehaviour
     {
         Debug.Log("Player hit by witch weapon");
         GameManager.Instance.playerController.lockControls = true;
+        GameManager.Instance.playerController.ResetVelocity();
         witch.GetComponent<WitchController>().StopEveryThink();
         darkenPanel.SetActive(true);
         darkenPanel.GetComponent<Animator>().SetTrigger("Darken");

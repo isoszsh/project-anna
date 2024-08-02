@@ -14,7 +14,7 @@ public class PotionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < 3.25f && !exploded)
+        if(transform.position.y < 0f && !exploded)
         {
             exploded = true;
             potionAus.PlayOneShot(potionClip);

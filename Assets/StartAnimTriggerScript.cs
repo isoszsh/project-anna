@@ -17,6 +17,8 @@ public class StartAnimTriggerScript : MonoBehaviour
 
     public GameObject backgroundMusic;
 
+    public AudioSource witchAus;
+    public AudioClip witchAuc;
 
     public List<GameObject> lights;
 
@@ -43,6 +45,7 @@ public class StartAnimTriggerScript : MonoBehaviour
     IEnumerator StartAnim()
     {
         GameManager.Instance.playerController.lockControls = true;
+        GameManager.Instance.playerController.ResetVelocity();
 
 
         camraOriginal.SetActive(false);
@@ -63,14 +66,14 @@ public class StartAnimTriggerScript : MonoBehaviour
         camraAnnaFaceAngry.SetActive(false);
 
         camraBossSpeakPosition.SetActive(true);
-        Debug.Log("Boss konuşma başladı");
-        yield return new WaitForSeconds(2f);// burası hocam
+        witchAus.PlayOneShot(witchAuc);
+        yield return new WaitForSeconds(13f);// burası hocam
         camraBossSpeakPosition.SetActive(false);
 
-        camraAnnaSpeakPosition.SetActive(true);
-        Debug.Log("Anna konuşma başladı");
-        yield return new WaitForSeconds(2f);// burası hocam
-        camraAnnaSpeakPosition.SetActive(false);
+        //camraAnnaSpeakPosition.SetActive(true);
+        //Debug.Log("Anna konuşma başladı");
+       // yield return new WaitForSeconds(2f);// burası hocam
+        //camraAnnaSpeakPosition.SetActive(false);
 
         GameManager.Instance.playerController.lockControls = false;
         camraOriginal.SetActive(true);

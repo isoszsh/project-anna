@@ -59,6 +59,7 @@ public class WitchController : MonoBehaviour
     {
         isAttackingNow = false;
         music.SetActive(false);
+        StopCoroutine(AttackRoutine());
     }
 
     IEnumerator AttackRoutine()
@@ -91,20 +92,20 @@ public class WitchController : MonoBehaviour
             }
 
             attackCount++;
-            if (attackCount % 10 == 0) // After every 10 attacks
+            if (attackCount % 5 == 0) // After every 10 attacks
             {
                 stunAnimationStars.SetActive(true);
                 flowersVases.GetComponent<Animator>().SetTrigger("Up");
                 if (plantCount < 5) // If there are less than 5 plants
                 {
                     SpawnPlant();
-                    yield return new WaitForSeconds(15.0f); // Wait for 15 seconds
+                    yield return new WaitForSeconds(20.0f); // Wait for 15 seconds
                     stunAnimationStars.SetActive(false);
                     flowersVases.GetComponent<Animator>().SetTrigger("Down");
                 }
                 else
                 {
-                    yield return new WaitForSeconds(15.0f); // Wait for 15 seconds if max plants are spawned
+                    yield return new WaitForSeconds(20.0f); // Wait for 15 seconds if max plants are spawned
                 }
             }
             isAttacking = false;
@@ -143,7 +144,7 @@ public class WitchController : MonoBehaviour
         Vector3 targetPosition = player.position;
         GameObject marker = Instantiate(targetMarkerPrefab, targetPosition, Quaternion.identity);
         yield return new WaitForSeconds(targetMarkerDuration);
-
+        yield return new WaitForSeconds(1);
         GameObject gasCloud = Instantiate(gasCloudPrefab, targetPosition, Quaternion.identity);
         Destroy(gasCloud, gasCloudDuration);
         Destroy(marker);
