@@ -5,6 +5,8 @@ using TMPro;
 using Cinemachine;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,6 +47,9 @@ public class GameManager : MonoBehaviour
     public bool letterOpened = false;
 
     public PostRequest pr;
+
+    public BlackAndWhiteTransitionController bts;
+
 
     // Singleton instance property
     public static GameManager Instance
@@ -111,7 +116,7 @@ public class GameManager : MonoBehaviour
         butterfly.transform.parent.transform.parent = annaHand;
         butterfly.transform.parent.GetComponent<Animator>().enabled = false;
         butterfly.transform.parent.transform.localPosition = new Vector3(0, 0, 0);
-        
+        bts.CloseEyes();
         
         yield return new WaitForSeconds(2);
         butterfly.gameObject.SetActive(false);

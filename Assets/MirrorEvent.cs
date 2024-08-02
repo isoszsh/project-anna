@@ -29,6 +29,8 @@ public class MirrorEvent : Event
 
     public GameObject darkenPanel;
 
+    public GameObject annarig;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
@@ -71,6 +73,7 @@ public class MirrorEvent : Event
         mirrorCam.GetComponent<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(2);
         GameManager.Instance.playerController.playerAnimator.SetTrigger("Paint");
+        GameManager.Instance.bts.OpenEyes();
         yield return new WaitForSeconds(1);
         ortu.gameObject.SetActive(false);
         yield return new WaitForSeconds(2);
@@ -120,6 +123,7 @@ public class MirrorEvent : Event
         decisionPanel.SetActive(false);
         mirrorCam2.SetActive(false);
         mirrorCam4.SetActive(true);
+        annarig.SetActive(false);
         mirrorCam3.GetComponent<Animator>().SetTrigger("Look");
         OpenColor();
         yield return new WaitForSeconds(5f);

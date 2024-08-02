@@ -54,7 +54,8 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
   - {fileID: 3813222954550358932}
-  m_RendererFeatureMap: adc0de57c6d2eee594f356e7124aeb34
+  - {fileID: 879113262946201817}
+  m_RendererFeatureMap: adc0de57c6d2eee594f356e7124aeb34d9303edbda3c330c
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -97,6 +98,21 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 1
   m_IntermediateTextureMode: 1
+--- !u!114 &879113262946201817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a40ae01f005e746adf4ec3d131469a, type: 3}
+  m_Name: BlackAndWhiteRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    material: {fileID: 2100000, guid: a6c3eb3e0c1b0774eb537b6f9c3722a6, type: 2}
 --- !u!114 &3813222954550358932
 MonoBehaviour:
   m_ObjectHideFlags: 0
