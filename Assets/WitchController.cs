@@ -23,11 +23,20 @@ public class WitchController : MonoBehaviour
     private bool isAttacking = false;
     private Transform player;
 
+    public GameObject stunAnimationStars;
+    public GameObject flowersVases;
+
+    public bool isAttackingNow ;
+
+    public GameObject music;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        stunAnimationStars.SetActive(false);
+        isAttackingNow = false;
         // GameManager.Instance.playerController.lockControls = true;
-        StartCoroutine(AttackRoutine()); // Bunu çaðýrmadan önce baþka bir ýenumerator oluþtur ve cutscene yap
+        // StartCoroutine(AttackRoutine()); // Bunu ï¿½aï¿½ï¿½rmadan ï¿½nce baï¿½ka bir ï¿½enumerator oluï¿½tur ve cutscene yap
     }
 
     public void Attack()
@@ -38,9 +47,21 @@ public class WitchController : MonoBehaviour
         }
     }
 
+    public void StartEveryThink()
+    {
+        isAttackingNow = true;
+        StartCoroutine(AttackRoutine());
+    }
+
+    public void StopEveryThink()
+    {
+        isAttackingNow = false;
+        music.SetActive(false);
+    }
+
     IEnumerator AttackRoutine()
     {
-        while (true)
+        while (isAttackingNow)
         {
             yield return new WaitForSeconds(attackInterval);
 
@@ -70,10 +91,14 @@ public class WitchController : MonoBehaviour
             attackCount++;
             if (attackCount % 10 == 0) // After every 10 attacks
             {
+                stunAnimationStars.SetActive(true);
+                flowersVases.GetComponent<Animator>().SetTrigger("Up");
                 if (plantCount < 5) // If there are less than 5 plants
                 {
                     SpawnPlant();
                     yield return new WaitForSeconds(15.0f); // Wait for 15 seconds
+                    stunAnimationStars.SetActive(false);
+                    flowersVases.GetComponent<Animator>().SetTrigger("Down");
                 }
                 else
                 {
