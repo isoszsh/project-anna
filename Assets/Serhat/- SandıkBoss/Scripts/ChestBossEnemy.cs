@@ -51,6 +51,10 @@ public class ChestBossEnemy : MonoBehaviour
 
     public GameObject popParticleEffectObject;
 
+    public GameObject darkenPanel;
+
+    public GameObject deathManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +84,7 @@ public class ChestBossEnemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player has entered the trigger");
+            deathManager.GetComponent<ChestDeathManagerScript>().LoadDeathScene();
         }
     }
 }

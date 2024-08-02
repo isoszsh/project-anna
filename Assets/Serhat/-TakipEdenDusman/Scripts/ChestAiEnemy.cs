@@ -21,6 +21,8 @@ public class ChestAiEnemy : MonoBehaviour
     public Material defouldMaterial;
     public Material yellowMaterial;
 
+    public GameObject darkenPanel;
+
     // Start is called before the first frame update
     void Start()
     {

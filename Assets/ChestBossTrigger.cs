@@ -31,30 +31,6 @@ public class ChestBossTrigger : MonoBehaviour
 
     void Update()
     {
-
-        /* if (Input.GetKeyDown(KeyCode.O))
-         {
-             StartCoroutine(MakeEveryThing());
-         }
-         if (Input.GetKeyDown(KeyCode.J))
-         {
-             foreach (var item in outDoorWall)
-             {
-                 item.SetActive(true);
-             }
-             this.GetComponent<ChestBossStateMachine>().Initialise();
-         }
-         if(Input.GetKeyDown(KeyCode.K)){
-             wallWithAnimation.GetComponent<Animator>().SetTrigger("Start");
-             fireAnimation.GetComponent<Animator>().SetTrigger("Start");
-         }
-         if(Input.GetKeyDown(KeyCode.L)){
-             cameraOriginal.SetActive(false);
-             cameraChestBoss.SetActive(true);
-         }
-         if(Input.GetKeyDown(KeyCode.P)){
-             StartCoroutine(LightOn());
-         }*/
     }
 
     IEnumerator LightOn(){
@@ -74,6 +50,10 @@ public class ChestBossTrigger : MonoBehaviour
         lights[7].SetActive(true);
     }
 
+    public void DoitPlease(){
+        StartCoroutine(MakeEveryThingSecondTime());
+    }
+
     public IEnumerator MakeEveryThing(){
         cameraOriginal.SetActive(false);
         doorCam.SetActive(true);
@@ -89,6 +69,21 @@ public class ChestBossTrigger : MonoBehaviour
         musicObject.SetActive(true);
         StartCoroutine(LightOn());
 
+        foreach (var item in outDoorWall)
+        {
+            item.SetActive(true);
+        }
+        yield return new WaitForSeconds(3f);
+        this.GetComponent<ChestBossStateMachine>().Initialise();
+        GameManager.Instance.playerController.lockControls = false;
+    }
+
+    public IEnumerator MakeEveryThingSecondTime(){
+        wallWithAnimation.GetComponent<Animator>().SetTrigger("Start");
+        cameraOriginal.SetActive(false);
+        cameraChestBoss.SetActive(true);
+        musicObject.SetActive(true);
+        StartCoroutine(LightOn());
         foreach (var item in outDoorWall)
         {
             item.SetActive(true);

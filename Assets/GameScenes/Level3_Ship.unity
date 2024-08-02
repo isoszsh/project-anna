@@ -2033,6 +2033,7 @@ MonoBehaviour:
   redMaterial: {fileID: 2100000, guid: 00bec9705266e7f439c4970012873bf2, type: 2}
   defouldMaterial: {fileID: 0}
   yellowMaterial: {fileID: 2100000, guid: 662d907899316aa4fb567bb20acff27a, type: 2}
+  darkenPanel: {fileID: 1974802722}
 --- !u!114 &79429700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10569,6 +10570,7 @@ MonoBehaviour:
   letterText: {fileID: 744003695}
   letterSource: {fileID: 443515621}
   letterOpened: 0
+  pr: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -25425,6 +25427,7 @@ MonoBehaviour:
   redMaterial: {fileID: 2100000, guid: 00bec9705266e7f439c4970012873bf2, type: 2}
   defouldMaterial: {fileID: 0}
   yellowMaterial: {fileID: 2100000, guid: 662d907899316aa4fb567bb20acff27a, type: 2}
+  darkenPanel: {fileID: 1974802722}
 --- !u!114 &970704042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39251,6 +39254,7 @@ MonoBehaviour:
   redMaterial: {fileID: 2100000, guid: 00bec9705266e7f439c4970012873bf2, type: 2}
   defouldMaterial: {fileID: 0}
   yellowMaterial: {fileID: 2100000, guid: 662d907899316aa4fb567bb20acff27a, type: 2}
+  darkenPanel: {fileID: 1974802722}
 --- !u!114 &1574500304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57017,6 +57021,7 @@ MonoBehaviour:
   redMaterial: {fileID: 2100000, guid: 00bec9705266e7f439c4970012873bf2, type: 2}
   defouldMaterial: {fileID: 0}
   yellowMaterial: {fileID: 2100000, guid: 662d907899316aa4fb567bb20acff27a, type: 2}
+  darkenPanel: {fileID: 1974802722}
 --- !u!1 &1801462235872318227
 GameObject:
   m_ObjectHideFlags: 0
