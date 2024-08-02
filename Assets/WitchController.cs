@@ -26,6 +26,8 @@ public class WitchController : MonoBehaviour
     public GameObject stunAnimationStars;
     public GameObject flowersVases;
 
+    public GameObject musicManager;
+
     public bool isAttackingNow ;
 
     public GameObject music;
@@ -177,6 +179,7 @@ public class WitchController : MonoBehaviour
 
     IEnumerator StinkBomb()
     {
+        musicManager.GetComponent<WitchMusicManagerScript>().PlayFisssh();
         isAttacking = true;
         Vector3 targetPosition = player.position;
         GameObject marker = Instantiate(targetMarkerPrefab, targetPosition, Quaternion.identity);

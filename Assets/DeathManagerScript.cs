@@ -12,6 +12,8 @@ public class DeathManagerScript : MonoBehaviour
 
     public GameObject reTrigger;
 
+    public GameObject witchMusicManager;
+
     public void DeathCircle()
     {
         StartCoroutine(DeathCircleRoutine());
@@ -25,6 +27,7 @@ public class DeathManagerScript : MonoBehaviour
         darkenPanel.SetActive(true);
         darkenPanel.GetComponent<Animator>().SetTrigger("Darken");
         yield return new WaitForSeconds(2.5f);
+        witchMusicManager.GetComponent<WitchMusicManagerScript>().PlayBossLaugh();
         
         player.transform.position = spawnPoint.transform.position;
         PlayerController pc = player.GetComponent<PlayerController>();
