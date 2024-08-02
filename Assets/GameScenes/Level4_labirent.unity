@@ -11926,6 +11926,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ec1f36400dcd1124c86c4d525b562f04, type: 3}
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
       propertyPath: letterContent
       value: "Dear Diary,\r\n\r\nIt seems that Anna has come up with an interesting
         idea about her toys. Gathering the toys and putting them in the chest has
@@ -17046,6 +17051,7 @@ MonoBehaviour:
   letterSource: {fileID: 443515621}
   letterOpened: 0
   pr: {fileID: 0}
+  bts: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -80196,6 +80202,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e6cf36e9192374a4988d70c213d9aa12, type: 3}
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent

@@ -5854,6 +5854,7 @@ MonoBehaviour:
   letterSource: {fileID: 443515621}
   letterOpened: 0
   pr: {fileID: 0}
+  bts: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -8527,6 +8528,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 38258de0d6170e24cb3e84f26935ec57, type: 3}
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent
@@ -17861,6 +17867,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 95a99b9bb9c981d4083e691bfa761e2d, type: 3}
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent

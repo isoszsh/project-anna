@@ -1853,89 +1853,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.0840416, y: 24.8885, z: 14.216654}
   m_Center: {x: -0.18159099, y: 0.5406922, z: -1.13271}
---- !u!1001 &55070013
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.21334
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.21334
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.21334
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -73.04
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.009000003
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -60.34
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.41006228
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9120576
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 131.583
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eaa460895c41c9148a1445f138272685,
-        type: 3}
-      propertyPath: m_Name
-      value: 'Ant Model '
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: eaa460895c41c9148a1445f138272685, type: 3}
 --- !u!1 &57291860
 GameObject:
   m_ObjectHideFlags: 0
@@ -15114,6 +15031,7 @@ MonoBehaviour:
   letterSource: {fileID: 443515621}
   letterOpened: 0
   pr: {fileID: 0}
+  bts: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -63764,6 +63682,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f8077a940e6015b4bafe7b8fb56dfde6, type: 3}
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
       propertyPath: letterContent
       value: "Dear Diary,\r\n\r\nWhile out for a walk, I heard children shouting
         from the top of a large oak tree. There was a perfect treehouse up there,
@@ -77913,6 +77836,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8320bd59524aa884fa5176194d80de3d, type: 3}
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
       propertyPath: letterContent
       value: 'Dear Diary,
 
@@ -78147,7 +78075,6 @@ SceneRoots:
   - {fileID: 1774319907}
   - {fileID: 727722741}
   - {fileID: 1829114399}
-  - {fileID: 55070013}
   - {fileID: 1409417508}
   - {fileID: 1490551633}
   - {fileID: 576049486}

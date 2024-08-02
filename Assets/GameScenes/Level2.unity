@@ -17484,6 +17484,7 @@ MonoBehaviour:
   letterSource: {fileID: 443515621}
   letterOpened: 0
   pr: {fileID: 443515622}
+  bts: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -22531,6 +22532,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5fc56e61bca539c4092ac025e12304b5, type: 3}
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent
@@ -50075,6 +50081,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f62cdf3f1eafc64f94a7a02ea2e6fc1, type: 3}
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
       propertyPath: letterContent
       value: "Dear Diary,\r\n\r\nIt\u2019s true that Anna still has trouble hearing,
         but she loves listening to me play the piano. Pressing the keys has become
@@ -65447,6 +65458,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
+        type: 3}
+      propertyPath: letterClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 69e822593364b824ebc46ee3a5722e9c, type: 3}
     - target: {fileID: 53208633960436111, guid: cbdebba5b7b18024ead1c7a6d5660a15,
         type: 3}
       propertyPath: letterContent
