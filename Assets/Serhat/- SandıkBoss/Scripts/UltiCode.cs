@@ -5,6 +5,7 @@ using UnityEngine;
 public class UltiCode : MonoBehaviour
 {
     public float moveSpeed = 5f; // Hareket hızı
+     public GameObject deathManager;
 
     // Doğduktan sonra 2 saniye bekle ardından x yönüne doğru hareket et
     public void Start()
@@ -13,12 +14,14 @@ public class UltiCode : MonoBehaviour
     }
 
     //ontrigger enter
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player has entered the trigger in UltiCode");
+            deathManager = GameObject.Find("ChestDeathManager");
+            deathManager.GetComponent<ChestDeathManagerScript>().LoadDeathScene();
         }
+
     }
 
     private IEnumerator MoveAfterDelay()
