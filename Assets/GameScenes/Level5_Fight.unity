@@ -293,7 +293,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6726773, z: -0, w: 0.73993605}
   m_LocalPosition: {x: 0, y: 0.017, z: 0}
-  m_LocalScale: {x: 0.037045334, y: 0.037045334, z: 0.037045334}
+  m_LocalScale: {x: 0.051452264, y: 0.051452264, z: 0.051452264}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 498018775}
@@ -5543,6 +5543,7 @@ MonoBehaviour:
   letterSource: {fileID: 443515621}
   letterOpened: 0
   pr: {fileID: 443515622}
+  bts: {fileID: 0}
 --- !u!4 &443515619
 Transform:
   m_ObjectHideFlags: 0
@@ -7378,7 +7379,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.6967704, z: -0, w: 0.7172943}
   m_LocalPosition: {x: 0, y: 0.017, z: 0}
-  m_LocalScale: {x: 0.037045203, y: 0.037045203, z: 0.037045203}
+  m_LocalScale: {x: 0.051452085, y: 0.051452085, z: 0.051452085}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 268612416}
@@ -7532,6 +7533,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5254053, y: 10.219096, z: 1.5262051}
   m_Center: {x: -0.015276368, y: 5.144998, z: -0.092671484}
+--- !u!1 &651216547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651216548}
+  m_Layer: 0
+  m_Name: FlowerParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &651216548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651216547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40.64, y: 0, z: -90.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &654902352 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6737983931858058753, guid: 9fb7e10a72d188946bff5f124c5c808a,
@@ -11799,7 +11831,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.017, z: 0}
-  m_LocalScale: {x: 0.0370452, y: 0.0370452, z: 0.0370452}
+  m_LocalScale: {x: 0.051452078, y: 0.051452078, z: 0.051452078}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 472252314}
@@ -13043,6 +13075,8 @@ MonoBehaviour:
   musicManager: {fileID: 96571270}
   isAttackingNow: 0
   music: {fileID: 673173723}
+  LastFlowerToSpawn: {fileID: 0}
+  FlowerParentObject: {fileID: 651216547}
 --- !u!1 &1104667629
 GameObject:
   m_ObjectHideFlags: 0
@@ -13652,7 +13686,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.59148026, z: -0, w: 0.80631953}
   m_LocalPosition: {x: 0, y: 0.017, z: 0}
-  m_LocalScale: {x: 0.037045334, y: 0.037045334, z: 0.037045334}
+  m_LocalScale: {x: 0.051452264, y: 0.051452264, z: 0.051452264}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1790220177}
@@ -18728,7 +18762,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6472312, z: -0, w: 0.76229376}
   m_LocalPosition: {x: 0, y: 0.017, z: 0}
-  m_LocalScale: {x: 0.037045334, y: 0.037045334, z: 0.037045334}
+  m_LocalScale: {x: 0.051452264, y: 0.051452264, z: 0.051452264}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 130116948}
@@ -24778,7 +24812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ce8a0254dc08640a4d0d192643e513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howManyFlowers: 1
+  howManyFlowers: 5
   boss: {fileID: 919132148487707010}
   originalCamra: {fileID: 1111425574}
   camraBoss: {fileID: 1390564543}
@@ -27661,3 +27695,4 @@ SceneRoots:
   - {fileID: 989730618}
   - {fileID: 2101233295}
   - {fileID: 945179678}
+  - {fileID: 651216548}

@@ -31,6 +31,7 @@ public class WitchController : MonoBehaviour
     public bool isAttackingNow ;
 
     public GameObject music;
+    public GameObject FlowerParentObject;
 
     void Start()
     {
@@ -41,14 +42,6 @@ public class WitchController : MonoBehaviour
         // StartCoroutine(AttackRoutine()); // Bunu �a��rmadan �nce ba�ka bir �enumerator olu�tur ve cutscene yap
     }
 
-    public void Attack()
-    {
-        if (!isAttacking)
-        {
-            StartCoroutine(AttackRoutine());
-        }
-    }
-
     public void StartEveryThink()
     {
         isAttackingNow = true;
@@ -57,9 +50,21 @@ public class WitchController : MonoBehaviour
 
     public void StopEveryThink()
     {
+        StopCoroutine(AttackRoutine());
         isAttackingNow = false;
         music.SetActive(false);
-        StopCoroutine(AttackRoutine());
+        stunAnimationStars.SetActive(false);
+        flowersVases.GetComponent<Animator>().ResetTrigger("Up");
+        flowersVases.GetComponent<Animator>().SetTrigger("Down");
+        attackCount = 0;
+
+
+        // eğer FlowerParentObject içinde herhangi bir childe varsa hepsini yok et ve o sayı kadar plantCount'ı azalt
+        foreach (Transform child in FlowerParentObject.transform)
+        {
+            Destroy(child.gameObject);
+            plantCount--;
+        }
     }
 
     IEnumerator AttackRoutine()
@@ -72,22 +77,22 @@ public class WitchController : MonoBehaviour
             switch (attackChoice)
             {
                 case 0:
-                    StartCoroutine(PotionSplash());
+                    yield return StartCoroutine(PotionSplash());
                     break;
                 case 1:
-                    StartCoroutine(GasCloud());
+                    yield return StartCoroutine(GasCloud());
                     break;
                 case 2:
-                    StartCoroutine(SummonMinions());
+                    yield return StartCoroutine(SummonMinions());
                     break;
                 case 3:
-                    StartCoroutine(PoisonDart());
+                    yield return StartCoroutine(PoisonDart());
                     break;
                 case 4:
-                    StartCoroutine(StinkBomb());
+                    yield return StartCoroutine(StinkBomb());
                     break;
                 case 5:
-                    StartCoroutine(CircleAttack());
+                    yield return StartCoroutine(CircleAttack());
                     break;
             }
 
@@ -95,12 +100,14 @@ public class WitchController : MonoBehaviour
             if (attackCount % 5 == 0) // After every 10 attacks
             {
                 stunAnimationStars.SetActive(true);
+                flowersVases.GetComponent<Animator>().ResetTrigger("Down");
                 flowersVases.GetComponent<Animator>().SetTrigger("Up");
                 if (plantCount < 5) // If there are less than 5 plants
                 {
                     SpawnPlant();
                     yield return new WaitForSeconds(20.0f); // Wait for 15 seconds
                     stunAnimationStars.SetActive(false);
+                    flowersVases.GetComponent<Animator>().ResetTrigger("Up");
                     flowersVases.GetComponent<Animator>().SetTrigger("Down");
                 }
                 else
@@ -109,6 +116,9 @@ public class WitchController : MonoBehaviour
                 }
             }
             isAttacking = false;
+        }
+        if (!isAttackingNow){
+            attackCount = 0;
         }
     }
 
@@ -232,11 +242,14 @@ public class WitchController : MonoBehaviour
 
     void SpawnPlant()
     {
+        //FlowerParentObject
         if (plantCount < 5)
         {
             int spawnIndex = Random.Range(0, plantSpawnPoints.Length);
-            Instantiate(plantPrefab, plantSpawnPoints[spawnIndex].position, Quaternion.identity);
+            GameObject newPlant = Instantiate(plantPrefab, plantSpawnPoints[spawnIndex].position, Quaternion.identity);
+            newPlant.transform.parent = FlowerParentObject.transform;
             plantCount++;
         }
     }
+
 }
