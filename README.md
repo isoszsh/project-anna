@@ -167,7 +167,7 @@
   - Sprint Review katılımcıları: İsmail Dönmez, İncila Kırbaç, İbrahim Serhat Aktaş, İpek Nezihe Can.
 
 - **Sprint Retrospective:** 
- 
+ - ʚɞ ʚɞ ʚɞ ʚɞ
 ---
 
  **Jüri Notları**:
