@@ -17,13 +17,13 @@ MonoBehaviour:
     sentences:
     - npcName: 
       text: Aww looks like you found something
-      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      audioClip: {fileID: 8300000, guid: 867ce765a0c59594eb80ca969b6e118c, type: 3}
     options:
     - question: is this your batteries?
       answers:
       - npcName: 
-        text: Let me look
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        text: Let me take a look
+        audioClip: {fileID: 8300000, guid: b6b92af404c62dc45b5d88b37751c3fb, type: 3}
       - npcName: 
         text: No, this is not a battery.
-        audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+        audioClip: {fileID: 8300000, guid: 4c9d9abc99dfd98499cea1f434266540, type: 3}

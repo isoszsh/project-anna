@@ -17,12 +17,12 @@ MonoBehaviour:
     sentences:
     - npcName: 
       text: Did you solve it?
-      audioClip: {fileID: 8300000, guid: da287befa4ba7354487419610a404fac, type: 3}
+      audioClip: {fileID: 8300000, guid: 1f3c8e35df8464342a9484905616d53c, type: 3}
     options:
     - question: I have solved it
       answers:
       - npcName: 
-        text: Every golem has to prove themselves after reaching a certain age. I
-          need to prove myself by solving this ancient puzzle, but it involves colors,
-          and I'm colorblind.
-        audioClip: {fileID: 8300000, guid: 0649dfaa4ec0cea40a3ad4b03e6cac60, type: 3}
+        text: "Thank you very much. Now I can finally be with the one I love. He
+          won\u2019t have to wait on the bridge anymore. I\u2019m so happy, thank
+          you again."
+        audioClip: {fileID: 8300000, guid: 27683d7375723c64989b0ad868ddb211, type: 3}
