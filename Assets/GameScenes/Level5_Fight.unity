@@ -8367,7 +8367,7 @@ GameObject:
   m_Layer: 0
   m_Name: ReTrigger
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13075,7 +13075,6 @@ MonoBehaviour:
   musicManager: {fileID: 96571270}
   isAttackingNow: 0
   music: {fileID: 673173723}
-  LastFlowerToSpawn: {fileID: 0}
   FlowerParentObject: {fileID: 651216547}
 --- !u!1 &1104667629
 GameObject:
