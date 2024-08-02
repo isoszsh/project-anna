@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Ismail/Scenes/PlayerTest.unity
     guid: 815415ace080c6f458a1b9cbc0dc02d6
-  - enabled: 0
+  - enabled: 1
     path: Assets/GameScenes/Intro.unity
     guid: 4f9b61bd50066184b8fdcbde23906c50
-  - enabled: 0
+  - enabled: 1
     path: Assets/GameScenes/Main Menu.unity
     guid: 280e91924081e83488296c24b1495f29
-  - enabled: 0
+  - enabled: 1
     path: Assets/GameScenes/LoadingScreens/main_menu_to_lv1.unity
     guid: a1450f46065806441b48f577bce1ec4d
-  - enabled: 0
+  - enabled: 1
     path: Assets/GameScenes/Level1.unity
     guid: 650224de68cf90544bac2011e5e33fb8
   - enabled: 1
