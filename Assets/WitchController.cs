@@ -26,7 +26,8 @@ public class WitchController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        StartCoroutine(AttackRoutine());
+        // GameManager.Instance.playerController.lockControls = true;
+        StartCoroutine(AttackRoutine()); // Bunu çaðýrmadan önce baþka bir ýenumerator oluþtur ve cutscene yap
     }
 
     public void Attack()
