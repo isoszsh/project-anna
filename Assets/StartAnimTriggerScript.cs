@@ -59,16 +59,9 @@ public class StartAnimTriggerScript : MonoBehaviour
         boss.SetActive(true);
         
         camraAnim1.GetComponent<Animator>().SetTrigger("Start");
-        yield return new WaitForSeconds(6f);
-        camraAnim1.SetActive(false);
-        camraAnnaFaceAngry.SetActive(true);
-        yield return new WaitForSeconds(4f);
-        camraAnnaFaceAngry.SetActive(false);
-
-        camraBossSpeakPosition.SetActive(true);
         witchAus.PlayOneShot(witchAuc);
-        yield return new WaitForSeconds(13f);// burası hocam
-        camraBossSpeakPosition.SetActive(false);
+        yield return new WaitForSeconds(12f);
+        camraAnim1.SetActive(false);
 
         //camraAnnaSpeakPosition.SetActive(true);
         //Debug.Log("Anna konuşma başladı");

@@ -16,7 +16,11 @@ public class DeathManagerScript : MonoBehaviour
 
     public void DeathCircle()
     {
-        StartCoroutine(DeathCircleRoutine());
+        if(!GameManager.Instance.playerController.lockControls)
+        {
+            StartCoroutine(DeathCircleRoutine());
+        }
+        
     }
 
     IEnumerator DeathCircleRoutine()
