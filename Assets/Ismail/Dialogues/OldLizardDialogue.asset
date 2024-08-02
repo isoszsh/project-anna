@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OldLizardDialogue
   m_EditorClassIdentifier: 
   dialogue:
-    npcName: Lizard (But 100 Times Older)
+    npcName: Old Lizard
     sentences:
     - npcName: 
       text: Looks like you finally made it..

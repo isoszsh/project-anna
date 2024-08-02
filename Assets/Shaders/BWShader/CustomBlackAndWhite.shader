@@ -62,7 +62,7 @@ Shader "Custom/BlackAndWhiteTransition"
                 half4 grayColor = half4(gray, gray, gray, col.a);
 
                 // Siyah-beyaz dönüþümü
-                float transitionSharpness = 1.2;
+                float transitionSharpness = 0.5;
                 float smoothstepValue = smoothstep(0, transitionSharpness, _TransitionProgress * 2 - distance * 2);
                 return lerp(grayColor, col, smoothstepValue);
             }

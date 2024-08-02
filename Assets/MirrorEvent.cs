@@ -107,6 +107,7 @@ public class MirrorEvent : Event
         GameManager.Instance.pr.SaveDecision("Level_1", 1);
         decisionPanel.SetActive(false );
         mirrorCam2.SetActive(false);
+        mirrorCam4.SetActive(false);
         mirrorCam3.SetActive(true);
         mirrorCam3.GetComponent<Animator>().SetTrigger("Look");
         OpenColor();
@@ -122,9 +123,10 @@ public class MirrorEvent : Event
         GameManager.Instance.pr.SaveDecision("Level_1", 2);
         decisionPanel.SetActive(false);
         mirrorCam2.SetActive(false);
+        mirrorCam3.SetActive(false);
         mirrorCam4.SetActive(true);
         annarig.SetActive(false);
-        mirrorCam3.GetComponent<Animator>().SetTrigger("Look");
+        mirrorCam4.GetComponent<Animator>().SetTrigger("Look");
         OpenColor();
         yield return new WaitForSeconds(5f);
         darkenPanel.SetActive(true);

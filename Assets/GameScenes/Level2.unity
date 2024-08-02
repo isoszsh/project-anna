@@ -13769,8 +13769,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.0903854, z: 7.050384}
+  m_Center: {x: 0.00000075734727, y: -0.545193, z: -0.28087863}
 --- !u!33 &356538802
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13787,13 +13787,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356538799}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.309, y: 0.918, z: -40.02}
+  m_LocalRotation: {x: -0, y: -0.21606733, z: -0, w: 0.9763785}
+  m_LocalPosition: {x: -11.766, y: 1.138, z: -44.361}
   m_LocalScale: {x: 1, y: 1, z: 3.1537}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -24.956, z: 0}
 --- !u!82 &356538804
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27473,8 +27473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -496, y: 60}
-  m_SizeDelta: {x: 110.7523, y: 50}
+  m_AnchoredPosition: {x: -551.6935, y: 60}
+  m_SizeDelta: {x: 222.1393, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738438062
 MonoBehaviour:

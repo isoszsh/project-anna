@@ -197,7 +197,7 @@ public class CouncilManager : MonoBehaviour
         else if (decision == 2)
         {
             StartCoroutine(GoToLevel4());
-            SceneManager.LoadScene("Level4");
+            SceneManager.LoadScene("lv3_to_lv4");
         }
         
        
