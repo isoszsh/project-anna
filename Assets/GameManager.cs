@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(StoryAudioSource != null)
+        if (StoryAudioSource != null)
         {
             StoryAudioSource.Play();
             StoryAudioSource.Pause();

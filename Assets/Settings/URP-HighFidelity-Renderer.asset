@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a40ae01f005e746adf4ec3d131469a, type: 3}
   m_Name: BlackAndWhiteRenderFeature
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   settings:
     material: {fileID: 2100000, guid: a6c3eb3e0c1b0774eb537b6f9c3722a6, type: 2}
 --- !u!114 &3813222954550358932
