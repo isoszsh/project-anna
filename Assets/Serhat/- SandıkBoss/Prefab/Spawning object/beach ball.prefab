@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  deathManager: {fileID: 0}
 --- !u!65 &5702743422227454938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123,8 +124,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019903002}
-  m_Center: {x: -0.000000003259629, y: 0.0000000027939673, z: 0}
+  m_Size: {x: 0.015860556, y: 0.015860556, z: 0.01578364}
+  m_Center: {x: -0.000000003259629, y: 0.0000000027939675, z: 2.8455002e-23}
 --- !u!96 &-365598072679603428
 TrailRenderer:
   serializedVersion: 3
