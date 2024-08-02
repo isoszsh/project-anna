@@ -18,22 +18,24 @@ public class WitchController : MonoBehaviour
     public float targetMarkerDuration = 2.0f;
     public float potionArcHeight = 5.0f;
 
-    private int plantCount = 0;
+    private int attackCount = 0;  // Total attacks counter
+    private int plantCount = 0;   // Plant counter
     private bool isAttacking = false;
     private Transform player;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        
-    }
-
-
-    public void Attack()
-    {
         StartCoroutine(AttackRoutine());
     }
 
+    public void Attack()
+    {
+        if (!isAttacking)
+        {
+            StartCoroutine(AttackRoutine());
+        }
+    }
 
     IEnumerator AttackRoutine()
     {
@@ -64,11 +66,20 @@ public class WitchController : MonoBehaviour
                     break;
             }
 
-            if (isAttacking)
+            attackCount++;
+            if (attackCount % 10 == 0) // After every 10 attacks
             {
-                yield return new WaitForSeconds(1.0f);
-                SpawnPlant();
+                if (plantCount < 5) // If there are less than 5 plants
+                {
+                    SpawnPlant();
+                    yield return new WaitForSeconds(15.0f); // Wait for 15 seconds
+                }
+                else
+                {
+                    yield return new WaitForSeconds(15.0f); // Wait for 15 seconds if max plants are spawned
+                }
             }
+            isAttacking = false;
         }
     }
 
@@ -79,7 +90,7 @@ public class WitchController : MonoBehaviour
         GameObject marker = Instantiate(targetMarkerPrefab, targetPosition, Quaternion.identity);
         yield return new WaitForSeconds(targetMarkerDuration);
 
-        GameObject potion = Instantiate(potionPrefab, new Vector3(transform.position.x,transform.position.y + .5f,transform.position.z), Quaternion.identity);
+        GameObject potion = Instantiate(potionPrefab, new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z), Quaternion.identity);
         Vector3 startPos = potion.transform.position;
         Vector3 endPos = targetPosition;
         float duration = 1.0f;
@@ -116,7 +127,7 @@ public class WitchController : MonoBehaviour
     {
         isAttacking = true;
         Transform m1 = Instantiate(minionPrefab, new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z) + Vector3.left * 2, Quaternion.identity).transform;
-        m1.rotation = Quaternion.Euler(0,180,0);
+        m1.rotation = Quaternion.Euler(0, 180, 0);
         Transform m2 = Instantiate(minionPrefab, new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z) + Vector3.right * 2, Quaternion.identity).transform;
         m2.rotation = Quaternion.Euler(0, 180, 0);
 
@@ -131,8 +142,7 @@ public class WitchController : MonoBehaviour
         GameObject marker = Instantiate(targetMarkerPrefab, targetPosition, Quaternion.identity);
         yield return new WaitForSeconds(targetMarkerDuration);
 
-
-        GameObject dart = Instantiate(poisonDartPrefab, new Vector3(transform.position.x,transform.position.y + .5f,transform.position.z), Quaternion.identity);
+        GameObject dart = Instantiate(poisonDartPrefab, new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z), Quaternion.identity);
         dart.GetComponent<Rigidbody>().AddForce((targetPosition - transform.position).normalized * 15f, ForceMode.VelocityChange);
         Destroy(marker);
         yield return new WaitForSeconds(1.0f);
@@ -156,14 +166,14 @@ public class WitchController : MonoBehaviour
     IEnumerator CircleAttack()
     {
         isAttacking = true;
-        int numberOfObjects = 10; // Çemberde kaç nesne olacaðý
-        float radius = 3.0f; // Çemberin yarýçapý
-        float expansionSpeed = 10.0f; // Geniþleme hýzý
-        float spawnInterval = 0.2f; // Nesnelerin spawnlanma aralýðý
+        int numberOfObjects = 10; // Number of objects in the circle
+        float radius = 3.0f; // Radius of the circle
+        float expansionSpeed = 10.0f; // Expansion speed
+        float spawnInterval = 0.2f; // Interval for spawning objects
 
-        Vector3 centerPosition = new Vector3(cauldron.position.x,cauldron.position.y + .5f,cauldron.position.z);
+        Vector3 centerPosition = new Vector3(cauldron.position.x, cauldron.position.y + .5f, cauldron.position.z);
 
-        // Nesneleri spawnlamak için çemberin etrafýndaki pozisyonlarý hesaplayýn
+        // Calculate positions around the circle for spawning objects
         for (int i = 0; i < numberOfObjects; i++)
         {
             float angle = i * Mathf.PI * 2 / numberOfObjects;
@@ -187,9 +197,8 @@ public class WitchController : MonoBehaviour
                 obj.transform.position += (obj.transform.position - cauldron.position).normalized * speed * Time.deltaTime;
                 yield return null;
             }
-        }    
+        }
     }
-
 
     void SpawnPlant()
     {

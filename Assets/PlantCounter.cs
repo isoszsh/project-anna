@@ -11,6 +11,8 @@ public class PlantCounter : MonoBehaviour
 
     public DialogueData plantDD;
 
+    public GameObject elevatorDC;
+
     bool planted = false;
 
     public int totalPlant = 0;
@@ -42,6 +44,7 @@ public class PlantCounter : MonoBehaviour
     {
         if (totalPlant == 3 && !planted) {
             planted = true;
+            elevatorDC.SetActive(true);
             shroomDS.dialogueData = plantDD;
             dcImg.sprite = dcSprite;
             GetComponent<MeshRenderer>().enabled = false;

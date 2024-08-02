@@ -20,7 +20,7 @@ public class NoteList
 
 public class NoteLoader : MonoBehaviour
 {
-    public string jsonFilePath = "Assets/song_notes.json"; // JSON dosyasýnýn yolu
+    public string jsonFilePath = "Assets/notes.json"; // JSON dosyasýnýn yolu
     public List<Note> notes; // JSON'dan yüklenecek notalar
 
     public GameObject notePrefab; // Nota için prefab
@@ -48,6 +48,7 @@ public class NoteLoader : MonoBehaviour
     }
     void LoadNotes()
     {
+
         string jsonText = File.ReadAllText(jsonFilePath);
         NoteList noteList = JsonUtility.FromJson<NoteList>(jsonText);
 
@@ -81,7 +82,7 @@ public class NoteLoader : MonoBehaviour
     IEnumerator StartSong()
     {
 
-        yield return new WaitForSecondsRealtime(2.25f);
+        yield return new WaitForSecondsRealtime(2f);
         startTime = (float)AudioSettings.dspTime; // Müziðin baþlama zamanýný kaydet
         audioSource.PlayScheduled(startTime); // Müziði baþlat (planlanmýþ zamanla)
         audioSource2.PlayScheduled(startTime);
