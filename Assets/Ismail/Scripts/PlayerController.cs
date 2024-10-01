@@ -94,6 +94,9 @@ public class PlayerController : MonoBehaviour
 
         timer = 0f;
         isBlinking = false;
+
+
+            
     }
 
 
@@ -125,6 +128,93 @@ public class PlayerController : MonoBehaviour
         if (context.performed && isGrounded && !lockControls)
         {
             Jump();
+        }
+    }
+
+    //Controller için eklendi 
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.performed && !lockControls)
+        {
+            if (currentEvent)
+            {
+                ResetVelocity();
+                currentEvent.TriggerEvent();
+            }
+            else if (pickedItem != null)
+            {
+                ResetVelocity();
+                string ItemType = pickedItem.GetComponent<PickUpItem>().type;
+                if (ItemType == "Stone" && !isThrowing)
+                {
+                    if (!isAiming)
+                    {
+                        lockControls = true;
+                        StartAim();
+                        isAiming = true;
+                    }
+                    else
+                    {
+                        StartCoroutine(StartThrow());
+                    }
+                }
+                else if (ItemType == "Flute")
+                {
+                    StartCoroutine(PlayFlute());
+                }
+                else if (ItemType == "Plant")
+                {
+                    StartCoroutine(Plant());
+                }
+                else if (ItemType == "Shovel")
+                {
+                    StartCoroutine(Dig());
+                }
+                else if (ItemType == "Brush")
+                {
+                    StartCoroutine(Paint());
+                }
+                else if (ItemType == "Mantar")
+                {
+                    StartCoroutine(Mantar());
+                }
+                else if (ItemType == "Key")
+                {
+                    StartCoroutine(OpenDoor());
+                }
+            }
+            else
+            {
+                if (willPick != null)
+                {
+                    StartCoroutine(PickUp());
+                }
+                else
+                {
+                    Debug.Log("Handle");
+                    HandleInteraction();
+                }
+            }
+        }
+    }
+
+    //Controller için eklendi 
+    public void OnCrouch(InputAction.CallbackContext context)
+    {
+        if (context.performed && !lockControls)
+        {
+            isSneaking = !isSneaking;
+            playerAnimator.SetBool("Sneak", isSneaking);
+            if (isSneaking)
+            {
+                playerCollider.height = .6f;
+                playerCollider.center = new Vector3(0, 0.3f, 0);
+            }
+            else
+            {
+                playerCollider.height = 1.2f;
+                playerCollider.center = new Vector3(0, 0.6f, 0);
+            }
         }
     }
 
@@ -163,7 +253,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.F) && !lockControls)
+        if (Input.GetKeyDown(KeyCode.F)  && !lockControls) 
         {
             if(currentEvent)
             {
